@@ -29,6 +29,7 @@ Other features:
 * Compatible with Contact Form 7
 * Compatible with Visual Composer
 * Compatible with Elementor Page Builder
+* Compatible with WP Gutenberg Editor
 
 
 This theme will be an active project which we will update from time to time. Check this page regularly for the updates.
@@ -55,11 +56,11 @@ Pepper One includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-= 1.2 - Nov 25, 2019 =
+= 0.2 - Nov 25, 2019 =
 * Change the theme name to Pepper One
 
-= 1.1 - Nov 24, 2019 =
+= 0.11- Nov 24, 2019 =
 * Added Theme "Cuciniale"
 
-= 1.0 - Nov 24, 2019 =
+= 0.1 - Nov 24, 2019 =
 * Initial release

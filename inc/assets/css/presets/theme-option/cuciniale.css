@@ -405,13 +405,13 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 3rem;
+  font-size: 3.001rem;
   letter-spacing: 2px;
   margin-bottom: unset;
 }
 
 h3, .h3 {
-  font-size: 2.3rem;
+  font-size: 2.301rem;
   letter-spacing: 2px;
 }
 
