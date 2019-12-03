@@ -135,15 +135,6 @@ add_action( 'after_setup_theme', 'wp_bootstrap_starter_content_width', 0 );
 
 function wp_bootstrap_starter_widgets_init() {
     register_sidebar( array(
-        'name'          => esc_html__( 'Header Button', 'wp-bootstrap-starter' ),
-        'id'            => 'header-cta',
-        'description'   => esc_html__( 'Add HTML Code here to insert some CTA Buttons in the header area', 'wp-bootstrap-starter' ),
-        'before_widget' => '',
-        'after_widget'  => '',
-        'before_title'  => '',
-        'after_title'   => '',
-    ) );
-    register_sidebar( array(
         'name'          => esc_html__( 'Social Media Buttons', 'wp-bootstrap-starter' ),
         'id'            => 'socialmedia-buttons',
         'description'   => esc_html__( 'Add HTML Code here to insert fancy social media buttons', 'wp-bootstrap-starter' ),
@@ -199,14 +190,6 @@ function wp_bootstrap_starter_widgets_init() {
     ) );
 }
 add_action( 'widgets_init', 'wp_bootstrap_starter_widgets_init' );
-
-/* Adds to the last Menu Link a CTA Styling*/
-function add_first_and_last($items) {
-    $items[count($items)]->classes[] = 'btn btn-primary btn-cta';
-    return $items;
-  }
-  
-  add_filter('wp_nav_menu_objects', 'add_first_and_last');
 
 /**
  * Enqueue scripts and styles.

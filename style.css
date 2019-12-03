@@ -289,7 +289,7 @@ header#masthead {
   margin-bottom: 0;
   background-color: #262626;
   box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
-  padding: 1.4rem 1rem;
+  padding: 1.066rem 1rem;
 }
 
 .navbar-brand > a {
@@ -710,7 +710,8 @@ a img.aligncenter {
 
 .nav > li > a:focus,
 .nav > li > a:hover {
-  color: #3A3F44;
+  transition: color .3s;
+  color: var(--secondary);
   text-decoration: none;
 }
 .half-rule {
@@ -1072,7 +1073,7 @@ body:not(.theme-preset-active) footer#colophon {
   .navbar-brand {
     position: absolute;
     right: -7px;
-    top: -18px;
+    top: -17px;
   }
 }
 /*--------------------------------------------------------------

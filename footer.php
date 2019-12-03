@@ -15,7 +15,7 @@
 		</div><!-- .container -->
 	</div><!-- #content -->
 	<footer id="colophon" class="site-footer <?php echo wp_bootstrap_starter_bg_class(); ?>" role="contentinfo">
-		<div class="pt-3 container footer-cta">
+		<div class="pt-3 container-fluid footer-cta">
 			<?php if ( is_active_sidebar( 'footer-cta' )) : ?>
 				<?php dynamic_sidebar( 'footer-cta' ); ?>
 			<?php endif;?>

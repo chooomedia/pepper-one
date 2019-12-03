@@ -110,7 +110,7 @@ function wp_bootstrap_starter_bg_class() {
             return 'navbar-dark bg-primary';
             break;
         default:
-            return 'navbar-light';
+            return 'navbar-dark';
     }
 }
 
