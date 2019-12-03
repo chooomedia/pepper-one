@@ -171,8 +171,8 @@ function wp_bootstrap_starter_widgets_init() {
         'after_title'   => '',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer 1', 'wp-bootstrap-starter' ),
-        'id'            => 'footer-1',
+        'name'          => esc_html__( 'Footer Left', 'wp-bootstrap-starter' ),
+        'id'            => 'footer-left',
         'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
@@ -180,8 +180,8 @@ function wp_bootstrap_starter_widgets_init() {
         'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer 2', 'wp-bootstrap-starter' ),
-        'id'            => 'footer-2',
+        'name'          => esc_html__( 'Footer Middle', 'wp-bootstrap-starter' ),
+        'id'            => 'footer-middle',
         'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
@@ -189,8 +189,8 @@ function wp_bootstrap_starter_widgets_init() {
         'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer 3', 'wp-bootstrap-starter' ),
-        'id'            => 'footer-3',
+        'name'          => esc_html__( 'Footer Right', 'wp-bootstrap-starter' ),
+        'id'            => 'footer-right',
         'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
@@ -199,6 +199,14 @@ function wp_bootstrap_starter_widgets_init() {
     ) );
 }
 add_action( 'widgets_init', 'wp_bootstrap_starter_widgets_init' );
+
+/* Adds to the last Menu Link a CTA Styling*/
+function add_first_and_last($items) {
+    $items[count($items)]->classes[] = 'btn btn-primary btn-cta';
+    return $items;
+  }
+  
+  add_filter('wp_nav_menu_objects', 'add_first_and_last');
 
 /**
  * Enqueue scripts and styles.

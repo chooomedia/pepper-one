@@ -43,8 +43,12 @@ h2.overview {
 	border-bottom-width: 0;
 	display: block;
 	font-family: "Roboto", sans-serif;
-	padding: 10px 14px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 18px;
+	padding-right: 18px;
 }
+
 div#page-sub-header h1 {
 	font-family: "Roboto", sans-serif;
 	margin-bottom: 0;

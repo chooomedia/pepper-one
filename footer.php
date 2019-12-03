@@ -22,10 +22,10 @@
 		</div>
 		<?php get_template_part( 'footer-widget' ); ?>
 		<div class="container">
-			<br>
+			</br>
             <div class="site-info">
                 <?php echo 'cuciniale.com'; ?><br> &copy; <?php echo date('Y'); ?>
-				<br>
+				</br>
             </div><!-- close .site-info -->
 		</div>
 	</footer><!-- #colophon -->

@@ -2521,9 +2521,9 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 }
 
 .btn-cta {
-  margin: 0 9px;
-  font-family: "Montserrat",sans-serif;
+  margin: 0 11px 0 12px !important;
   font-size: 1.15rem;
+  padding: 10px 8px;
 }
 
 .circled-buttons {
@@ -4400,6 +4400,7 @@ tbody.collapse.show {
         flex-wrap: nowrap;
   }
   .navbar-expand-xl .navbar-collapse {
+    line-height: 34px;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
