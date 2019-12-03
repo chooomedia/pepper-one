@@ -21,10 +21,13 @@ p, pre, table, form {
 	color: #797979;
 }
 
+p, p.overview {
+	font-size: 1.3rem;
+}
+
 p.overview {
 	margin-bottom: 1rem;
 	line-height: 2;
-	font-size: 1.3rem;
 	color: var(--creamwhite);
 }
 h2.overview {

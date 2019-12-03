@@ -25,6 +25,7 @@
 			<br>
             <div class="site-info">
                 <?php echo 'cuciniale.com'; ?><br> &copy; <?php echo date('Y'); ?>
+				<br>
             </div><!-- close .site-info -->
 		</div>
 	</footer><!-- #colophon -->
