@@ -2578,6 +2578,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   color: white;
   display: flex;
   justify-content: center;
+  text-align-last: center;
   align-items: center;
   font-size: 1.5rem;
   margin: .7rem auto;
@@ -3389,7 +3390,7 @@ tbody.collapse.show {
 
 .content-area {
   margin:  0 auto;
-  padding-top: 3rem;
+  /*padding-top: 3rem;*/
   background: #000;
 }
 
@@ -3515,6 +3516,8 @@ tbody.collapse.show {
 .btn-group-vertical .btn-group + .btn-group {
   margin-left: -1px;
 }
+
+
 
 .btn-toolbar {
   display: -webkit-box;
