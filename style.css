@@ -1072,7 +1072,7 @@ body:not(.theme-preset-active) footer#colophon {
 
   .navbar-brand {
     position: absolute;
-    right: -7px;
+    right: -17px;
     top: -17px;
   }
 }
