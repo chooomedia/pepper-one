@@ -62,7 +62,6 @@ get_header(); ?>
 </script>
 
 </div>
-
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div id="content" class="article-content">
