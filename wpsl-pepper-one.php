@@ -14,7 +14,7 @@ $output .= "\t\t\t\t" . '<p class="overview">Lorem ipsum dolor sit amet, consete
 
 
 $output .= "\t\t\t\t" . '<form class="form-inline p-0 m-0" autocomplete="off">' . "\r\n";
-$output .= "\t\t\t\t\t" . '<div class="form-group p-0 col-4">' . "\r\n";
+$output .= "\t\t\t\t\t" . '<div class="form-group p-0 col-5">' . "\r\n";
 $output .= "\t\t\t\t\t\t" . '<input id="wpsl-search-input" class="inputPostalCode form-control" type="text" value="' . apply_filters( 'wpsl_search_input', '' ) . '" name="wpsl-search-input" placeholder="Postal Code" aria-required="true" />' . "\r\n";
 $output .= "\t\t\t\t\t" . '</div>' . "\r\n";
 
@@ -43,7 +43,7 @@ if ( $this->use_category_filter() ) {
     $output .= $this->create_category_filter();
 }
 
-$output .= "\t\t\t\t" . '<div class="form-group ml-2 pr-0 col-4">' . "\r\n";
+$output .= "\t\t\t\t" . '<div class="form-group ml-2 pr-0 col-3">' . "\r\n";
 $output .= "\t\t\t\t\t" . '<input id="wpsl-search-btn" class="btn btn-primary postalCodeSubmit" type="submit" value="' . esc_attr( $wpsl->i18n->get_translation( 'search_btn_label', __( 'Search', 'wpsl' ) ) ) . '">' . "\r\n";
 $output .= "\t\t\t\t" . '</div>' . "\r\n";
 $output .= "\t\t\t\t" . '<p class="mt-2">or write us a message <a class="underline" href="/contact" title="write a message here"><u>here</u></a></p>' . "\r\n";
