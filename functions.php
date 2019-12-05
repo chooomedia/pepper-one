@@ -84,7 +84,7 @@ function wpb_hidetitle_class($classes) {
     endif;
     return $classes;
     }
-add_filter('post_class', 'wpb_hidetitle_class');
+add_filter('page_class', 'wpb_hidetitle_class');
 
 
 function wp_bootstrap_full_width() {
@@ -99,7 +99,7 @@ function wp_bootstrap_starter_reminder(){
         $theme_page_url = 'https://afterimagedesigns.com/wp-bootstrap-starter/?dashboard=1';
 
             if(!get_option( 'triggered_welcomet')){
-                $message = sprintf(__( 'Welcome to WP Bootstrap Starter Theme! Before diving in to your new theme, please visit the <a style="color: #fff; font-weight: bold;" href="%1$s" target="_blank">theme\'s</a> page for access to dozens of tips and in-depth tutorials.', 'wp-bootstrap-starter' ),
+                $message = sprintf(__( 'Welcome to Pepper-One Theme! Before diving in to your new theme, please visit the <a style="color: #fff; font-weight: bold;" href="%1$s" target="_blank">theme\'s</a> page for access to dozens of tips and in-depth tutorials.', 'wp-bootstrap-starter' ),
                     esc_url( $theme_page_url )
                 );
 

@@ -249,7 +249,6 @@ h1, h3, h4, h5, h6 {
 }
 h1 {
   font-size: 32px;
-  padding-bottom: 10px;
 }
 h2 {
   font-size: 24px;
@@ -295,7 +294,6 @@ img {
   height: auto;
   /* Make sure images are scaled correctly. */
   max-width: 100%;
-  max-height: 720px !important;
   /* Adhere to container width. */
 }
 
