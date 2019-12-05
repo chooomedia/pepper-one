@@ -8,6 +8,8 @@
  */
 
 ?>
+<?php $recipeLink = get_field( 'recipe-button-link' ); ?>
+<?php $recipeLinkTitle = get_field( 'recipe-button-link-title' ); ?>
 <div class="container-fluid p-0">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="post-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
@@ -16,7 +18,7 @@
 					<div class="m-4 bd-highlight justify-content-center align-self-center post-thumbnail-inner-content">
 						<h1>Integer ut ex <br>vitae enim</h1>
 						<p class="recipes">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
-						<button class="btn btn-primary btn-bigger">Cook it with the App</button>
+						<a href="<?php echo $recipeLink ?>" target="_blank" title="<?php echo $recipeLinkTitle ?>" class="btn btn-primary btn-bigger">Cook it with the App</a>
 					</div>
 				</div>
 			<?php endif ?>	
