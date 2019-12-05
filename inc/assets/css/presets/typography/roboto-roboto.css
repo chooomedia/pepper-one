@@ -34,7 +34,7 @@ h2.overview {
 	font-size: 3.749rem;
 }
 .navbar-brand {
-	padding-top: 0.25rem;
+	padding-bottom: 1rem;
 }
 .navbar-brand>a {
 	font-family: "Roboto", sans-serif;
@@ -43,10 +43,10 @@ h2.overview {
 	border-bottom-width: 0;
 	display: block;
 	font-family: "Roboto", sans-serif;
-	padding-top: 1px;
-	padding-bottom: 1px;
-	padding-left: 18px;
-	padding-right: 18px;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 12px;
+	padding-right: 12px;
 }
 
 div#page-sub-header h1 {

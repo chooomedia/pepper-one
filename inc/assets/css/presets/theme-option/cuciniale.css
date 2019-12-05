@@ -2558,7 +2558,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 }
 
 .btn-cta {
-  margin: 0 11px 0 12px !important;
+  margin: 0 28px 0 12px !important;
   font-size: 1.15rem;
   padding: 10px 8px;
 }
@@ -4152,9 +4152,9 @@ tbody.collapse.show {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.32421875rem;
+  /*padding-top: 0.32421875rem;
   padding-bottom: 0.32421875rem;
-  margin-right: 1rem;
+  margin-right: 1rem;*/
   font-size: 1.171875rem;
   line-height: inherit;
   white-space: nowrap;
@@ -4444,7 +4444,7 @@ tbody.collapse.show {
         flex-wrap: nowrap;
   }
   .navbar-expand-xl .navbar-collapse {
-    line-height: 34px;
+    line-height: 40px;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -4570,6 +4570,7 @@ tbody.collapse.show {
 
 .navbar-dark .navbar-brand {
   color: #fff;
+  max-width: 164px;
 }
 
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
@@ -9194,10 +9195,7 @@ a.text-dark:hover, a.text-dark:focus {
           filter: none;
 }
 
-.navbar-brand {
-  padding: 0.75rem 1rem calc(54px - 0.75rem - 30px);
-  margin-right: 0;
-}
+
 
 .navbar .nav-item.active .nav-link {
   color: var(--secondary);

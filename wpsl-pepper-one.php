@@ -8,7 +8,7 @@ $output .= "\t" . '<div class="row">' . "\r\n";
 $output .= "\t\t" . '<div id="" class="col-sm-12 col-md-7">' . "\r\n";
 $output .= "\t\t\t" . '<div class="container col-md-9 col-sm-12">' . "\r\n";
 
-$output .= "\t\t\t" . '<div style="width:100%;height:160px;" aria-hidden="true" class="wp-block-spacer"></div>' . "\r\n";
+$output .= "\t\t\t" . '<div style="width:100%;height:20vh;" aria-hidden="true" class="wp-block-spacer"></div>' . "\r\n";
 $output .= "\t\t\t\t" . '<h2>Find your Dealer</h2>' . "\r\n";
 $output .= "\t\t\t\t" . '<p class="overview">Lorem ipsum dolor sit amet, consetetur<br> sadipscing elitr, sed diam nonumy eirmod tempor<br> invidunt ut labore et dolore</p>' . "\r\n";
 
@@ -27,7 +27,7 @@ if ( $wpsl_settings['radius_dropdown'] || $wpsl_settings['results_dropdown']  ) 
         $output .= "\t\t\t\t" . '</div>' . "\r\n";
     }
 
-    /*if ( $wpsl_settings['results_dropdown'] ) {
+    if ( $wpsl_settings['results_dropdown'] ) {
         $output .= "\t\t\t\t" . '<div id="wpsl-results">' . "\r\n";
         $output .= "\t\t\t\t\t" . '<label for="wpsl-results-dropdown">' . esc_html( $wpsl->i18n->get_translation( 'results_label', __( 'Results', 'wpsl' ) ) ) . '</label>' . "\r\n";
         $output .= "\t\t\t\t\t" . '<select id="wpsl-results-dropdown" class="wpsl-dropdown" name="wpsl-results">' . "\r\n";
@@ -35,7 +35,6 @@ if ( $wpsl_settings['radius_dropdown'] || $wpsl_settings['results_dropdown']  ) 
         $output .= "\t\t\t\t\t" . '</select>' . "\r\n";
         $output .= "\t\t\t\t" . '</div>' . "\r\n";
     }
-    $output .= "\t\t\t" . '</div>' . "\r\n";*/ 
 
 }
 
@@ -49,7 +48,7 @@ $output .= "\t\t\t\t" . '</div>' . "\r\n";
 $output .= "\t\t\t\t" . '<p class="mt-2">or write us a message <a class="underline" href="/contact" title="write a message here"><u>here</u></a></p>' . "\r\n";
 
 $output .= "\t\t\t\t" . '</form>' . "\r\n";
-$output .= "\t" . '<div id="wpsl-result-list">' . "\r\n";
+$output .= "\t" . '<div id="wpsl-result-list" class="wpsl-pepper-store-list">' . "\r\n";
 $output .= "\t\t" . '<div id="wpsl-stores" '. $autoload_class .'>' . "\r\n";
 $output .= "\t\t\t" . '<ul></ul>' . "\r\n";
 $output .= "\t\t" . '</div>' . "\r\n";
