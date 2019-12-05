@@ -44,11 +44,11 @@
 				if ( is_single() ) :
 					the_content();
 				else :
-					the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wp-bootstrap-starter' ) );
+					the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wp-pepper-one' ) );
 				endif;
 
 					wp_link_pages( array(
-						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-bootstrap-starter' ),
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-pepper-one' ),
 						'after'  => '</div>',
 					) );
 				?>

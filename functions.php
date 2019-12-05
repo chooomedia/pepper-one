@@ -20,9 +20,9 @@ function wp_bootstrap_starter_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on WP Bootstrap Starter, use a find and replace
-	 * to change 'wp-bootstrap-starter' to the name of your theme in all the template files.
+	 * to change 'wp-pepper-one' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'wp-bootstrap-starter', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'wp-pepper-one', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,7 @@ function wp_bootstrap_starter_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'wp-bootstrap-starter' ),
+		'primary' => esc_html__( 'Primary', 'wp-pepper-one' ),
 	) );
 
 	/*
@@ -96,10 +96,10 @@ add_action( 'after_setup_theme', 'wp_bootstrap_full_width' );
  * Add Welcome message to dashboard
  */
 function wp_bootstrap_starter_reminder(){
-        $theme_page_url = 'https://afterimagedesigns.com/wp-bootstrap-starter/?dashboard=1';
+        $theme_page_url = 'https://afterimagedesigns.com/wp-pepper-one/?dashboard=1';
 
             if(!get_option( 'triggered_welcomet')){
-                $message = sprintf(__( 'Welcome to Pepper-One Theme! Before diving in to your new theme, please visit the <a style="color: #fff; font-weight: bold;" href="%1$s" target="_blank">theme\'s</a> page for access to dozens of tips and in-depth tutorials.', 'wp-bootstrap-starter' ),
+                $message = sprintf(__( 'Welcome to Pepper-One Theme! Before diving in to your new theme, please visit the <a style="color: #fff; font-weight: bold;" href="%1$s" target="_blank">theme\'s</a> page for access to dozens of tips and in-depth tutorials.', 'wp-pepper-one' ),
                     esc_url( $theme_page_url )
                 );
 
@@ -156,54 +156,54 @@ add_action( 'after_setup_theme', 'wp_bootstrap_starter_content_width', 0 );
 
 function wp_bootstrap_starter_widgets_init() {
     register_sidebar( array(
-        'name'          => esc_html__( 'Social Media Buttons', 'wp-bootstrap-starter' ),
+        'name'          => esc_html__( 'Social Media Buttons', 'wp-pepper-one' ),
         'id'            => 'socialmedia-buttons',
-        'description'   => esc_html__( 'Add HTML Code here to insert fancy social media buttons', 'wp-bootstrap-starter' ),
+        'description'   => esc_html__( 'Add HTML Code here to insert fancy social media buttons', 'wp-pepper-one' ),
         'before_widget' => '<ul class="circled-buttons">',
         'after_widget'  => '</ul>',
         'before_title'  => '',
         'after_title'   => '',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Sidebar', 'wp-bootstrap-starter' ),
+        'name'          => esc_html__( 'Sidebar', 'wp-pepper-one' ),
         'id'            => 'sidebar-1',
-        'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
+        'description'   => esc_html__( 'Add widgets here.', 'wp-pepper-one' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer CTA', 'wp-bootstrap-starter' ),
+        'name'          => esc_html__( 'Footer CTA', 'wp-pepper-one' ),
         'id'            => 'footer-cta',
-        'description'   => esc_html__( 'Add HTML Code here to insert some CTA Buttons in the footer area', 'wp-bootstrap-starter' ),
+        'description'   => esc_html__( 'Add HTML Code here to insert some CTA Buttons in the footer area', 'wp-pepper-one' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
         'before_title'  => '',
         'after_title'   => '',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer Left', 'wp-bootstrap-starter' ),
+        'name'          => esc_html__( 'Footer Left', 'wp-pepper-one' ),
         'id'            => 'footer-left',
-        'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
+        'description'   => esc_html__( 'Add widgets here.', 'wp-pepper-one' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer Middle', 'wp-bootstrap-starter' ),
+        'name'          => esc_html__( 'Footer Middle', 'wp-pepper-one' ),
         'id'            => 'footer-middle',
-        'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
+        'description'   => esc_html__( 'Add widgets here.', 'wp-pepper-one' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer Right', 'wp-bootstrap-starter' ),
+        'name'          => esc_html__( 'Footer Right', 'wp-pepper-one' ),
         'id'            => 'footer-right',
-        'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
+        'description'   => esc_html__( 'Add widgets here.', 'wp-pepper-one' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h3 class="widget-title">',
@@ -218,54 +218,54 @@ add_action( 'widgets_init', 'wp_bootstrap_starter_widgets_init' );
 function wp_bootstrap_starter_scripts() {
 	// load bootstrap css
     if ( get_theme_mod( 'cdn_assets_setting' ) === 'yes' ) {
-        wp_enqueue_style( 'wp-bootstrap-starter-bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css' );
-        wp_enqueue_style( 'wp-bootstrap-starter-fontawesome-cdn', 'https://use.fontawesome.com/releases/v5.10.2/css/all.css' );
+        wp_enqueue_style( 'wp-pepper-one-bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css' );
+        wp_enqueue_style( 'wp-pepper-one-fontawesome-cdn', 'https://use.fontawesome.com/releases/v5.10.2/css/all.css' );
     } else {
-        wp_enqueue_style( 'wp-bootstrap-starter-bootstrap-css', get_template_directory_uri() . '/inc/assets/css/bootstrap.min.css' );
-        wp_enqueue_style( 'wp-bootstrap-starter-fontawesome-cdn', get_template_directory_uri() . '/inc/assets/css/fontawesome.min.css' );
+        wp_enqueue_style( 'wp-pepper-one-bootstrap-css', get_template_directory_uri() . '/inc/assets/css/bootstrap.min.css' );
+        wp_enqueue_style( 'wp-pepper-one-fontawesome-cdn', get_template_directory_uri() . '/inc/assets/css/fontawesome.min.css' );
     }
 	// load bootstrap css
 	// load AItheme styles
 	// load WP Bootstrap Starter styles
-	wp_enqueue_style( 'wp-bootstrap-starter-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'wp-pepper-one-style', get_stylesheet_uri() );
     if(get_theme_mod( 'theme_option_setting' ) && get_theme_mod( 'theme_option_setting' ) !== 'default') {
-        wp_enqueue_style( 'wp-bootstrap-starter-'.get_theme_mod( 'theme_option_setting' ), get_template_directory_uri() . '/inc/assets/css/presets/theme-option/'.get_theme_mod( 'theme_option_setting' ).'.css', false, '' );
+        wp_enqueue_style( 'wp-pepper-one-'.get_theme_mod( 'theme_option_setting' ), get_template_directory_uri() . '/inc/assets/css/presets/theme-option/'.get_theme_mod( 'theme_option_setting' ).'.css', false, '' );
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'poppins-lora') {
-        wp_enqueue_style( 'wp-bootstrap-starter-poppins-lora-font', 'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Poppins:300,400,500,600,700' );
+        wp_enqueue_style( 'wp-pepper-one-poppins-lora-font', 'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Poppins:300,400,500,600,700' );
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'montserrat-merriweather') {
-        wp_enqueue_style( 'wp-bootstrap-starter-montserrat-merriweather-font', 'https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700,900|Montserrat:300,400,400i,500,700,800' );
+        wp_enqueue_style( 'wp-pepper-one-montserrat-merriweather-font', 'https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700,900|Montserrat:300,400,400i,500,700,800' );
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'poppins-poppins') {
-        wp_enqueue_style( 'wp-bootstrap-starter-poppins-font', 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' );
+        wp_enqueue_style( 'wp-pepper-one-poppins-font', 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' );
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'roboto-roboto') {
-        wp_enqueue_style( 'wp-bootstrap-starter-roboto-font', 'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i' );
+        wp_enqueue_style( 'wp-pepper-one-roboto-font', 'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i' );
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'arbutusslab-opensans') {
-        wp_enqueue_style( 'wp-bootstrap-starter-arbutusslab-opensans-font', 'https://fonts.googleapis.com/css?family=Arbutus+Slab|Open+Sans:300,300i,400,400i,600,600i,700,800' );
+        wp_enqueue_style( 'wp-pepper-one-arbutusslab-opensans-font', 'https://fonts.googleapis.com/css?family=Arbutus+Slab|Open+Sans:300,300i,400,400i,600,600i,700,800' );
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'oswald-muli') {
-        wp_enqueue_style( 'wp-bootstrap-starter-oswald-muli-font', 'https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800|Oswald:300,400,500,600,700' );
+        wp_enqueue_style( 'wp-pepper-one-oswald-muli-font', 'https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800|Oswald:300,400,500,600,700' );
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'montserrat-opensans') {
-        wp_enqueue_style( 'wp-bootstrap-starter-montserrat-opensans-font', 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300,300i,400,400i,600,600i,700,800' );
+        wp_enqueue_style( 'wp-pepper-one-montserrat-opensans-font', 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300,300i,400,400i,600,600i,700,800' );
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'robotoslab-roboto') {
-        wp_enqueue_style( 'wp-bootstrap-starter-robotoslab-roboto', 'https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:300,300i,400,400i,500,700,700i' );
+        wp_enqueue_style( 'wp-pepper-one-robotoslab-roboto', 'https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:300,300i,400,400i,500,700,700i' );
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'baskervville-cuciniale') {
-        wp_enqueue_style( 'wp-bootstrap-starter-baskervville-cuciniale', 'https://fonts.googleapis.com/css?family=Baskervville&display=swap' );
+        wp_enqueue_style( 'wp-pepper-one-baskervville-cuciniale', 'https://fonts.googleapis.com/css?family=Baskervville&display=swap' );
     }
     if(get_theme_mod( 'preset_style_setting' ) && get_theme_mod( 'preset_style_setting' ) !== 'default') {
-        wp_enqueue_style( 'wp-bootstrap-starter-'.get_theme_mod( 'preset_style_setting' ), get_template_directory_uri() . '/inc/assets/css/presets/typography/'.get_theme_mod( 'preset_style_setting' ).'.css', false, '' );
+        wp_enqueue_style( 'wp-pepper-one-'.get_theme_mod( 'preset_style_setting' ), get_template_directory_uri() . '/inc/assets/css/presets/typography/'.get_theme_mod( 'preset_style_setting' ).'.css', false, '' );
     }
     //Color Scheme
     /*if(get_theme_mod( 'preset_color_scheme_setting' ) && get_theme_mod( 'preset_color_scheme_setting' ) !== 'default') {
-        wp_enqueue_style( 'wp-bootstrap-starter-'.get_theme_mod( 'preset_color_scheme_setting' ), get_template_directory_uri() . '/inc/assets/css/presets/color-scheme/'.get_theme_mod( 'preset_color_scheme_setting' ).'.css', false, '' );
+        wp_enqueue_style( 'wp-pepper-one-'.get_theme_mod( 'preset_color_scheme_setting' ), get_template_directory_uri() . '/inc/assets/css/presets/color-scheme/'.get_theme_mod( 'preset_color_scheme_setting' ).'.css', false, '' );
     }else {
-        wp_enqueue_style( 'wp-bootstrap-starter-default', get_template_directory_uri() . '/inc/assets/css/presets/color-scheme/blue.css', false, '' );
+        wp_enqueue_style( 'wp-pepper-one-default', get_template_directory_uri() . '/inc/assets/css/presets/color-scheme/blue.css', false, '' );
     }*/
 
 	wp_enqueue_script('jquery');
@@ -276,14 +276,14 @@ function wp_bootstrap_starter_scripts() {
 
 	// load bootstrap js
     if ( get_theme_mod( 'cdn_assets_setting' ) === 'yes' ) {
-        wp_enqueue_script('wp-bootstrap-starter-popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js', array(), '', true );
-    	wp_enqueue_script('wp-bootstrap-starter-bootstrapjs', 'https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js', array(), '', true );
+        wp_enqueue_script('wp-pepper-one-popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js', array(), '', true );
+    	wp_enqueue_script('wp-pepper-one-bootstrapjs', 'https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js', array(), '', true );
     } else {
-        wp_enqueue_script('wp-bootstrap-starter-popper', get_template_directory_uri() . '/inc/assets/js/popper.min.js', array(), '', true );
-        wp_enqueue_script('wp-bootstrap-starter-bootstrapjs', get_template_directory_uri() . '/inc/assets/js/bootstrap.min.js', array(), '', true );
+        wp_enqueue_script('wp-pepper-one-popper', get_template_directory_uri() . '/inc/assets/js/popper.min.js', array(), '', true );
+        wp_enqueue_script('wp-pepper-one-bootstrapjs', get_template_directory_uri() . '/inc/assets/js/bootstrap.min.js', array(), '', true );
     }
-    wp_enqueue_script('wp-bootstrap-starter-themejs', get_template_directory_uri() . '/inc/assets/js/theme-script.min.js', array(), '', true );
-	wp_enqueue_script( 'wp-bootstrap-starter-skip-link-focus-fix', get_template_directory_uri() . '/inc/assets/js/skip-link-focus-fix.min.js', array(), '20151215', true );
+    wp_enqueue_script('wp-pepper-one-themejs', get_template_directory_uri() . '/inc/assets/js/theme-script.min.js', array(), '', true );
+	wp_enqueue_script( 'wp-pepper-one-skip-link-focus-fix', get_template_directory_uri() . '/inc/assets/js/skip-link-focus-fix.min.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -318,8 +318,8 @@ function wp_bootstrap_starter_password_form() {
     global $post;
     $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
     $o = '<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
-    <div class="d-block mb-3">' . __( "To view this protected post, enter the password below:", "wp-bootstrap-starter" ) . '</div>
-    <div class="form-group form-inline"><label for="' . $label . '" class="mr-2">' . __( "Password:", "wp-bootstrap-starter" ) . ' </label><input name="post_password" id="' . $label . '" type="password" size="20" maxlength="20" class="form-control mr-2" /> <input type="submit" name="Submit" value="' . esc_attr__( "Submit", "wp-bootstrap-starter" ) . '" class="btn btn-primary"/></div>
+    <div class="d-block mb-3">' . __( "To view this protected post, enter the password below:", "wp-pepper-one" ) . '</div>
+    <div class="form-group form-inline"><label for="' . $label . '" class="mr-2">' . __( "Password:", "wp-pepper-one" ) . ' </label><input name="post_password" id="' . $label . '" type="password" size="20" maxlength="20" class="form-control mr-2" /> <input type="submit" name="Submit" value="' . esc_attr__( "Submit", "wp-pepper-one" ) . '" class="btn btn-primary"/></div>
     </form>';
     return $o;
 }
