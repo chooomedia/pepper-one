@@ -17,7 +17,7 @@ get_header(); ?>
 
 <?php if( get_field( 'video_link' ) ) {
     $videoid = get_field( 'video_link' );																
-	echo '<div class="videoWrapper"><div id="ytplayer"></div></div>';
+	echo '<div class="videoWrapper layer-over-footer"><div id="ytplayer"></div></div>';
 } else {
     if( has_post_thumbnail( get_the_ID() ) ) {
 		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );

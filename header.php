@@ -26,7 +26,7 @@
     <?php dynamic_sidebar( 'socialmedia-buttons' ); ?>
 <?php endif;?>
 
-<div id="page" class="site">
+<div id="page" class="layer-over-footer site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-pepper-one' ); ?></a>
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
 	<header id="masthead" class="site-header navbar-static-top sticky-top <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
@@ -70,7 +70,7 @@
 	</header><!-- #masthead -->
     <?php if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )): ?>
         <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
-        <div id="page-sub-header" style="background-image: url('<?php echo $thumb['0'];?>');">
+        <div id="page-sub-header" class="layer-over-footer" style="background-image: url('<?php echo $thumb['0'];?>');">
             <div class="container">
                 <h1>
                     <?php
@@ -91,7 +91,7 @@
             <div class="gradient-end"></div>
         </div>
 
-        <div id="content" class="site-content">
+        <div id="content" class="site-content layer-over-footer">
             <div class="container-fluid">
                 <div class="row">
                     <?php endif; ?>
