@@ -356,6 +356,11 @@ header#masthead {
   text-decoration: none;
 }
 
+#page {
+  z-index: 3;
+  position: relative;
+}
+
 #page-sub-header {
   position: relative;
   /*padding-top: 5rem;*/
@@ -1067,6 +1072,10 @@ body:not(.theme-preset-active) footer#colophon {
   .sticky-footer { 
     content: '';
     position: relative;
+  }
+
+  .ml-6 {
+    margin-left: 0 !important;
   }
 
   .post-thumbnail:after {

@@ -42,6 +42,9 @@ p.recipes {
 	line-height: 1.5;
 	color: var(--creamwhite);
 }
+p.recipes-author {
+	color: #797979;
+}
 
 h3.recipes-step {
 	font-size: 1.5rem;

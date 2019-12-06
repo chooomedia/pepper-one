@@ -86,7 +86,7 @@ body {
 /* Extra Margin-left for Recipes Grid*/
 
 .ml-6 {
-  margin-left: 6rem !important;
+  margin-left: 6rem;
 }
 
 [tabindex="-1"]:focus {
