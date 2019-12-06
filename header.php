@@ -19,7 +19,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 
 <!-- Social-Media Button Area-->
 <?php if ( is_active_sidebar( 'socialmedia-buttons' )) : ?>

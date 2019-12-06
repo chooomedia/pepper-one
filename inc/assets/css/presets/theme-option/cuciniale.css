@@ -83,6 +83,12 @@ body {
   );
 }
 
+/* Extra Margin-left for Recipes Grid*/
+
+.ml-6 {
+  margin-left: 6rem !important;
+}
+
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }

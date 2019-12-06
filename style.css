@@ -1063,13 +1063,20 @@ body:not(.theme-preset-active) footer#colophon {
   z-index: 0;
 }
 
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .sticky-footer { 
     content: '';
     position: relative;
-}}
+  }
+
+  .post-thumbnail:after {
+    bottom: 15rem !important;
+  }
+
+  h3.recipes-step:before {
+    right: .25rem !important;
+  }
+}
 
 .site-info {
   color: #fff;
