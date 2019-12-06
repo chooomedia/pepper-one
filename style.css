@@ -566,6 +566,12 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a 
     outline: none;
   }
 }
+
+.site-main {
+  position: relative;
+  z-index: 1;
+}
+
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -1047,6 +1053,23 @@ body:not(.theme-preset-active) footer#colophon {
   color: #f5f5f5;
   background-color: #262626;
 }
+
+.sticky-footer {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  height: auto;
+  padding: 5px 0;
+  z-index: 0;
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  .sticky-footer { 
+    content: '';
+    position: relative;
+}}
 
 .site-info {
   color: #fff;
