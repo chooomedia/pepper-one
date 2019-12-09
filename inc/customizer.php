@@ -2,7 +2,7 @@
 /**
  * WP Bootstrap Starter Theme Customizer
  *
- * @package WP_Bootstrap_Starter
+ * @package wp_template_pepper_one
  */
 
 /**
@@ -15,7 +15,7 @@ function themeslug_sanitize_checkbox( $checked ) {
     return ( ( isset( $checked ) && true == $checked ) ? true : false );
 }
 
-function wp_bootstrap_starter_customize_register( $wp_customize ) {
+function wp_template_pepper_one_customize_register( $wp_customize ) {
 
     //Style Preset
     $wp_customize->add_section(
@@ -218,21 +218,21 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
     $wp_customize->get_control( 'background_color'  )->section = 'site_name_text_color';
 
     // Add control for logo uploader
-    $wp_customize->add_setting( 'wp_bootstrap_starter_logo', array(
+    $wp_customize->add_setting( 'wp_template_pepper_one_logo', array(
         //'default' => __( '', 'wp-pepper-one' ),
         'sanitize_callback' => 'esc_url',
     ) );
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'wp_bootstrap_starter_logo', array(
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'wp_template_pepper_one_logo', array(
         'label'    => __( 'Upload Logo (replaces text)', 'wp-pepper-one' ),
         'section'  => 'title_tagline',
-        'settings' => 'wp_bootstrap_starter_logo',
+        'settings' => 'wp_template_pepper_one_logo',
     ) ) );
 
 }
-add_action( 'customize_register', 'wp_bootstrap_starter_customize_register' );
+add_action( 'customize_register', 'wp_template_pepper_one_customize_register' );
 
-add_action( 'wp_head', 'wp_bootstrap_starter_customizer_css');
-function wp_bootstrap_starter_customizer_css()
+add_action( 'wp_head', 'wp_template_pepper_one_customizer_css');
+function wp_template_pepper_one_customizer_css()
 {
     ?>
     <style type="text/css">
@@ -245,7 +245,7 @@ function wp_bootstrap_starter_customizer_css()
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function wp_bootstrap_starter_customize_preview_js() {
-    wp_enqueue_script( 'wp_bootstrap_starter_customizer', get_template_directory_uri() . '/inc/assets/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+function wp_template_pepper_one_customize_preview_js() {
+    wp_enqueue_script( 'wp_template_pepper_one_customizer', get_template_directory_uri() . '/inc/assets/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
-add_action( 'customize_preview_init', 'wp_bootstrap_starter_customize_preview_js' );
+add_action( 'customize_preview_init', 'wp_template_pepper_one_customize_preview_js' );

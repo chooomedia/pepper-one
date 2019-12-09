@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package WP_Bootstrap_Starter
+ * @package wp_template_pepper_one
  */
 
-if ( ! function_exists( 'wp_bootstrap_starter_setup' ) ) :
+if ( ! function_exists( 'wp_template_pepper_one_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,7 +15,7 @@ if ( ! function_exists( 'wp_bootstrap_starter_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function wp_bootstrap_starter_setup() {
+function wp_template_pepper_one_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -58,7 +58,7 @@ function wp_bootstrap_starter_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'wp_bootstrap_starter_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'wp_template_pepper_one_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
@@ -73,7 +73,7 @@ function wp_bootstrap_starter_setup() {
 
 }
 endif;
-add_action( 'after_setup_theme', 'wp_bootstrap_starter_setup' );
+add_action( 'after_setup_theme', 'wp_template_pepper_one_setup' );
 
 
 /* Function that hide Titles in Pages and Posts*/
@@ -95,7 +95,7 @@ add_action( 'after_setup_theme', 'wp_bootstrap_full_width' );
 /**
  * Add Welcome message to dashboard
  */
-function wp_bootstrap_starter_reminder(){
+function wp_template_pepper_one_reminder(){
         $theme_page_url = 'https://afterimagedesigns.com/wp-pepper-one/?dashboard=1';
 
             if(!get_option( 'triggered_welcomet')){
@@ -113,7 +113,7 @@ function wp_bootstrap_starter_reminder(){
             }
 
 }
-add_action( 'admin_notices', 'wp_bootstrap_starter_reminder' );
+add_action( 'admin_notices', 'wp_template_pepper_one_reminder' );
 
 
 /**Styling of the WP Store Locator Plugin */
@@ -135,6 +135,19 @@ function custom_templates( $templates ) {
 }
 add_filter( 'wpsl_templates', 'custom_templates' );
 
+/* Find the URL Path (partner) and show the specific Tempate for the Partner-page*/
+
+add_action('init', function() {
+    $url_path = trim(parse_url(add_query_arg(array()), PHP_URL_PATH), '/');
+    if ( $url_path === 'partner' ) {
+        // load the file if exists
+        $load = locate_template(get_template_directory_uri() . '/inc/template-parts/content-partner.php', true);
+        if ($load) {
+            exit(); // just exit if template was found and loaded
+        }
+    }
+});
+
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -143,10 +156,10 @@ add_filter( 'wpsl_templates', 'custom_templates' );
  *
  * @global int $content_width
  */
-function wp_bootstrap_starter_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'wp_bootstrap_starter_content_width', 1170 );
+function wp_template_pepper_one_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'wp_template_pepper_one_content_width', 1170 );
 }
-add_action( 'after_setup_theme', 'wp_bootstrap_starter_content_width', 0 );
+add_action( 'after_setup_theme', 'wp_template_pepper_one_content_width', 0 );
 
 /**
  * Register widget area.
@@ -154,7 +167,7 @@ add_action( 'after_setup_theme', 'wp_bootstrap_starter_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 
-function wp_bootstrap_starter_widgets_init() {
+function wp_template_pepper_one_widgets_init() {
     register_sidebar( array(
         'name'          => esc_html__( 'Social Media Buttons', 'wp-pepper-one' ),
         'id'            => 'socialmedia-buttons',
@@ -210,12 +223,12 @@ function wp_bootstrap_starter_widgets_init() {
         'after_title'   => '</h3>',
     ) );
 }
-add_action( 'widgets_init', 'wp_bootstrap_starter_widgets_init' );
+add_action( 'widgets_init', 'wp_template_pepper_one_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function wp_bootstrap_starter_scripts() {
+function wp_template_pepper_one_scripts() {
 	// load bootstrap css
     if ( get_theme_mod( 'cdn_assets_setting' ) === 'yes' ) {
         wp_enqueue_style( 'wp-pepper-one-bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css' );
@@ -290,14 +303,14 @@ function wp_bootstrap_starter_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'wp_bootstrap_starter_scripts' );
+add_action( 'wp_enqueue_scripts', 'wp_template_pepper_one_scripts' );
 
 
 
 /**
  * Add Preload for CDN scripts and stylesheet
  */
-function wp_bootstrap_starter_preload( $hints, $relation_type ){
+function wp_template_pepper_one_preload( $hints, $relation_type ){
     if ( 'preconnect' === $relation_type && get_theme_mod( 'cdn_assets_setting' ) === 'yes' ) {
         $hints[] = [
             'href'        => 'https://cdn.jsdelivr.net/',
@@ -311,11 +324,11 @@ function wp_bootstrap_starter_preload( $hints, $relation_type ){
     return $hints;
 } 
 
-add_filter( 'wp_resource_hints', 'wp_bootstrap_starter_preload', 10, 2 );
+add_filter( 'wp_resource_hints', 'wp_template_pepper_one_preload', 10, 2 );
 
 
 
-function wp_bootstrap_starter_password_form() {
+function wp_template_pepper_one_password_form() {
     global $post;
     $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
     $o = '<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
@@ -324,7 +337,7 @@ function wp_bootstrap_starter_password_form() {
     </form>';
     return $o;
 }
-add_filter( 'the_password_form', 'wp_bootstrap_starter_password_form' );
+add_filter( 'the_password_form', 'wp_template_pepper_one_password_form' );
 
 
 

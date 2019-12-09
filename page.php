@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package WP_Bootstrap_Starter
+ * @package wp_template_pepper_one
  */
 
 get_header(); ?>

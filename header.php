@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package WP_Bootstrap_Starter
+ * @package wp_template_pepper_one
  */
 
 ?><!DOCTYPE html>
@@ -29,7 +29,7 @@
 <div id="page" class="layer-over-footer site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-pepper-one' ); ?></a>
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
-	<header id="masthead" class="site-header navbar-static-top sticky-top <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
+	<header id="masthead" class="site-header navbar-static-top sticky-top <?php echo wp_template_pepper_one_bg_class(); ?>" role="banner">
         <div class="container">
             <nav class="navbar navbar-expand-xl p-0">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,9 +56,9 @@
                 <?php endif;?>
 
                 <div class="navbar-brand">
-                    <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
+                    <?php if ( get_theme_mod( 'wp_template_pepper_one_logo' ) ): ?>
                         <a href="<?php echo esc_url( home_url( '/' )); ?>">
-                            <img src="<?php echo esc_url(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                            <img src="<?php echo esc_url(get_theme_mod( 'wp_template_pepper_one_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                         </a>
                     <?php else : ?>
                         <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
@@ -67,7 +67,7 @@
                 </div>
             </nav>
         </div>
-	</header><!-- #masthead -->
+    </header><!-- #masthead -->
     <?php if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )): ?>
         <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
         <div id="page-sub-header" class="layer-over-footer" style="background-image: url('<?php echo $thumb['0'];?>');">

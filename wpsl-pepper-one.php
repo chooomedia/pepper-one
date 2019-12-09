@@ -16,7 +16,7 @@ $output .= "\t\t\t\t" . '<p class="overview">Lorem ipsum dolor sit amet, consete
 
 $output .= "\t\t\t\t" . '<form class="form-inline p-0 m-0" autocomplete="off">' . "\r\n";
 $output .= "\t\t\t\t\t" . '<div class="form-group p-0 col-5">' . "\r\n";
-$output .= "\t\t\t\t\t\t" . '<input id="wpsl-search-input" class="inputPostalCode form-control" type="text" value="' . apply_filters( 'wpsl_search_input', '' ) . '" name="wpsl-search-input" placeholder="Postal Code" aria-required="true" />' . "\r\n";
+$output .= "\t\t\t\t\t\t" . '<input id="wpsl-search-input" class="inputPostalCode form-control" type="text" value="' . apply_filters( 'wpsl_search_input', '' ) . '" name="wpsl-search-input" placeholder="Postal Code or Town" aria-required="true" />' . "\r\n";
 $output .= "\t\t\t\t\t" . '</div>' . "\r\n";
 
 if ( $wpsl_settings['radius_dropdown'] || $wpsl_settings['results_dropdown']  ) {

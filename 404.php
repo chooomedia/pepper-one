@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package WP_Bootstrap_Starter
+ * @package wp_template_pepper_one
  */
 
 get_header(); ?>

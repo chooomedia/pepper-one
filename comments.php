@@ -7,7 +7,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package WP_Bootstrap_Starter
+ * @package wp_template_pepper_one
  */
 
 /*
@@ -61,7 +61,7 @@ if ( post_password_required() ) {
 
         <ul class="comment-list">
             <?php
-            wp_list_comments( array( 'callback' => 'wp_bootstrap_starter_comment', 'avatar_size' => 50 ));
+            wp_list_comments( array( 'callback' => 'wp_template_pepper_one_comment', 'avatar_size' => 50 ));
             ?>
         </ul><!-- .comment-list -->
 

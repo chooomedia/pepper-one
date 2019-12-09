@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package WP_Bootstrap_Starter
+ * @package wp_template_pepper_one
  */
 
 ?>
@@ -14,7 +14,7 @@
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</div><!-- #content -->
-	<footer id="colophon" class="site-footer sticky-footer <?php echo wp_bootstrap_starter_bg_class(); ?>" role="contentinfo">
+	<footer id="colophon" class="site-footer sticky-footer <?php echo wp_template_pepper_one_bg_class(); ?>" role="contentinfo">
 		<div class="pt-3 container footer-cta">
 			<?php if ( is_active_sidebar( 'footer-cta' )) : ?>
 				<?php dynamic_sidebar( 'footer-cta' ); ?>

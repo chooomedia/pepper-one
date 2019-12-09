@@ -4,14 +4,14 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package WP_Bootstrap_Starter
+ * @package wp_template_pepper_one
  */
 
-if ( ! function_exists( 'wp_bootstrap_starter_posted_on' ) ) :
+if ( ! function_exists( 'wp_template_pepper_one_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function wp_bootstrap_starter_posted_on() {
+function wp_template_pepper_one_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
         $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
@@ -44,16 +44,16 @@ function wp_bootstrap_starter_posted_on() {
 }
 endif;
 
-if ( ! function_exists( 'wp_bootstrap_starter_entry_footer' ) ) :
+if ( ! function_exists( 'wp_template_pepper_one_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-function wp_bootstrap_starter_entry_footer() {
+function wp_template_pepper_one_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'wp-pepper-one' ) );
-		if ( $categories_list && wp_bootstrap_starter_categorized_blog() ) {
+		if ( $categories_list && wp_template_pepper_one_categorized_blog() ) {
 			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'wp-pepper-one' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
@@ -82,8 +82,8 @@ endif;
  *
  * @return bool
  */
-function wp_bootstrap_starter_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'wp_bootstrap_starter_categories' ) ) ) {
+function wp_template_pepper_one_categorized_blog() {
+	if ( false === ( $all_the_cool_cats = get_transient( 'wp_template_pepper_one_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
@@ -95,39 +95,39 @@ function wp_bootstrap_starter_categorized_blog() {
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'wp_bootstrap_starter_categories', $all_the_cool_cats );
+		set_transient( 'wp_template_pepper_one_categories', $all_the_cool_cats );
 	}
 
 	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so wp_bootstrap_starter_categorized_blog should return true.
+		// This blog has more than 1 category so wp_template_pepper_one_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so wp_bootstrap_starter_categorized_blog should return false.
+		// This blog has only 1 category so wp_template_pepper_one_categorized_blog should return false.
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in wp_bootstrap_starter_categorized_blog.
+ * Flush out the transients used in wp_template_pepper_one_categorized_blog.
  */
-function wp_bootstrap_starter_category_transient_flusher() {
+function wp_template_pepper_one_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
 	// Like, beat it. Dig?
-	delete_transient( 'wp_bootstrap_starter_categories' );
+	delete_transient( 'wp_template_pepper_one_categories' );
 }
-add_action( 'edit_category', 'wp_bootstrap_starter_category_transient_flusher' );
-add_action( 'save_post',     'wp_bootstrap_starter_category_transient_flusher' );
+add_action( 'edit_category', 'wp_template_pepper_one_category_transient_flusher' );
+add_action( 'save_post',     'wp_template_pepper_one_category_transient_flusher' );
 
 
-if ( ! function_exists( 'wp_bootstrap_starter_comment' ) ) :
+if ( ! function_exists( 'wp_template_pepper_one_comment' ) ) :
     /**
      * Template for comments and pingbacks.
      *
      * Used as a callback by wp_list_comments() for displaying the comments.
      */
-    function wp_bootstrap_starter_comment( $comment, $args, $depth ) {
+    function wp_template_pepper_one_comment( $comment, $args, $depth ) {
        // $GLOBALS['comment'] = $comment;
 
         if ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) : ?>
@@ -188,4 +188,4 @@ if ( ! function_exists( 'wp_bootstrap_starter_comment' ) ) :
             <?php
         endif;
     }
-endif; // ends check for wp_bootstrap_starter_comment()
+endif; // ends check for wp_template_pepper_one_comment()
