@@ -608,11 +608,12 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a 
 
 .post-navigation .nav-previous a,
 .post-navigation .nav-next a {
-  border: 1px solid #ddd;
-  border-radius: 0.938rem;
   display: inline-block;
-  padding: 0.313rem 0.875rem;
-  text-decoration: none;
+  font-size: 1.15rem;
+  padding: 10px 8px;
+  border-radius: 3px;
+  margin: 0 3px;
+  background: var(--secondary);
 }
 
 .post-navigation .nav-next a::after {
@@ -625,7 +626,9 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a 
 
 .post-navigation .nav-previous a:hover,
 .post-navigation .nav-next a:hover {
-  background: #eee none repeat scroll 0 0;
+  color: #fff;
+  background-color: #282c2f;
+  transition: all .3s;
 }
 
 /*--------------------------------------------------------------
