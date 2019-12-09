@@ -2594,9 +2594,9 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 }
 
 .btn-cta {
-  margin: 0 28px 0 12px !important;
   font-size: 1.15rem;
   padding: 10px 8px;
+  width: 100%;
 }
 
 .circled-buttons {
@@ -2606,6 +2606,11 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   right: 96px;
   top: 40vh;
   width: 40px;
+  transition: all .3s;
+}
+
+.d-none-scroll {
+  transform: translateX(80px);
 }
 
 .circle-buttons ul {

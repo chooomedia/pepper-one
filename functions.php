@@ -272,6 +272,7 @@ function wp_bootstrap_starter_scripts() {
 
     // Internet Explorer HTML5 support
     wp_enqueue_script( 'html5hiv',get_template_directory_uri().'/inc/assets/js/html5.js', array(), '3.7.0', false );
+    wp_enqueue_script( 'hide-on-scroll',get_template_directory_uri().'/inc/assets/js/hide-on-scroll.js', array(), '1.0.0', false );
     wp_script_add_data( 'html5hiv', 'conditional', 'lt IE 9' );
 
 	// load bootstrap js

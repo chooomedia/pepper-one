@@ -8,7 +8,8 @@ $output .= "\t" . '<div class="row">' . "\r\n";
 $output .= "\t\t" . '<div id="" class="col-sm-12 col-md-7">' . "\r\n";
 $output .= "\t\t\t" . '<div class="container col-md-9 col-sm-12">' . "\r\n";
 
-$output .= "\t\t\t" . '<div style="width:100%;height:20vh;" aria-hidden="true" class="wp-block-spacer"></div>' . "\r\n";
+$output .= "\t\t\t" . '<div style="width:100%;height:20vh;" aria-hidden="true" class="wp-block-spacer d-none d-sm-block"></div>' . "\r\n";
+$output .= "\t\t\t" . '<div style="width:100%;height:4vh;" aria-hidden="true" class="wp-block-spacer d-block d-sm-none"></div>' . "\r\n";
 $output .= "\t\t\t\t" . '<h2>Find your Dealer</h2>' . "\r\n";
 $output .= "\t\t\t\t" . '<p class="overview">Lorem ipsum dolor sit amet, consetetur<br> sadipscing elitr, sed diam nonumy eirmod tempor<br> invidunt ut labore et dolore</p>' . "\r\n";
 
@@ -48,6 +49,7 @@ $output .= "\t\t\t\t" . '</div>' . "\r\n";
 $output .= "\t\t\t\t" . '<p class="mt-2">or write us a message <a class="underline" href="/contact" title="write a message here"><u>here</u></a></p>' . "\r\n";
 
 $output .= "\t\t\t\t" . '</form>' . "\r\n";
+$output .= "\t" . '<div style="width:100%;height:4vh;" aria-hidden="true" class="wp-block-spacer d-none d-sm-block"></div>' . "\r\n";
 $output .= "\t" . '<div id="wpsl-result-list" class="wpsl-pepper-store-list">' . "\r\n";
 $output .= "\t\t" . '<div id="wpsl-stores" '. $autoload_class .'>' . "\r\n";
 $output .= "\t\t\t" . '<ul></ul>' . "\r\n";

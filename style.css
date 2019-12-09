@@ -1088,7 +1088,6 @@ body:not(.theme-preset-active) footer#colophon {
     width: 94%;
     font-size: 1.5rem;
     padding: 10px 8px;
-    margin: 0 auto !important;
   }
 
   .post-thumbnail:after {
