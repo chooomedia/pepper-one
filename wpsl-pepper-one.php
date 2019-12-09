@@ -5,7 +5,7 @@ $output         = $this->get_custom_css();
 $autoload_class = ( !$wpsl_settings['autoload'] ) ? 'class="wpsl-not-loaded"' : '';
 
 $output .= "\t" . '<div class="row">' . "\r\n";
-$output .= "\t\t" . '<div id="" class="col-sm-12 col-md-7">' . "\r\n";
+$output .= "\t\t" . '<div id="" class="col-sm-12 col-md-7 py-md-5">' . "\r\n";
 $output .= "\t\t\t" . '<div class="container col-md-9 col-sm-12">' . "\r\n";
 
 $output .= "\t\t\t" . '<div style="width:100%;height:20vh;" aria-hidden="true" class="wp-block-spacer d-none d-sm-block"></div>' . "\r\n";

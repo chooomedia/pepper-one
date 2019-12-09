@@ -8,7 +8,7 @@ jQuery(window).scroll(function() {
         jQuery(".circled-buttons").removeClass("d-none-scroll");
     }
 
-    if (scroll >= 2180) {
+    if (scroll >= 2000) {
         jQuery(".circled-buttons").removeClass("d-none-scroll");
     }
 }); 

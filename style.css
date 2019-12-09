@@ -797,11 +797,13 @@ a img.aligncenter {
   padding-bottom: 2.75rem;
   padding-top: 3rem;
   background: #000;
+  min-height: 100vh;
 }
 
 #content.article-content {
   padding-bottom: 2.75rem;
   background: #000;
+  min-height: 100vh;
 }
 
 .sticky .entry-title::before {
@@ -1103,7 +1105,6 @@ body:not(.theme-preset-active) footer#colophon {
   color: #fff;
   text-align: center;
   line-height: 2;
-  margin-bottom: 5rem;
 }
 .copyright {
   font-size: 1rem;

@@ -23,7 +23,7 @@
 		<?php get_template_part( 'footer-widget' ); ?>
 		<div class="container">
 			</br>
-            <div class="site-info">
+            <div class="site-info mb-md-2">
                 <?php echo 'cuciniale.com'; ?><br> &copy; <?php echo date('Y'); ?>
 				</br>
             </div><!-- close .site-info -->

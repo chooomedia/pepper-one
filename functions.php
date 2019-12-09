@@ -135,20 +135,6 @@ function custom_templates( $templates ) {
 }
 add_filter( 'wpsl_templates', 'custom_templates' );
 
-/* Find the URL Path (partner) and show the specific Tempate for the Partner-page*/
-
-add_action('init', function() {
-    $url_path = trim(parse_url(add_query_arg(array()), PHP_URL_PATH), '/');
-    if ( $url_path === 'partner' ) {
-        // load the file if exists
-        $load = locate_template(get_template_directory_uri() . '/inc/template-parts/content-partner.php', true);
-        if ($load) {
-            exit(); // just exit if template was found and loaded
-        }
-    }
-});
-
-
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
