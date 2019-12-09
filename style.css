@@ -1084,8 +1084,11 @@ body:not(.theme-preset-active) footer#colophon {
     margin-bottom: 1.7rem;
   }
 
-  .ml-6 {
-    margin-left: 0 !important;
+  .btn-cta {
+    width: 94%;
+    font-size: 1.5rem;
+    padding: 10px 8px;
+    margin: 0 auto !important;
   }
 
   .post-thumbnail:after {
