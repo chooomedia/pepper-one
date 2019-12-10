@@ -11,4 +11,14 @@ jQuery(window).scroll(function() {
     jQuery("#colophon").on("mouseover", function() {
         jQuery(".circled-buttons").removeClass("d-none-scroll");
     });
+
+
+    jQuery("#wpsl-gmap").on("mouseover", function() {
+        jQuery(".circled-buttons").addClass("d-none-scroll");
+    });
+
+    jQuery("#wpsl-gmap").on("mouseleave", function() {
+        jQuery(".circled-buttons").removeClass("d-none-scroll");
+    });
+
 });
