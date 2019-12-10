@@ -2599,6 +2599,11 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   width: 100%;
 }
 
+.btn-appointment {
+  border: 1px solid var(--secondary);
+  font-weight: 400;
+}
+
 .circled-buttons {
   z-index: 999;
   position: fixed;
