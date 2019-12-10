@@ -1,24 +1,23 @@
 jQuery(window).scroll(function() {    
+    var circledButtons = jQuery(".circled-buttons");
     var scroll = jQuery(window).scrollTop();
 
     if (scroll >= 200) {
-        //clearHeader, not clearheader - caps H
-        jQuery(".circled-buttons").addClass("d-none-scroll");
+        circledButtons.addClass("d-none-scroll");
     } else {
-        jQuery(".circled-buttons").removeClass("d-none-scroll");
+        circledButtons.removeClass("d-none-scroll");
     }
 
     jQuery("#colophon").on("mouseover", function() {
-        jQuery(".circled-buttons").removeClass("d-none-scroll");
+        circledButtons.removeClass("d-none-scroll");
     });
 
-
     jQuery("#wpsl-gmap").on("mouseover", function() {
-        jQuery(".circled-buttons").addClass("d-none-scroll");
+        circledButtons.addClass("d-none-scroll");
     });
 
     jQuery("#wpsl-gmap").on("mouseleave", function() {
-        jQuery(".circled-buttons").removeClass("d-none-scroll");
+        circledButtons.removeClass("d-none-scroll"); 
     });
 
 });
