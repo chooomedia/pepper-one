@@ -8,7 +8,7 @@ jQuery(window).scroll(function() {
         jQuery(".circled-buttons").removeClass("d-none-scroll");
     }
 
-    if (scroll >= 2000) {
+    jQuery("#colophon").on("mouseover", function() {
         jQuery(".circled-buttons").removeClass("d-none-scroll");
-    }
-}); 
+    });
+});
