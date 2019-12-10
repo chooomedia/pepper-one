@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying specific posts
+ * Template part for displaying posts
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -12,15 +12,17 @@
 <?php $recipeLinkTitle = get_field( 'recipe-button-link-title' ); ?>
 <div class="container-fluid p-0">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		
+		<div class="post-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');max-height:40vh;background-position:center;"></div>
 		<div class="container">
-			<header class="entry-header">
+			<header class="entry-header my-5">
 				<?php
 				if ( is_single() ) :
 					the_title( '<h2 class="text-center">', '</h2>' );
 				else :
 					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 				endif; ?>
+
+				
 
 			</header><!-- .entry-header -->
 			<div class="entry-content">

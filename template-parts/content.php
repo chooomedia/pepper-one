@@ -43,7 +43,6 @@
 				endif; ?>
 
 				
-
 			</header><!-- .entry-header -->
 			<div class="entry-content">
 				<div class="row p-0 m-0">

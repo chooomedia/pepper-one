@@ -1175,8 +1175,12 @@ body:not(.theme-preset-active) footer#colophon {
 
   .navbar-brand {
     position: absolute;
-    right: -17px;
-    top: -17px;
+    right: -39px;
+    top: -14px;
+  }
+
+  .navbar-brand a img {
+    max-width: 88%;
   }
 }
 /*--------------------------------------------------------------

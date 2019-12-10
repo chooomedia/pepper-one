@@ -96,7 +96,7 @@ add_action( 'after_setup_theme', 'wp_bootstrap_full_width' );
  * Add Welcome message to dashboard
  */
 function wp_template_pepper_one_reminder(){
-        $theme_page_url = 'https://afterimagedesigns.com/wp-pepper-one/?dashboard=1';
+        $theme_page_url = 'https://themes.chooomedia.de/pepper-one/';
 
             if(!get_option( 'triggered_welcomet')){
                 $message = sprintf(__( 'Welcome to Pepper-One Theme! Before diving in to your new theme, please visit the <a style="color: #fff; font-weight: bold;" href="%1$s" target="_blank">theme\'s</a> page for access to dozens of tips and in-depth tutorials.', 'wp-pepper-one' ),
@@ -134,6 +134,21 @@ function custom_templates( $templates ) {
     return $templates;
 }
 add_filter( 'wpsl_templates', 'custom_templates' );
+
+/**Use Special Tempalte for Partner-Pages */
+add_filter( 'template_include', 'wp_partner_post_template', 99 );
+
+function wp_partner_post_template( $template ) {
+
+    if ( is_page( 'partner' )  ) {
+        $new_template = locate_template( array( '/template-parts/content-partner.php' ) );
+        if ( '' != $new_template ) {
+            return $new_template ;
+        }
+    }
+
+    return $template;
+}
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
