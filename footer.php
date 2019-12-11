@@ -14,6 +14,7 @@
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</div><!-- #content -->
+</div><!-- .wrapper -->
 	<footer id="colophon" class="site-footer sticky-footer <?php echo wp_template_pepper_one_bg_class(); ?>" role="contentinfo">
 		<div class="pt-3 container footer-cta">
 			<?php if ( is_active_sidebar( 'footer-cta' )) : ?>
@@ -31,6 +32,8 @@
 	</footer><!-- #colophon -->
 <?php endif; ?>
 </div><!-- #page -->
+<!-- Dark Overlay element -->
+<div class="overlay"></div>
 <?php wp_footer(); ?>
 </body>
 </html>
