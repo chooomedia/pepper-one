@@ -357,11 +357,6 @@ header#masthead {
   text-decoration: none;
 }
 
-.layer-over-footer {
-  z-index: 3;
-  position: relative;
-}
-
 #page-sub-header {
   position: relative;
   /*padding-top: 5rem;*/
@@ -1065,19 +1060,12 @@ body:not(.theme-preset-active) footer#colophon {
   background-color: #262626;
 }
 
-.sticky-footer {
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0;
-  height: auto;
-  padding: 5px 0;
-  z-index: 0;
-}
-
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  .sticky-footer { 
-    content: '';
-    position: relative;
+
+  .btn-overview { /*mad solution! */
+    padding-left: 1rem !important; 
+    padding-right: 1rem !important;
+    margin-bottom: 1.5rem;
   }
 
   .videoWrapper {
