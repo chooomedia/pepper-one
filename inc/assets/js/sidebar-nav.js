@@ -1,6 +1,7 @@
 jQuery(document).ready(function () {
     var headerHeight = jQuery("#masthead").outerHeight();
-    jQuery("#dismiss, .overlay").on("click", function () {
+
+    jQuery(".overlay").on("click", function () {
         // hide sidebar
         jQuery("#sidebar").removeClass("active");
         // hide overlay

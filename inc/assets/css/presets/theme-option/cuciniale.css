@@ -4171,15 +4171,6 @@ tbody.collapse.show {
   transform: translateX(0);
 }
 
-#dismiss {
-  width: 35px;
-  height: 35px;
-  position: absolute;
-  /* top right corner of the sidebar */
-  top: 10px;
-  right: 10px;
-}
-
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4773,6 +4764,7 @@ tbody.collapse.show {
 
 .navbar-dark .navbar-toggler-icon {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAABkCAMAAACCTv/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////5ubmueBsSwAAAAJ0Uk5T/wDltzBKAAAAPklEQVR42uzYQQ0AAAgDseHfNC4IyVoD912WAACUm3uampqampqamq+aAAD+IVtTU1NTU1NT0z8EAFBsBRgAX+kR+Qam138AAAAASUVORK5CYII=");
+  color: var(--creamwhite);
 }
 
 .navbar-dark .navbar-text {
