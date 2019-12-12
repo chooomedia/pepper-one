@@ -56,6 +56,9 @@ Pepper One includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 0.5 - Nov 25, 2019 =
+* Added Theme "Cuciniale Light"
+
 = 0.2 - Nov 25, 2019 =
 * Change the theme name to Pepper One
 

@@ -42,6 +42,7 @@ function wp_template_pepper_one_customize_register( $wp_customize ) {
         'choices' => array(
             'default' => 'Default',
             'cuciniale' => 'Cuciniale',
+            'cuciniale-light' => 'Cuciniale Light'
         )
     ) ) );
 
