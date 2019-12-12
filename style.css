@@ -1082,7 +1082,7 @@ body:not(.theme-preset-active) footer#colophon {
   }
 
   .post-thumbnail:after {
-    bottom: 15rem !important;
+    top: 58% !important;
   }
 
   h3.recipes-step:before {
