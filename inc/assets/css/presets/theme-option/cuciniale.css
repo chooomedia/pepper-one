@@ -4117,7 +4117,6 @@ tbody.collapse.show {
   min-width: 250px;
   max-width: 250px;
   padding: 0 32px;
-  height: 91.3vh;
   position: fixed;
   transform: translateX(-100%);
   transition: all 0.5s ease-in-out;
@@ -4129,7 +4128,7 @@ tbody.collapse.show {
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: 2rem;
+  top: 85vh;
 }
 
 .sidebar-brand:before, .sidebar-brand:after {
@@ -4173,6 +4172,10 @@ tbody.collapse.show {
 
 #sidebar.active {
   transform: translateX(0);
+}
+
+.current-menu-item a {
+  color: var(--secondary);
 }
 
 .nav {

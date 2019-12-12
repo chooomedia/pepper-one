@@ -46,7 +46,7 @@ function wp_template_pepper_one_setup() {
 	register_nav_menus( array(
         'primary' => esc_html__( 'Primary', 'wp-pepper-one' ),
         'sidebar-nav' => esc_html__( 'Sidebar Nav', 'wp-pepper-one' ),
-	) );
+    ) );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments

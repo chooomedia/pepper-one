@@ -1,5 +1,7 @@
 jQuery(document).ready(function () {
+    var bodyHeight = jQuery("body").outerHeight();
     var headerHeight = jQuery("#masthead").outerHeight();
+    jQuery("#sidebar").css("height", bodyHeight - headerHeight );
 
     jQuery(".overlay").on("click", function () {
         // hide sidebar
