@@ -4,6 +4,9 @@ jQuery(window).scroll(function() {
 
     if (scroll >= 200) {
         circledButtons.addClass("d-none-scroll");
+        jQuery("#sidebar").removeClass("active");
+        jQuery(".overlay").removeClass("active");
+        jQuery(".overlay").css("z-index", "-1");
     } else {
         circledButtons.removeClass("d-none-scroll");
     }
