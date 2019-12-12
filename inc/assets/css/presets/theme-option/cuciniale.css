@@ -88,12 +88,6 @@ body {
   );
 }
 
-/* Extra Margin-left for Recipes Grid*/
-
-.ml-6 {
-  margin-left: 6rem;
-}
-
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
@@ -4731,6 +4725,10 @@ tbody.collapse.show {
 
 .navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {
   color: #3A3F44;
+}
+
+.navbar-dark {
+  background-color: #262626;
 }
 
 .navbar-dark .navbar-brand {
