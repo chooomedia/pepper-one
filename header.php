@@ -106,7 +106,7 @@
                     </p>
                     <!--<a href="#content" class="page-scroller"><i class="fa fa-fw fa-angle-down"></i></a>-->
                 </div>
-                <div class="gradient-end"></div>
+                <div class="gradient-end-page"></div>
             </div>
 
             <div id="content" class="site-content layer-over-footer">

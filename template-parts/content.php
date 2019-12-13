@@ -15,14 +15,13 @@
 		<div class="post-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
 			<?php if (is_single() && has_category('recipes')) : ?>
 				<div class="col-md-6 offset-md-6 d-flex flex-row-reverse bd-highlight h-100 p-4">
-					<div class="m-4 bd-highlight justify-content-center align-self-center post-thumbnail-inner-content">
+					<div class="m-md-4 bd-highlight justify-content-center align-self-center post-thumbnail-inner-content">
 						<h1>Integer ut ex <br>vitae enim</h1>
 						<p class="recipes">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
 						<a href="<?php echo $recipeLink ?>" target="_blank" title="<?php echo $recipeLinkTitle ?>" class="btn btn-primary btn-bigger">Cook it with the App</a>
 					</div>
 				</div>
 			<?php endif ?>
-
 			<?php if (is_single() && has_category('partner')) : ?>
 				<div class="col-md-6 offset-md-6 d-flex flex-row-reverse bd-highlight h-100 p-4">
 					<div class="m-4 bd-highlight justify-content-center align-self-center post-thumbnail-inner-content">
@@ -33,6 +32,8 @@
 				</div>
 			<?php endif ?>
 		</div>
+		<div class="gradient-end-post"></div>
+
 		<div class="container">
 			<header class="entry-header">
 				<?php

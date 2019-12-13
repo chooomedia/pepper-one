@@ -22,7 +22,7 @@ get_header(); ?>
     if( has_post_thumbnail( get_the_ID() ) ) {
 		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
 		echo '<div id="page-sub-header" style="background-image: url('. $thumb['0'] .')">';
-		echo '<div class="gradient-end"></div>';
+		echo '<div class="gradient-end-page"></div>';
     }
 } ?>
 
