@@ -1,6 +1,8 @@
 jQuery( function($) {
-    var scroll = $(window).scrollTop();
-
-    $(".post-thumbnail").css("background-position","center " + scroll +"px";);
-
+    let scrollWindow = $(window).height();
+    $(document).scroll(function(){
+        let scrollScale = scrollWindow / 100;
+        console.log(scrollScale);
+        $(".post-thumbnail").css("transform", "scale(" + scrollScale +");");
+      });
 });
