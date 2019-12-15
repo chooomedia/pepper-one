@@ -363,7 +363,7 @@ header#masthead {
   text-align: center;
   font-size: 1.25rem;
   background-size: cover !important;
-  background-position: center center !important;
+  background-position: center !important;
   height: calc(78vh - 95px);
 }
 
