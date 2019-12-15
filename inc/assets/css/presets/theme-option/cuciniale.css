@@ -557,6 +557,7 @@ mark,
 	margin-bottom: 1.875rem;
 	height: 71vh;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /*.post-thumbnail::after {

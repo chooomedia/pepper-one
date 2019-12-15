@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-<div class="post-thumbnail mb-0" style="background-image: url('<?php echo get_template_directory_uri() . '/inc/assets/img/page-404-cuciniale-plate-on-red-background.jpg'; ?>');max-height: 50vh;background-position:center;background-size:cover;background-repeat: no-repeat;"></div>
+<div class="post-thumbnail mb-0" style="background-image: url('<?php echo get_template_directory_uri() . '/inc/assets/img/page-404-cuciniale-plate-on-red-background.jpg'; ?>');height: 71vh;background-size:cover;background-repeat: no-repeat;"></div>
 	<section id="primary" class="content-area container-fluid">
 		<main id="main" class="site-main d-flex justify-content-center text-center" role="main">
 
