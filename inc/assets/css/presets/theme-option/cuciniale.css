@@ -3516,6 +3516,10 @@ tbody.collapse.show {
   max-width: 120px !important;
 }
 
+#media_image-4 img {
+  max-width: 266px !important;
+}
+
 .dropleft .dropdown-toggle::after {
   display: inline-block;
   width: 0;

@@ -22,10 +22,12 @@ get_header(); ?>
 			?>
 
 		</main><!-- #main -->
-				<!-- Add Widget Area on the Bottom of the Page Content-->
-				<?php if ( is_active_sidebar( 'page-bottom-widget' ) ) : ?>
+		<?php if(is_front_page()): ?>
+			<!-- Add Widget Area on the Bottom of the Page Content-->
+			<?php if ( is_active_sidebar( 'page-bottom-widget' ) ) : ?>
 				<?php dynamic_sidebar( 'page-bottom-widget' ); ?>
 			<?php endif; ?>
+		<?php endif; ?>
 	</section><!-- #primary -->
 
 <?php
