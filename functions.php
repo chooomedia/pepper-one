@@ -198,6 +198,15 @@ function wp_template_pepper_one_widgets_init() {
         'after_title'   => '</h2>',
     ) );
     register_sidebar( array(
+        'name'          => esc_html__( 'Page Bottom Widget', 'wp-pepper-one' ),
+        'id'            => 'page-bottom-widget',
+        'description'   => esc_html__( 'Add widgets here.', 'wp-pepper-one' ),
+        'before_widget' => '<div class="row pb-5 mb-5">',
+        'after_widget'  => '</div>',
+        'before_title'  => '',
+        'after_title'   => '',
+    ) );
+    register_sidebar( array(
         'name'          => esc_html__( 'Footer Left', 'wp-pepper-one' ),
         'id'            => 'footer-left',
         'description'   => esc_html__( 'Add widgets here.', 'wp-pepper-one' ),

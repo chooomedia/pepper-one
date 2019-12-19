@@ -22,6 +22,10 @@ get_header(); ?>
 			?>
 
 		</main><!-- #main -->
+				<!-- Add Widget Area on the Bottom of the Page Content-->
+				<?php if ( is_active_sidebar( 'page-bottom-widget' ) ) : ?>
+				<?php dynamic_sidebar( 'page-bottom-widget' ); ?>
+			<?php endif; ?>
 	</section><!-- #primary -->
 
 <?php
