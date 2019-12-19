@@ -46,8 +46,7 @@ if ( $this->use_category_filter() ) {
 $output .= "\t\t\t\t" . '<div class="form-group ml-2 pr-0 col-3">' . "\r\n";
 $output .= "\t\t\t\t\t" . '<input id="wpsl-search-btn" class="btn btn-primary postalCodeSubmit" type="submit" value="' . esc_attr( $wpsl->i18n->get_translation( 'search_btn_label', __( 'Search', 'wpsl' ) ) ) . '">' . "\r\n";
 $output .= "\t\t\t\t" . '</div>' . "\r\n";
-$output .= "\t\t\t\t" . '<p class="mt-2">oder schreiben Sie uns eine <a class="underline" href="/contact" title="write a message here"><u>Nachricht</u></a></p>' . "\r\n";
-
+$output .= "\t\t\t\t" . '<p class="mt-2">Oder schreiben Sie uns <a class="underline" href="/contact" title="Nachricht schreiben"><u>hier</u></a> eine Nachricht</p>' . "\r\n";
 $output .= "\t\t\t\t" . '</form>' . "\r\n";
 $output .= "\t" . '<div style="width:100%;height:4vh;" aria-hidden="true" class="wp-block-spacer d-none d-sm-block"></div>' . "\r\n";
 $output .= "\t" . '<div id="wpsl-result-list" class="wpsl-pepper-store-list">' . "\r\n";
@@ -65,7 +64,7 @@ $output .= "\t\t" . '</div>' . "\r\n";
 $output .= "\t" . '<div id="wpsl-gmap" class="col-sm-12 col-md-5 wpsl-gmap-canvas"></div>' . "\r\n";
 
 if ( $wpsl_settings['show_credits'] ) { 
-    $output .= "\t" . '<div class="wpsl-provided-by">'. sprintf( __( "Search provided by %sWP Store Locator%s", "wpsl" ), "<a target='_blank' href='https://wpstorelocator.co'>", "</a>" ) .'</div>' . "\r\n";
+    $output .= "\t" . '<div class="wpsl-provided-by">'. sprintf( __( "Suche unterstüzt von %sWP Store Locator%s", "wpsl" ), "<a target='_blank' href='https://wpstorelocator.co'>", "</a>" ) .'</div>' . "\r\n";
 }
 
 $output .= '</div>' . "\r\n";

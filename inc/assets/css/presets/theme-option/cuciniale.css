@@ -2628,12 +2628,23 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
 .btn-cta, .pushbutton-wide {
   font-size: 1.15rem;
-  padding: 10px 8px;
+  padding: 10px 20px;
   width: 100%;
 }
 
 .pushbutton-wide {
+  width: inherit;
+  line-height: 20px;
   border-radius: 4px !important;
+  color: #fff;
+  background-color: var(--secondary);
+  border: unset !important;
+}
+
+.pushbutton-wide:focus, .pushbutton-wide:hover {
+  background-color: #FFF;
+  color: var(--secondary);
+  transition: all .3s;
 }
 
 .btn-appointment {
@@ -2708,13 +2719,13 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
-.btn-primary, .pushbutton-wide {
+.btn-primary {
   color: #fff;
   background-color: var(--primary);
   border: unset !important;
 }
 
-.btn-primary:hover, .pushbutton-wide:hover {
+.btn-primary:hover {
   color: #fff;
   background-color: #0a0b0d;
   transition: all .3s;
@@ -9448,11 +9459,11 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .btn-primary:not([disabled]):not(.disabled):hover, .btn-primary:not([disabled]):not(.disabled):focus, .btn-primary:not([disabled]):not(.disabled):active:hover, .btn-primary:not([disabled]):not(.disabled).active:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#101112), color-stop(40%, #17191b), to(#1b1e20));
-  background-image: linear-gradient(#101112, #17191b 40%, #1b1e20);
+  background-color: #FFF;
   background-repeat: no-repeat;
   -webkit-filter: none;
           filter: none;
+          color: var(--secondary);
 }
 
 .btn-secondary {
