@@ -3512,6 +3512,10 @@ tbody.collapse.show {
   z-index: 10;
 }
 
+.widget_media_image img {
+  max-width: 120px !important;
+}
+
 .dropleft .dropdown-toggle::after {
   display: inline-block;
   width: 0;
