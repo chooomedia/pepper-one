@@ -10,13 +10,13 @@ $output .= "\t\t\t" . '<div class="container col-md-9 col-sm-12">' . "\r\n";
 
 $output .= "\t\t\t" . '<div style="width:100%;height:20vh;" aria-hidden="true" class="wp-block-spacer d-none d-sm-block"></div>' . "\r\n";
 $output .= "\t\t\t" . '<div style="width:100%;height:4vh;" aria-hidden="true" class="wp-block-spacer d-block d-sm-none"></div>' . "\r\n";
-$output .= "\t\t\t\t" . '<h2>Find your Dealer</h2>' . "\r\n";
-$output .= "\t\t\t\t" . '<p class="overview">Lorem ipsum dolor sit amet, consetetur<br> sadipscing elitr, sed diam nonumy eirmod tempor<br> invidunt ut labore et dolore</p>' . "\r\n";
+$output .= "\t\t\t\t" . '<h2>Finden Sie Ihren Händler</h2>' . "\r\n";
+$output .= "\t\t\t\t" . '<p class="overview">Über die Distanzsuche können Sie bequem einen <br>autorisierten Küchenfachhändler in ihrer Nähe finden.</p>' . "\r\n";
 
 
 $output .= "\t\t\t\t" . '<form class="form-inline p-0 m-0" autocomplete="off">' . "\r\n";
 $output .= "\t\t\t\t\t" . '<div class="form-group p-0 col-5">' . "\r\n";
-$output .= "\t\t\t\t\t\t" . '<input id="wpsl-search-input" class="inputPostalCode form-control" type="text" value="' . apply_filters( 'wpsl_search_input', '' ) . '" name="wpsl-search-input" placeholder="Postal Code or Town" aria-required="true" />' . "\r\n";
+$output .= "\t\t\t\t\t\t" . '<input id="wpsl-search-input" class="inputPostalCode form-control" type="text" value="' . apply_filters( 'wpsl_search_input', '' ) . '" name="wpsl-search-input" aria-required="true" />' . "\r\n";
 $output .= "\t\t\t\t\t" . '</div>' . "\r\n";
 
 if ( $wpsl_settings['radius_dropdown'] || $wpsl_settings['results_dropdown']  ) {
@@ -46,7 +46,7 @@ if ( $this->use_category_filter() ) {
 $output .= "\t\t\t\t" . '<div class="form-group ml-2 pr-0 col-3">' . "\r\n";
 $output .= "\t\t\t\t\t" . '<input id="wpsl-search-btn" class="btn btn-primary postalCodeSubmit" type="submit" value="' . esc_attr( $wpsl->i18n->get_translation( 'search_btn_label', __( 'Search', 'wpsl' ) ) ) . '">' . "\r\n";
 $output .= "\t\t\t\t" . '</div>' . "\r\n";
-$output .= "\t\t\t\t" . '<p class="mt-2">or write us a message <a class="underline" href="/contact" title="write a message here"><u>here</u></a></p>' . "\r\n";
+$output .= "\t\t\t\t" . '<p class="mt-2">oder schreiben Sie uns eine <a class="underline" href="/contact" title="write a message here"><u>Nachricht</u></a></p>' . "\r\n";
 
 $output .= "\t\t\t\t" . '</form>' . "\r\n";
 $output .= "\t" . '<div style="width:100%;height:4vh;" aria-hidden="true" class="wp-block-spacer d-none d-sm-block"></div>' . "\r\n";

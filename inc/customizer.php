@@ -47,7 +47,7 @@ function wp_template_pepper_one_customize_register( $wp_customize ) {
     ) ) );
 
     $wp_customize->add_setting( 'preset_style_setting', array(
-        'default'   => 'default',
+        'default'   => 'cuciniale',
         'type'       => 'theme_mod',
         'capability' => 'edit_theme_options',
         'sanitize_callback' => 'wp_filter_nohtml_kses',
@@ -58,13 +58,13 @@ function wp_template_pepper_one_customize_register( $wp_customize ) {
         'settings'   => 'preset_style_setting',
         'type'    => 'select',
         'choices' => array(
-            'default' => 'Default',
+            /*'default' => 'Default',
             'arbutusslab-opensans' => 'Arbutus Slab / Opensans',
             'montserrat-merriweather' => 'Montserrat / Merriweather',
             'montserrat-opensans' => 'Montserrat / Opensans',
             'oswald-muli' => 'Oswald / Muli',
             'poppins-lora' => 'Poppins / Lora',
-            'poppins-poppins' => 'Poppins / Poppins',
+            'poppins-poppins' => 'Poppins / Poppins',*/
             'roboto-roboto' => 'Roboto / Roboto',
             'robotoslab-roboto' => 'Roboto Slab / Roboto',
         )
@@ -241,6 +241,7 @@ function wp_template_pepper_one_customizer_css()
     </style>
     <?php
 }
+
 
 
 /**
