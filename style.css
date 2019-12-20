@@ -81,10 +81,21 @@ video {
   width: 100%;
 }
 
+/*.videoWrapper:before {
+  content: "";
+  position: absolute;
+  bottom: 2rem;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 60px;
+  z-index: 999;
+  background: #FFF;
+}*/
+
 .videoWrapper:after {
   content: '';
   width: 100%;
-  height: 260px;
+  height: 160px;
   display: inline-block;
   position: absolute;
   left: 0;
@@ -1080,6 +1091,10 @@ body:not(.theme-preset-active) footer#colophon {
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
+  .circled-buttons {
+    top: calc(70vh - 298.73px) !important;
+  }
+
   #contact-form .wp-block-spacer {
     display: none;
   }
@@ -1114,8 +1129,9 @@ body:not(.theme-preset-active) footer#colophon {
   }
 
   .videoWrapper {
-    height: 60vh;
-    transform: scaleY(1.09);
+    height: 35vh;
+    padding-top: 7.5 !important;
+    transform: scaleY(1.16);
     z-index: 1 !important;
     margin-bottom: 1.7rem;
   }
