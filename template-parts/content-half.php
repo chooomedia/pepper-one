@@ -21,7 +21,7 @@
 				<?php endif;?>
 			</div>
 		</div>
-		<div class="col-md-6 boxed-container">
+		<div id="contact-form" class="col-md-6 boxed-container">
 			<div class="entry-content">
 				<?php
 				if ( is_single() ) :

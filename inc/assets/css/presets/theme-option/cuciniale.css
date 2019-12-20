@@ -2117,6 +2117,10 @@ pre code {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
+.select-dropdown {
+  border-radius: 3px !important;
+}
+
 .form-control::-ms-expand {
   background-color: transparent;
   border: 0;
@@ -9643,7 +9647,7 @@ legend {
 }
 
 .boxed-container {
-  padding: 0 5.5rem 0 0 !important;
+  padding: 0 5.5rem 0 0;
 }
 
 /*Full-width Inputs for contact form 7 plugin*/
