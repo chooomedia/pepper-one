@@ -56,6 +56,19 @@ Pepper One includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.2 - Dec. 20.12.2019 =
+* Added Video Functionality to Startpage
+* Added customizsable Variable to Meta-Color Head (for mobile devices)
+
+= 0.8 - Dec. 17.12.2019 =
+* Optimzed Footer-CTA Widget Area
+
+= 0.7 - Dec. 15.12.2019 =
+* Added variables to Blog Template
+
+= 0.6 - Dec. 13.12.2019 =
+* Added second Blog Template
+
 = 0.5 - Nov 25, 2019 =
 * Added Theme "Cuciniale Light"
 
