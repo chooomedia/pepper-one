@@ -207,6 +207,15 @@ function wp_template_pepper_one_widgets_init() {
         'after_title'   => '',
     ) );
     register_sidebar( array(
+        'name'          => esc_html__( 'Contact Site Widget', 'wp-pepper-one' ),
+        'id'            => 'contact-widget',
+        'description'   => esc_html__( 'Add widgets here.', 'wp-pepper-one' ),
+        'before_widget' => '<div class="p-5">',
+        'after_widget'  => '</div>',
+        'before_title'  => '',
+        'after_title'   => '',
+    ) );
+    register_sidebar( array(
         'name'          => esc_html__( 'Footer Left', 'wp-pepper-one' ),
         'id'            => 'footer-left',
         'description'   => esc_html__( 'Add widgets here.', 'wp-pepper-one' ),

@@ -1080,6 +1080,10 @@ body:not(.theme-preset-active) footer#colophon {
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
+  .mt-ultra {
+    margin-top: 0 !important;
+  }
+
   .flex-center-mobile {
       justify-content: center;
       display: flex;

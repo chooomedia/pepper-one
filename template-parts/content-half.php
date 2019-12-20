@@ -14,7 +14,12 @@
 <div class="container-fluid p-0">
 	<article id="post-<?php the_ID(); ?>" class="row">
 		<div class="col-md-6 pr-md-4">
-			<div class="vh-100 mb-0" style="background-size:cover;background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');"></div>
+			<div class="vh-100 mb-0 contact-thumbnail" style="background-size:cover;background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
+				<!-- Widget Area for Contact Form Informations -->
+				<?php if ( is_active_sidebar( 'contact-widget' )) : ?>
+					<?php dynamic_sidebar( 'contact-widget' ); ?>
+				<?php endif;?>
+			</div>
 		</div>
 		<div class="col-md-6 boxed-container">
 			<div class="entry-content">
