@@ -27,8 +27,8 @@
   --white: #fff;
   --gray: #7A8288;
   --gray-dark: #797979;
-  --primary: #e11b1a; /* e11b1a*/
-  --secondary: #F0B150; /* #F0B150 */
+  --primary: #e11b1a;
+  --secondary: #970e0e; 
   --success: #62c462;
   --info: #5bc0de;
   --warning: #f89406;
@@ -704,6 +704,12 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media (max-width: 812px) and (orientation:landscape) {
+  .container {
+    min-width: 100%;
+  }
 }
 
 @media (min-width: 576px) {
@@ -2776,14 +2782,16 @@ fieldset:disabled a.btn {
 }
 
 .btn-secondary {
-  font-weight: 200;
+  font-weight: 300;
   font-size: 1.1rem;
   min-width: 50%;
-  color: var(--dark) !important;
+  color: #FFF !important;
   background-color: var(--secondary);
   border: unset;
   line-height: 16px;
   padding: 10px 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .btn-overview {
@@ -9492,13 +9500,6 @@ a.text-dark:hover, a.text-dark:focus {
   -webkit-filter: none;
           filter: none;
           color: var(--primary);
-}
-
-.btn-secondary {
-  background-color: var(--secondary);
-  background-repeat: no-repeat;
-  -webkit-filter: none;
-          filter: none;
 }
 
 .btn-secondary:not([disabled]):not(.disabled):hover, .btn-secondary:not([disabled]):not(.disabled):focus, .btn-secondary:not([disabled]):not(.disabled):active, .btn-secondary:not([disabled]):not(.disabled).active {
