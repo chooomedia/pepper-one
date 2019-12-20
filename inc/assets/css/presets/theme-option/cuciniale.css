@@ -27,8 +27,8 @@
   --white: #fff;
   --gray: #7A8288;
   --gray-dark: #797979;
-  --primary: #262626;
-  --secondary: #e11b1a;
+  --primary: #e11b1a; /* e11b1a*/
+  --secondary: #F0B150; /* #F0B150 */
   --success: #62c462;
   --info: #5bc0de;
   --warning: #f89406;
@@ -2779,8 +2779,8 @@ fieldset:disabled a.btn {
   font-weight: 200;
   font-size: 1.1rem;
   min-width: 50%;
-  color: #fff;
-  background-color: #720909;
+  color: var(--dark) !important;
+  background-color: var(--secondary);
   border: unset;
   line-height: 16px;
   padding: 10px 1.5rem;
@@ -4174,7 +4174,7 @@ tbody.collapse.show {
 }
 
 #sidebar {
-  background-color: var(--primary);
+  background-color: var(--dark);
   min-width: 250px;
   max-width: 250px;
   padding: 0 32px;
@@ -4441,7 +4441,7 @@ tbody.collapse.show {
 }
 
 .color-secondary {
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 .navbar-toggler-icon {
@@ -4812,7 +4812,7 @@ tbody.collapse.show {
 }
 
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus, .nav-link:hover, .nav-link:focus {
-  color: var(--secondary);
+  color: var(--primary);
   transition: color .3s;
   outline: unset;
   box-shadow: unset;
@@ -9431,7 +9431,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 
 .navbar .nav-item.active .nav-link {
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 .navbar-nav .nav-item + .nav-item {
@@ -9483,7 +9483,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .btn-primary {
-  background: var(--secondary);
+  background: var(--primary);
 }
 
 .btn-primary:not([disabled]):not(.disabled):hover, .btn-primary:not([disabled]):not(.disabled):focus, .btn-primary:not([disabled]):not(.disabled):active:hover, .btn-primary:not([disabled]):not(.disabled).active:hover {
@@ -9491,12 +9491,11 @@ a.text-dark:hover, a.text-dark:focus {
   background-repeat: no-repeat;
   -webkit-filter: none;
           filter: none;
-          color: var(--secondary);
+          color: var(--primary);
 }
 
 .btn-secondary {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#630808), color-stop(60%, #690808), to(#720909));
-  background-image: linear-gradient(#630808, #690808 60%, #720909);
+  background-color: var(--secondary);
   background-repeat: no-repeat;
   -webkit-filter: none;
           filter: none;
