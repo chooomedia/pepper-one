@@ -116,7 +116,6 @@ function wp_template_pepper_one_reminder(){
 }
 add_action( 'admin_notices', 'wp_template_pepper_one_reminder' );
 
-
 /**Styling of the WP Store Locator Plugin */
 function custom_templates( $templates ) {
 
@@ -311,7 +310,7 @@ function wp_template_pepper_one_scripts() {
     wp_enqueue_script( 'hide-on-scroll',get_template_directory_uri().'/inc/assets/js/hide-on-scroll.js', array(), '1.0.0', false );
     wp_enqueue_script( 'sidebar-nav',get_template_directory_uri().'/inc/assets/js/sidebar-nav.js', array(), '1.0.0', false );
     wp_enqueue_script( 'animated-background',get_template_directory_uri().'/inc/assets/js/animated-background.js', array(), '1.0.0', false );
-  
+   
 	// load bootstrap js
     if ( get_theme_mod( 'cdn_assets_setting' ) === 'yes' ) {
         wp_enqueue_script('wp-pepper-one-popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js', array(), '', true );
@@ -327,7 +326,9 @@ function wp_template_pepper_one_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
 add_action( 'wp_enqueue_scripts', 'wp_template_pepper_one_scripts' );
+
 
 
 
