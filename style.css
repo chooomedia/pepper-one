@@ -310,6 +310,12 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+
+/* Overwrite of margin from Error-Area Contact Form 7*/
+div.wpcf7-response-output {
+  margin: 4.7em 0.5em 1em;
+}
+
 .inputPostalCode, .postalCodeSubmit {
   width: 100%;
   height: 44px;
@@ -1074,6 +1080,19 @@ body:not(.theme-preset-active) footer#colophon {
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
+  .flex-center-mobile {
+      justify-content: center;
+      display: flex;
+  }
+
+  .boxed-container {
+    padding: 0 27px !important;
+  }
+
+  .input-group-addon {
+    line-height: 3.2 !important;
+    text-align: center;
+  }
 
   .post-thumbnail-inner-content {
     padding: 1rem !important;

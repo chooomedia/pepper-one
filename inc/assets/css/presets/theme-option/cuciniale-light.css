@@ -9569,13 +9569,21 @@ legend {
 }
 
 .input-group-addon {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#8a9196), color-stop(60%, #7A8288), to(#70787d));
-  background-image: linear-gradient(#8a9196, #7A8288 60%, #70787d);
-  background-repeat: no-repeat;
-  -webkit-filter: none;
-          filter: none;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  background-color: #262626;
+  line-height: 2.3;
+  padding: 0 18px 0 16px;
+  position: relative;
+  right: -2px;
   color: #fff;
+}
+
+.boxed-container {
+  padding: 0 5.5rem 0 0 !important;
+}
+
+/*Full-width Inputs for contact form 7 plugin*/
+.wpcf7-form-control-wrap {
+  width: calc(100% - 52.41px);
 }
 
 .nav-tabs .nav-link,
