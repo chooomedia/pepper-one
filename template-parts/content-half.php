@@ -14,7 +14,7 @@
 <div class="container-fluid p-0">
 	<article id="post-<?php the_ID(); ?>" class="row">
 		<div class="col-md-6 pr-md-4">
-			<div class="vh-100 mb-0 contact-thumbnail" style="background-size:cover;background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
+			<div class="h-100 mb-0 contact-thumbnail" style="background-size:cover;background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
 				<!-- Widget Area for Contact Form Informations -->
 				<?php if ( is_active_sidebar( 'contact-widget' )) : ?>
 					<?php dynamic_sidebar( 'contact-widget' ); ?>
@@ -36,11 +36,6 @@
 					) );
 				?>
 			</div><!-- .entry-content -->
-		</div>
-		
-			<footer class="entry-footer">
-				<?php wp_template_pepper_one_entry_footer(); ?>
-			</footer><!-- .entry-footer -->
 		</div>
 	</article><!-- #post-## -->
 </div>
