@@ -4220,7 +4220,7 @@ tbody.collapse.show {
   z-index: 0;
   height: 1px;
   position: absolute;
-  top: 50%;
+  top: .7%;
   left: 10%;
 }
 
@@ -4231,7 +4231,7 @@ tbody.collapse.show {
   z-index: 0;
   height: 1px;
   position: absolute;
-  top: 50%;
+  top: .7%;
   left: 62%;
 }
 

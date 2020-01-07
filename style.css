@@ -33,6 +33,7 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
 	## Galleries
 # Woocommerce
 # Footer
+# Content Selection
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -1169,6 +1170,22 @@ body:not(.theme-preset-active) footer#colophon {
     top: -18px;
   }
 }
+
+/*--------------------------------------------------------------
+# Content Selection
+--------------------------------------------------------------*/
+::selection { 
+  color: #f5f5f5; 
+  background: rgba(225, 27, 26, 0.33);
+  text-shadow: var(--primary) 0 3px 5px;
+}
+
+::-moz-selection { 
+  color: #f5f5f5; 
+  background: rgba(225, 27, 26, 0.33);
+  text-shadow: var(--primary) 0 3px 5px;
+}
+
 /*--------------------------------------------------------------
 # Media Query
 --------------------------------------------------------------*/

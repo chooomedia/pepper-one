@@ -29,10 +29,11 @@ jQuery( function ( $ ) {
         });
 
         $(".sidebar-brand").on("mouseover", function() {
-            $(this).children('img').toggleClass("flipper");
+            $(this).children('img').addClass("flipper");
             $("#template-brand").addClass("saturate text-show");
         });
         $(".sidebar-brand").on("mouseleave", function() {
+            $(this).children('img').removeClass("flipper");
             $("#template-brand").removeClass("saturate text-show");
         });
     });
