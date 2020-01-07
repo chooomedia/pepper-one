@@ -11,6 +11,7 @@ jQuery( function ( $ ) {
 
         } else {
             circledButtons.removeClass("d-none-scroll");
+            $(".btn-social:last-of-type").hide();
         }
 
         if (scroll + $(window).height() == $(document).height()) {
