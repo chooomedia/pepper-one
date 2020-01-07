@@ -1,6 +1,6 @@
 /*!
 /*!
- * Cuciniale v1.0.0
+ * Cuciniale v1.3.2
  * Homepage: https://cuciniale.com
  * Copyright 2019-2020 Cuciniale GmbH
  * Licensed under MIT
@@ -4196,10 +4196,13 @@ tbody.collapse.show {
 }
 
 .sidebar-brand {
+  cursor: help;
   width: 100%;
+  perspective: inherit;
   position: absolute;
   left: 0;
   top: 85vh;
+  height: inherit;
 }
 
 .sidebar-brand:before, .sidebar-brand:after {
@@ -4222,6 +4225,38 @@ tbody.collapse.show {
   position: absolute;
   top: 50%;
   left: 62%;
+}
+
+.flipper {
+  transition: all 1s;
+  transform: rotateY(180deg);
+}
+
+.saturate {
+  transition: all 1s;
+  filter: saturate(2.8);
+}
+
+.text-show {
+  transition: all 1s;
+  color: #FFF !important;
+}
+
+#template-brand {
+  width: 100%;
+  height: 4rem;
+  color: transparent;
+  font-size: .85rem;
+  left: 0;
+  top: 2rem;
+  z-index: 0;
+  opacity: .77;
+  position: absolute;
+  background: url(../../../img/tempate-pepper-one-v-1_3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 96% 50%;
+  line-height: 4.2;
 }
 
 .overlay {

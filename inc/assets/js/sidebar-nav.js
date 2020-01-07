@@ -27,5 +27,13 @@ jQuery( function ( $ ) {
             $(".collapse.in").toggleClass("in");
             $("a[aria-expanded=true]").attr("aria-expanded", "false");
         });
+
+        $(".sidebar-brand").on("mouseover", function() {
+            $(this).children('img').toggleClass("flipper");
+            $("#template-brand").addClass("saturate text-show");
+        });
+        $(".sidebar-brand").on("mouseleave", function() {
+            $("#template-brand").removeClass("saturate text-show");
+        });
     });
 });
