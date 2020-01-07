@@ -14,54 +14,31 @@
 
 get_header(); ?>
 
+<?php if( get_field( "video_link")) {
+	$videoid = get_field( 'video_link' );
+} ?>
 
-<?php if( get_field( 'video_link' ) ) {
-    $videoid = get_field( 'video_link' );																
-	echo '<div class="videoWrapper layer-over-footer"><div id="ytplayer"></div></div>';
-} else {
+<!-- Insert the YouTube-Player -->
+<script async src="https://www.youtube.com/iframe_api"></script>
+<script async src="<?php echo get_template_directory_uri() ?>/inc/assets/js/video.js"></script>
+		
+<?php echo '<section id="home-banner-box" class="lazy home-banner loading">
+				<div class="image video-slide">
+					<div class="video-background">
+						<div class="video-foreground" id="ytplayer">
+						</div>
+					</div>
+				</div>
+			</section>';
+
     if( has_post_thumbnail( get_the_ID() ) ) {
 		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
 		echo '<div id="page-sub-header" style="background-image: url('. $thumb['0'] .')">';
 		echo '<div class="gradient-end-page"></div>';
-    }
-} ?>
-
-<!-- Insert the YouTube-Player -->
-<script>
-  // Load the IFrame Player API code asynchronously.
-  var tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/player_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  // Replace the 'ytplayer' element with an <iframe> and
-  // YouTube player after the API code downloads.
-  var player;
-  function onYouTubePlayerAPIReady() {
-    player = new YT.Player('ytplayer', {
-      height: '100%',
-      width: '100%',
-	  playerVars: {
-		playlist: '<?php echo $videoid ?>',
-		autoplay: 1,
-		loop: 1,
-		controls: 0,
-		showinfo: 0,
-		autohide: 1,
-		modestbranding: 1,
-		vq: 'hd1080'},
-	  videoId: '<?php echo $videoid ?>',
-	  onStateChange: 
-		function(e) {
-			if (e.data === YT.PlayerState.ENDED) {
-				player.playVideo(); 
-			}
-    }
-    });
-  }
-</script>
-
+	} 
+?>
 </div>
+
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div id="content" class="article-content py-5">
