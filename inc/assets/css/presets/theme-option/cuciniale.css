@@ -200,6 +200,11 @@ a {
   color: var(--secondary);
 }
 
+.btn-social:last-of-type {
+  display: none;
+  list-style-type: none;
+}
+
 a:hover {
   color: var(--creamwhite);
   text-decoration: underline;
@@ -2708,6 +2713,11 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   color: #060708;
   border: 2px solid #FFF;
   transition: all .3s;
+}
+
+.btn-social a i {
+  position: relative;
+  top: 2px;
 }
 
 .btn:hover, .btn:focus {
