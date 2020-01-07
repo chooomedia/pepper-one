@@ -668,6 +668,12 @@ pre code {
   margin-left: auto;
 }
 
+@media (min-width: 576px) and (orientation:landscape) {
+  .container {
+    max-width: 100%;
+  }
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -2721,11 +2727,13 @@ fieldset:disabled a.btn {
   font-weight: 200;
   font-size: 1.1rem;
   min-width: 50%;
-  color: #fff;
-  background-color: #720909;
+  color: var(--dark) !important;
+  background-color: var(--secondary);
   border: unset;
   line-height: 16px;
-  padding: 10px 2.8rem;
+  padding: 10px 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .btn-overview {
@@ -9578,7 +9586,7 @@ legend {
 }
 
 .boxed-container {
-  padding: 0 5.5rem 0 0 !important;
+  padding: 0 5.5rem 14rem 0;
 }
 
 /*Full-width Inputs for contact form 7 plugin*/

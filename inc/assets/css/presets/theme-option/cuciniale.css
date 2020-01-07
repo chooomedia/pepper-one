@@ -27,8 +27,8 @@
   --white: #fff;
   --gray: #7A8288;
   --gray-dark: #797979;
-  --primary: #e11b1a; /* e11b1a*/
-  --secondary: #F0B150; /* #F0B150 */
+  --primary: #e11b1a;
+  --secondary: #970e0e; 
   --success: #62c462;
   --info: #5bc0de;
   --warning: #f89406;
@@ -709,6 +709,12 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media (max-width: 812px) and (orientation:landscape) {
+  .container {
+    min-width: 100%;
+  }
 }
 
 @media (min-width: 576px) {
@@ -2786,14 +2792,16 @@ fieldset:disabled a.btn {
 }
 
 .btn-secondary {
-  font-weight: 200;
+  font-weight: 300;
   font-size: 1.1rem;
   min-width: 50%;
-  color: var(--dark) !important;
+  color: #FFF !important;
   background-color: var(--secondary);
   border: unset;
   line-height: 16px;
   padding: 10px 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .btn-overview {
@@ -9539,13 +9547,6 @@ a.text-dark:hover, a.text-dark:focus {
           color: var(--primary);
 }
 
-.btn-secondary {
-  background-color: var(--secondary);
-  background-repeat: no-repeat;
-  -webkit-filter: none;
-          filter: none;
-}
-
 .btn-secondary:not([disabled]):not(.disabled):hover, .btn-secondary:not([disabled]):not(.disabled):focus, .btn-secondary:not([disabled]):not(.disabled):active, .btn-secondary:not([disabled]):not(.disabled).active {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#4e5458), color-stop(40%, #565b60), to(#5b6165));
   background-image: linear-gradient(#4e5458, #565b60 40%, #5b6165);
@@ -9691,7 +9692,7 @@ legend {
 }
 
 .boxed-container {
-  padding: 0 5.5rem 0 0;
+  padding: 0 5.5rem 14rem 0;
 }
 
 /*Full-width Inputs for contact form 7 plugin*/
