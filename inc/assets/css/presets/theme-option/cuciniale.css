@@ -4208,9 +4208,8 @@ tbody.collapse.show {
   cursor: help;
   width: 100%;
   perspective: inherit;
-  position: absolute;
+  position: inherit;
   left: 0;
-  top: 85vh;
   height: inherit;
 }
 

@@ -1098,6 +1098,26 @@ body:not(.theme-preset-active) footer#colophon {
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
+  .video-foreground, .video-background iframe {
+    transform: scale(1.4);
+    top: 42%;
+  }
+
+  .video-background:after {
+    content: "";
+    height: 80px;
+    z-index: 1;
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    bottom: -50.2%;
+    left: 0;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.95) 82%, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 82%,rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 82%,rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f2000000',GradientType=0 );
+}
+
   .circled-buttons {
     top: calc(70vh - 298.73px) !important;
   }
@@ -1160,12 +1180,6 @@ body:not(.theme-preset-active) footer#colophon {
 @media screen and (max-width: 767px) {
   #masthead .navbar-nav > li > a {
     padding: 0.938rem 10px !important; /*mad solution!*/
-  }
-
-  .navbar-brand {
-    position: absolute;
-    right: -7px;
-    top: -18px;
   }
 }
 
