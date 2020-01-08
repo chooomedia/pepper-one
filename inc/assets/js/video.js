@@ -35,5 +35,4 @@ function onYouTubeIframeAPIReady() {
           }
         }
     });
-    console.log("yt loaded");
   }

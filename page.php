@@ -14,30 +14,25 @@
 
 get_header(); ?>
 
-<?php if( get_field( "video_link")) {
-	$videoid = get_field( 'video_link' );
-} ?>
-
 <!-- Insert the YouTube-Player -->
 <script async src="https://www.youtube.com/iframe_api"></script>
 <script async src="<?php echo get_template_directory_uri() ?>/inc/assets/js/video.js"></script>
 		
-<?php echo '<section id="home-banner-box" class="lazy home-banner loading">
-				<div class="image video-slide">
-					<div class="video-background">
-						<div class="video-foreground" id="ytplayer">
+	<?php if( get_field( "video_link")) {
+		$videoid = get_field( 'video_link' );
+		echo '<section id="home-banner-box" class="loading">
+					<div class="image video-slide">
+						<div class="video-background">
+							<div class="video-foreground" id="ytplayer">
+							</div>
 						</div>
 					</div>
-				</div>
-			</section>';
-
-    if( has_post_thumbnail( get_the_ID() ) ) {
+				</section>';
+	} else if( has_post_thumbnail( get_the_ID() ) ) {
 		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
 		echo '<div id="page-sub-header" style="background-image: url('. $thumb['0'] .')">';
-		echo '<div class="gradient-end-page"></div>';
-	} 
-?>
-</div>
+		echo '<div class="gradient-end-page"></div></div>';
+	} ?>
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">

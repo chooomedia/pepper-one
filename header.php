@@ -105,7 +105,7 @@
         <script async src="<?php echo get_template_directory_uri() ?>/inc/assets/js/video.js"></script>
 
         <?php if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )):															
-                echo '<section id="home-banner-box" class="home-banner loading">
+                echo '<section id="home-banner-box" class="loading">
                             <div class="image video-slide">
                                 <div class="video-background">
                                     <div class="video-foreground" id="ytplayer">
