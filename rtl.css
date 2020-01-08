@@ -293,7 +293,7 @@ body:not(.theme-preset-active) #page-sub-header h1 {
     font-weight: 300;
 }
 body:not(.theme-preset-active) #page-sub-header p {
-    color: #212529;
+    color: transparent;
 }
 a.page-scroller {
     color: #333;
