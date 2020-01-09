@@ -21,7 +21,7 @@ $output .= "\t\t\t\t\t" . '</div>' . "\r\n";
 
 if ( $wpsl_settings['radius_dropdown'] || $wpsl_settings['results_dropdown']  ) {
     if ( $wpsl_settings['radius_dropdown'] ) {
-        $output .= "\t\t\t\t" . '<div class="form-group ml-4 p-0 col-3">' . "\r\n";
+        $output .= "\t\t\t\t" . '<div class="form-group p-0 col-4">' . "\r\n";
         $output .= "\t\t\t\t\t" . '<select id="wpsl-radius-dropdown" class="form-control select-dropdown" name="wpsl-radius">' . "\r\n";
         $output .= "\t\t\t\t\t\t" . $this->get_dropdown_list( 'search_radius' ) . "\r\n";
         $output .= "\t\t\t\t\t" . '</select>' . "\r\n";

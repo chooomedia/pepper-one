@@ -93,6 +93,74 @@ function wp_bootstrap_full_width() {
 }
 add_action( 'after_setup_theme', 'wp_bootstrap_full_width' );
 
+
+/* Add Custom Post Types for easier Content management */
+// Register Custom Post Type
+function wp_tempate_pepper_cpt_recipes() {
+
+	$labels = array(
+		'name'                  => _x( 'Rezepte', 'Post Type General Name', 'Rezepte' ),
+		'singular_name'         => _x( 'Rezept', 'Post Type Singular Name', 'Rezepte' ),
+		'menu_name'             => __( 'Rezepte', 'Rezepte' ),
+		'name_admin_bar'        => __( 'Rezepte', 'Rezepte' ),
+		'archives'              => __( 'Archiviere Rezept', 'Rezepte' ),
+		'attributes'            => __( 'Rezept Attribute', 'Rezepte' ),
+		'parent_item_colon'     => __( 'Aktuelles Rezept:', 'Rezepte' ),
+		'all_items'             => __( 'Alle Rezepte', 'Rezepte' ),
+		'add_new_item'          => __( 'Füge neues Rezept hinzu', 'Rezepte' ),
+		'add_new'               => __( 'Neues Rezept', 'Rezepte' ),
+		'new_item'              => __( 'Neues Rezept hinzu', 'Rezepte' ),
+		'edit_item'             => __( 'Bearbeite Rezept', 'Rezepte' ),
+		'update_item'           => __( 'Update Rezept', 'Rezepte' ),
+		'view_item'             => __( 'Rezept anschauen', 'Rezepte' ),
+		'view_items'            => __( 'Alle Rezepte anschauen', 'Rezepte' ),
+		'search_items'          => __( 'Suche Rezept', 'Rezepte' ),
+		'not_found'             => __( 'nichts gefunden', 'Rezepte' ),
+		'not_found_in_trash'    => __( 'Nicht im Papierkorb gefunden', 'Rezepte' ),
+		'featured_image'        => __( 'Rezept Bild', 'Rezepte' ),
+		'set_featured_image'    => __( 'Definiere Rezeptbild', 'Rezepte' ),
+		'remove_featured_image' => __( 'Entferne Rezept', 'Rezepte' ),
+		'use_featured_image'    => __( 'Als Rezept Bild verwenden', 'Rezepte' ),
+		'insert_into_item'      => __( 'Füge Rezept ein', 'Rezepte' ),
+		'uploaded_to_this_item' => __( 'Aktualisieren', 'Rezepte' ),
+		'items_list'            => __( 'Rezept Liste', 'Rezepte' ),
+		'items_list_navigation' => __( 'Rezept Liste Menü', 'Rezepte' ),
+		'filter_items_list'     => __( 'Filter Rezepte', 'Rezepte' ),
+	);
+	$rewrite = array(
+		'slug'                  => 'recipe',
+		'with_front'            => true,
+		'pages'                 => true,
+		'feeds'                 => true,
+	);
+	$args = array(
+		'label'                 => __( 'Rezept', 'Rezepte' ),
+		'description'           => __( 'Einfach Rezepte erstellen und veröffentlichen', 'Rezepte' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'page-attributes', 'post-formats' ),
+		'taxonomies'            => array( 'recipes' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-carrot',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'rewrite'               => $rewrite,
+		'capability_type'       => 'post',
+        'show_in_rest'          => true,
+        'supports' => array('editor')
+	);
+	register_post_type( 'recipes', $args );
+
+}
+add_action( 'init', 'wp_tempate_pepper_cpt_recipes', 0 );
+
 /**
  * Add Welcome message to dashboard
  */
