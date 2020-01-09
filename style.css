@@ -1058,8 +1058,8 @@ object {
 }
 
 .footer-cta {
-  margin: 2.4rem auto 0 auto;
-  padding-bottom: 2rem;
+  margin: 0 auto;
+  padding: 3.7rem 0 1.6rem 0;
   border-bottom: 1px solid #515151;
 }
 
@@ -1069,7 +1069,9 @@ body:not(.theme-preset-active) footer#colophon {
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-
+  #wpsl-gmap {
+    position: relative!important;
+  }
   
   .block-overview {
     padding: 10px 1rem !important;

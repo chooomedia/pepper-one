@@ -1,6 +1,8 @@
-jQuery( function ( $ ) {
+jQuery(function ($) {
     $(window).scroll(function() {    
+        // Social Media Buttons on the right
         var circledButtons = $(".circled-buttons");
+        // Get the current Scroll position
         var scroll = $(window).scrollTop();
 
         if (scroll >= 200) {
@@ -14,6 +16,7 @@ jQuery( function ( $ ) {
             $(".btn-social:last-of-type").hide();
         }
 
+        // Show Scroll to Top Button if on end of Page
         if (scroll + $(window).height() == $(document).height()) {
             circledButtons.removeClass("d-none-scroll");
             $(".btn-social:last-of-type").show();
@@ -22,14 +25,17 @@ jQuery( function ( $ ) {
         $("#colophon").on("mouseover", function() {
             circledButtons.removeClass("d-none-scroll");
         });
-    
-        $("#wpsl-gmap").on("mouseover", function() {
+
+
+        //Require WPSL Map Plugin for Wordpress
+        var wpslMap = $("#wpsl-gmap");
+
+        wpslMap.on("mouseover", function() {
             circledButtons.addClass("d-none-scroll");
         });
     
-        $("#wpsl-gmap").on("mouseleave", function() {
+        wpslMap.on("mouseleave", function() {
             circledButtons.removeClass("d-none-scroll"); 
         });
-    
     });    
 });
