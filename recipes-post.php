@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts
  * Template Name: Recipes Post
- * Template Post Type: post
+ * Template Post Type: recipes
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *

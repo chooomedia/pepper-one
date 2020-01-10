@@ -60,6 +60,7 @@ Pepper One includes support for Infinite Scroll in Jetpack.
 * Added extended functionality to scroll-to-top button
 * Added Template Branding to Sidebar-Nav
 * Changed Video-Background-API Requests
+* Added Custom Posty type for easy edit "Recipe" entries
 
 = 1.2 - Dec. 20.12.2019 =
 * Added Video Functionality to Startpage

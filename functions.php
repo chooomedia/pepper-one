@@ -78,25 +78,19 @@ add_action( 'after_setup_theme', 'wp_template_pepper_one_setup' );
 
 
 /* Function that hide Titles in Pages and Posts*/
-function wpb_hidetitle_class($classes) {
-    if ( is_page() ) :
-    $classes[] = 'hidetitle';
-    return $classes;
+function remove_single_custom_post_titles( $title ) {
+    if( is_page() ):
+        return '';
+    else:
+        return $title;
     endif;
-    return $classes;
-    }
-add_filter('page_class', 'wpb_hidetitle_class');
-
-
-function wp_bootstrap_full_width() {
-    add_theme_support( 'align-wide' );
 }
-add_action( 'after_setup_theme', 'wp_bootstrap_full_width' );
+add_filter( 'the_title', 'remove_single_custom_post_titles', 10, 2 );
 
 
 /* Add Custom Post Types for easier Content management */
 // Register Custom Post Type
-function wp_tempate_pepper_cpt_recipes() {
+function wp_template_pepper_cpt_recipes() {
 
 	$labels = array(
 		'name'                  => _x( 'Rezepte', 'Post Type General Name', 'Rezepte' ),
@@ -118,10 +112,10 @@ function wp_tempate_pepper_cpt_recipes() {
 		'not_found'             => __( 'nichts gefunden', 'Rezepte' ),
 		'not_found_in_trash'    => __( 'Nicht im Papierkorb gefunden', 'Rezepte' ),
 		'featured_image'        => __( 'Rezept Bild', 'Rezepte' ),
-		'set_featured_image'    => __( 'Definiere Rezeptbild', 'Rezepte' ),
-		'remove_featured_image' => __( 'Entferne Rezept', 'Rezepte' ),
+		'set_featured_image'    => __( 'Wähle Rezept Bild', 'Rezepte' ),
+		'remove_featured_image' => __( 'Entferne Rezept Bild', 'Rezepte' ),
 		'use_featured_image'    => __( 'Als Rezept Bild verwenden', 'Rezepte' ),
-		'insert_into_item'      => __( 'Füge Rezept ein', 'Rezepte' ),
+		'insert_into_item'      => __( 'Füge Rezept hinzu', 'Rezepte' ),
 		'uploaded_to_this_item' => __( 'Aktualisieren', 'Rezepte' ),
 		'items_list'            => __( 'Rezept Liste', 'Rezepte' ),
 		'items_list_navigation' => __( 'Rezept Liste Menü', 'Rezepte' ),
@@ -153,13 +147,12 @@ function wp_tempate_pepper_cpt_recipes() {
 		'publicly_queryable'    => true,
 		'rewrite'               => $rewrite,
 		'capability_type'       => 'post',
-        'show_in_rest'          => true,
-        'supports' => array('editor')
+        'show_in_rest'          => true
 	);
 	register_post_type( 'recipes', $args );
 
 }
-add_action( 'init', 'wp_tempate_pepper_cpt_recipes', 0 );
+add_action( 'init', 'wp_template_pepper_cpt_recipes', 0 );
 
 /**
  * Add Welcome message to dashboard
