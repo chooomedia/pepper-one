@@ -71,7 +71,7 @@ function wp_template_pepper_one_entry_footer() {
 			esc_html__( 'Edit %s', 'wp-pepper-one' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
-		' | <span class="edit-link">',
+		'<span class="edit-link">',
 		'</span>'
 	);
 }

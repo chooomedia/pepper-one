@@ -42,7 +42,7 @@
 			</div><!-- .entry-content -->
 			<!-- $partnerLink = get_field( 'partner-store-link' ); -->
 			<footer class="entry-footer mb-4">
-				<a href="#partner" class="col-md-4 btn btn-cta btn-dark btn-appointment"><i class="fas fa-calendar"></i> Make an appointment</a>
+				<!-- <a href="#partner" class="col-md-4 btn btn-cta btn-dark btn-appointment"><i class="fas fa-calendar"></i> Make an appointment</a> -->
 				<?php wp_template_pepper_one_entry_footer(); ?>
 			</footer><!-- .entry-footer -->
 		</div>

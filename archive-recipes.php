@@ -15,19 +15,25 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<div class="container">
 				<div id="content" class="row">
-					<div class="col-md-4">
-						<?php the_date( 'Y' ); ?>
-					</div>
-					<div class="offset-md-4 col-md-4">
-						<p class="recipe-app-info float-right">
-							In der Groumetpilot2 App <br>digital verfügbar
-						</p>
-					</div>
 				<?php
+					$date_variable = '';
+
 					while ( have_posts() ) : the_post();
+						$year = get_the_date( 'Y' );
+
+						if ( $date_variable != $year ) // Year values are not the same
+							echo '<div class="col-md-4 float-left"><h2>' . $year . '</h2></div>
+									<div class="offset-md-4 col-md-4">
+										<p class="recipe-app-info">
+											In der Groumetpilot2 App <br>digital verfügbar
+										</p>
+									</div>';
+
+						// Set $date_variable to $year
+						$date_variable = $year;
 
 						get_template_part( 'template-parts/content', 'recipes' );
-
+						
 						// If comments are open or we have at least one comment, load up the comment template.
 						if ( comments_open() || get_comments_number() ) :
 							comments_template();

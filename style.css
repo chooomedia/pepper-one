@@ -810,6 +810,7 @@ a img.aligncenter {
   padding: 1.5rem;
   border-radius:3px;
   background-size: cover;
+  overflow: hidden;
 }
 
 .recipes-box {
