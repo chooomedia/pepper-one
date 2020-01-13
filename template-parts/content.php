@@ -19,7 +19,7 @@
 				<div class="col-md-6 offset-md-5 d-flex flex-row-reverse bd-highlight h-100 p-4">
 					<div class="m-md-4 bd-highlight justify-content-center align-self-center post-thumbnail-inner-content">
 						<h1><?php the_title() ?></h1>
-						<p class="recipes">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+						<p class="recipes"><?php echo $recipeShortDescr ?></p>
 						<a href="https://<?php echo $recipeLink ?>" target="_blank" title="<?php echo $recipeLinkTitle ?>" class="btn btn-primary btn-bigger">Cook it with the App</a>
 					</div>
 				</div>
