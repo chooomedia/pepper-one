@@ -237,7 +237,7 @@ function wp_template_pepper_one_customizer_css()
 {
     ?>
     <style type="text/css">
-        #page-sub-header { background: <?php echo get_theme_mod('header_bg_color_setting', '#fff'); ?>; }
+        #page-sub-header, #page { background: <?php echo get_theme_mod('header_bg_color_setting', '#000'); ?>; }
     </style>
     <?php
 }

@@ -36,11 +36,34 @@ p.overview {
 	line-height: 2;
 	color: var(--creamwhite);
 }
+
+h2.recipes-month-name {
+	text-shadow: unset;
+	text-transform: uppercase;
+	margin-bottom: 1px;
+}
 p.recipes {
 	font-size: 1.149rem;
 	margin: 1rem auto 2rem;
 	line-height: 1.5;
 	color: var(--creamwhite);
+}
+.recipes-text {
+	z-index: 1;
+}
+p.recipe-app-info {
+	color: var(--primary) !important;
+	text-align: left;
+	display: inline-flex;
+}
+p.recipe-app-info::before {
+	content: "";
+	display: inline-flex;
+	position: relative;
+	background: url(../../../img/icon-cuciniale-avaiable-for-app.png) no-repeat center center;
+	background-size: contain;
+	margin-right: 1.3rem;
+	width: 38px;
 }
 p.recipes-author {
 	color: #797979;
