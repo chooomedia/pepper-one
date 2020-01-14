@@ -88,14 +88,14 @@
                 </nav>
             </div>
         </header><!-- #masthead -->
-
         <?php if( get_field( "video_link")) {
-            $videoid = get_field( 'video_link' );
+                $videoid = get_field( 'video_link' );
         } ?>
+        
         <script type="text/javascript">var videoID = "<?php Print($videoid); ?>";</script>
 
         <!-- Add Custom Field for Video Background & required Scripts for embed yt video background -->
-        <?php  if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )):
+        <?php  if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )):           
                 echo '<script async src="https://www.youtube.com/iframe_api"></script>';
                 echo '<script async src="' . get_template_directory_uri() . '/inc/assets/js/video.js"></script>';														
                 echo '<section id="home-banner-box" class="loading">
@@ -112,6 +112,20 @@
                     echo '<div id="page-sub-header" style="background-image: url('. $thumb['0'] .')">';
                     echo '<div class="gradient-end-page"></div></div>';
                 }
+
+                if( is_singular('recipe') ) {
+                    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+                    echo '<div id="page-sub-header" style="background-image: url('. $thumb['0'] .')">
+                              <div id="recipe-banner" class="col-md-6 offset-md-5 d-flex flex-row-reverse bd-highlight h-100 p-4">
+                                <div class="m-md-4 bd-highlight justify-content-center align-self-center post-thumbnail-inner-content">
+                                    <h1>Rezept</h1>
+                                    <p>für jeden Monat</p>
+                                </div>
+                            </div>
+                            <div class="gradient-end-page"></div>
+                          </div>';
+                } 
+                
             ?>
 
             <div id="content" class="site-content layer-over-footer">

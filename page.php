@@ -15,11 +15,12 @@
 get_header(); ?>
 
 <!-- Insert the YouTube-Player -->
+<script async src="https://www.youtube.com/iframe_api"></script>
+<script async src="<?php echo get_template_directory_uri() ?>/inc/assets/js/video.js"></script>
+		
 	<?php if( get_field( "video_link")) {
 		$videoid = get_field( 'video_link' );
-		echo '	<script async src="https://www.youtube.com/iframe_api"></script>
-				<script async src="' . get_template_directory_uri() . '/inc/assets/js/video.js"></script>
-				<section id="home-banner-box" class="loading">
+		echo '<section id="home-banner-box" class="loading">
 					<div class="image video-slide">
 						<div class="video-background">
 							<div class="video-foreground" id="ytplayer">
