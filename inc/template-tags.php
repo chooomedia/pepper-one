@@ -35,7 +35,7 @@ function wp_template_pepper_one_posted_on() {
 	echo '<span class="posted-on">' . $posted_on . '</span> | <span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
     if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-        echo ' | <span class="comments-link"><i class="fa fa-comments" aria-hidden="true"></i> ';
+        echo '<span class="comments-link"><i class="fa fa-comments" aria-hidden="true"></i> ';
         /* translators: %s: post title */
         comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'wp-pepper-one' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
         echo '</span>';
@@ -60,7 +60,7 @@ function wp_template_pepper_one_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'wp-pepper-one' ) );
 		if ( $tags_list ) {
-			printf( ' | <span class="tags-links">' . esc_html__( 'Tagged %1$s', 'wp-pepper-one' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'wp-pepper-one' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
@@ -71,7 +71,7 @@ function wp_template_pepper_one_entry_footer() {
 			esc_html__( 'Edit %s', 'wp-pepper-one' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
-		' | <span class="edit-link">',
+		'<span class="edit-link">',
 		'</span>'
 	);
 }
