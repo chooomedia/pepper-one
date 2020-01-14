@@ -194,6 +194,10 @@ a {
   color: var(--creamwhite);
 }
 
+.btn-social:last-of-type {
+  list-style-type: none;
+}
+
 .btn-social a:active {
   color: var(--secondary);
 }
