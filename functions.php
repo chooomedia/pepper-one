@@ -173,8 +173,8 @@ function wp_template_pepper_one_widgets_init() {
         'name'          => esc_html__( 'Social Media Buttons', 'wp-pepper-one' ),
         'id'            => 'socialmedia-buttons',
         'description'   => esc_html__( 'Add HTML Code here to insert fancy social media buttons', 'wp-pepper-one' ),
-        'before_widget' => '<ul class="circled-buttons">',
-        'after_widget'  => '</ul>',
+        'before_widget' => '<div class="circled-buttons">',
+        'after_widget'  => '</div>',
         'before_title'  => '',
         'after_title'   => '',
     ) );
