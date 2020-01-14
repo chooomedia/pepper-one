@@ -77,17 +77,6 @@ endif;
 add_action( 'after_setup_theme', 'wp_template_pepper_one_setup' );
 
 
-/* Function that hide Titles in Pages and Posts*/
-function remove_single_custom_post_titles( $title ) {
-    if( is_page() ):
-        return '';
-    else:
-        return $title;
-    endif;
-}
-add_filter( 'the_title', 'remove_single_custom_post_titles', 10, 2 );
-
-
 /* Add Custom Post Types for easier Content management */
 // Register Custom Post Type
 function wp_template_pepper_cpt_recipes() {
