@@ -56,11 +56,15 @@ Pepper One includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.4 - Jan. 14.01.2020 =
+* Added Archive Page for Overview of the monthly Recipes
+* Added Event-Animation for the Archive Recipe Boxes
+
 = 1.3 - Jan. 07.01.2020 =
 * Added extended functionality to scroll-to-top button
 * Added Template Branding to Sidebar-Nav
 * Changed Video-Background-API Requests
-* Added Custom Posty type for easy edit "Recipe" entries
+* Added Custom Post type for easy edit "Recipe" entries
 
 = 1.2 - Dec. 20.12.2019 =
 * Added Video Functionality to Startpage

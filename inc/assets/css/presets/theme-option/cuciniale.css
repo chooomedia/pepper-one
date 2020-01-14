@@ -2711,7 +2711,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   z-index: 999;
   position: fixed;
   display: inline-block;
-  right: 96px;
+  right: 54px;
   top: 37vh;
   width: 40px;
   transition: all .3s;
@@ -2719,10 +2719,6 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
 .d-none-scroll {
   transform: translateX(80px);
-}
-
-.circle-buttons ul {
-  list-style-type: none;
 }
 
 .btn-social {

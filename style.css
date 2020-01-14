@@ -1122,7 +1122,8 @@ body:not(.theme-preset-active) footer#colophon {
   
   .video-foreground, .video-background iframe {
     transform: scale(1.4);
-    top: 42%;
+    top: 9rem;
+    pointer-events: all;
   }
 
   .circled-buttons {
