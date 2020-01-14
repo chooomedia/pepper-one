@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-	<div id="page-sub-header" class="mb-5" style="background-image: url('http://localhost:8888/wp-content/uploads/2019/12/monthlyrecipe0316.jpg');">
+	<div id="page-sub-header" class="mb-5 post-thumbnail" style="background: url('http://localhost:8888/wp-content/uploads/2019/12/monthlyrecipe0316.jpg');">
 		<div class="gradient-end-page"></div>
 	</div>
 	<section id="primary" class="content-area">

@@ -207,8 +207,8 @@ a {
 }
 
 a:hover {
-  color: var(--creamwhite);
-  text-decoration: underline;
+  color: var(--primary);
+  text-decoration: unset;
 }
 
 a:not([href]):not([tabindex]) {
