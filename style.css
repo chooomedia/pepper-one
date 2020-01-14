@@ -1076,10 +1076,16 @@ body:not(.theme-preset-active) footer#colophon {
   .block-overview {
     padding: 10px 1rem !important;
   }
+
+  .image-video-slide {
+    max-height: 31vh;
+  }
   
   .video-foreground, .video-background iframe {
+    position: relative;
+    pointer-events: all;
     transform: scale(1.4);
-    top: 42%;
+    top: 71%;
   }
 
   .circled-buttons {
