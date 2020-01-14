@@ -92,19 +92,12 @@
         <?php if( get_field( "video_link")) {
             $videoid = get_field( 'video_link' );
         } ?>
-        <!-- Add Custom Field for Video Background -->
-        <script type="text/javascript">
-            /*var holder = document.getElementById("home-banner-box");*/
-            var videoID = "<?php Print($videoid); ?>";
-            var videoImg = "https://img.youtube.com/vi/" + videoID + "/maxresdefault.jpg";
-                /*holder.style.backgroundImage =  "url(" + videoImg + ")";*/
-        </script>
+        <script type="text/javascript">var videoID = "<?php Print($videoid); ?>";</script>
 
-        <!-- Insert the YouTube-Player -->
-        <script async src="https://www.youtube.com/iframe_api"></script>
-        <script async src="<?php echo get_template_directory_uri() ?>/inc/assets/js/video.js"></script>
-
-        <?php if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )):															
+        <!-- Add Custom Field for Video Background & required Scripts for embed yt video background -->
+        <?php  if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )):
+                echo '<script async src="https://www.youtube.com/iframe_api"></script>';
+                echo '<script async src="' . get_template_directory_uri() . '/inc/assets/js/video.js"></script>';														
                 echo '<section id="home-banner-box" class="loading">
                             <div class="image video-slide">
                                 <div class="video-background">
@@ -114,15 +107,15 @@
                             </div>
                         </section>';
 
-            if( has_post_thumbnail( get_the_ID() ) ) {
-                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-                echo '<div id="page-sub-header" style="background-image: url('. $thumb['0'] .')">';
-                echo '<div class="gradient-end-page"></div></div>';
-            } ?>
+                if( has_post_thumbnail( get_the_ID() ) ) {
+                    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+                    echo '<div id="page-sub-header" style="background-image: url('. $thumb['0'] .')">';
+                    echo '<div class="gradient-end-page"></div></div>';
+                }
+            ?>
 
             <div id="content" class="site-content layer-over-footer">
                 <div class="container-fluid">
                     <div class="row">
                         <?php endif; ?>
-            
         <?php endif; ?>

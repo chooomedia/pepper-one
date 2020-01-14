@@ -12,6 +12,7 @@
 <?php $recipeLink = get_field( 'recipe-button-link' ); ?>
 <?php $recipeLinkTitle = get_field( 'recipe-button-link-title' ); ?>
 <?php $recipeShortDescr = get_field( 'recipe-short-description' ); ?>
+
 <div class="container-fluid p-0">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="post-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">

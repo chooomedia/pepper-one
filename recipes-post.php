@@ -10,7 +10,6 @@
  */
 
 get_header(); ?>
-
 	<section id="primary">
 		<main id="main" class="site-main" role="main">
 			<div id="content" class="article-content">
@@ -37,5 +36,4 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
