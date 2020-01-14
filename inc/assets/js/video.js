@@ -32,8 +32,7 @@ function onYouTubeIframeAPIReady() {
             }else if(e && e.data === 0){
               e.target.playVideo()
             }
-          }
+          },
         }
     });
-    console.log("yt loaded");
   }
