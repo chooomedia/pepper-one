@@ -14,14 +14,14 @@
     
     <article class="col-md-4 p-0 d-flex justify-content-center" id="recipe-<?php the_ID(); ?>" <?php post_class(); ?>>
         <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">    
-            <div class="col-md-11 px-md-0 col-sm-12">
+            <div class="col-md-11 col-xs-12 px-md-2">
                 <?php
                     $enable_vc = get_post_meta(get_the_ID(), '_wpb_vc_js_status', true);
                     if(!$enable_vc ) {
                     ?>
                     <?php if(is_archive()): ?>
                     <div class="recipes-box">
-                        <div class="recipe-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
+                        <div class="recipe-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');background-repeat: no-repeat;">
                         <footer class="recipes-text align-self-end">
                             <h2 class="recipes-month-name"><?php the_date( 'F' ); ?></h2>
                             <div class="row m-0 p-0">
@@ -54,6 +54,6 @@
                         ?>
                     </footer><!-- .entry-footer -->
                 <?php endif; ?>
-            </div>
+
         </a>
     </article><!-- #post-## -->

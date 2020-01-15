@@ -1127,6 +1127,23 @@ body:not(.theme-preset-active) footer#colophon {
     padding: 1rem !important;
   }
 
+  .btn-animation {
+    background-image: repeating-linear-gradient(-45deg, transparent, transparent 60%, rgba(255, 255, 255, 0.1) 61%, rgba(255, 255, 255, 0.1) 65%, transparent 66%, transparent 100%);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-size: 400% 100%;
+    animation: background-panning 10s linear infinite;
+  }
+
+  @keyframes background-panning {
+    from {background-position: 0 0;}
+    to {background-position: -99999999px 0;} 
+  }
+
   .btn-overview { /*mad solution! */
     padding-left: 1rem !important; 
     padding-right: 1rem !important;
