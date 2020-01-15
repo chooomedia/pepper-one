@@ -56,6 +56,11 @@ Pepper One includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.4 - Jan. 15.01.2020 =
+* Added Custom Post Type "Recipe" for easy editing
+* Added Custom Archive Template
+* Added Custom Template for Plugin-Template "Stores" WP Store Locator
+
 = 1.3 - Jan. 07.01.2020 =
 * Added extended functionality to scroll-to-top button
 * Added Template Branding to Sidebar-Nav
