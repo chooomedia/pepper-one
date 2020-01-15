@@ -17,7 +17,7 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="post-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
 			<?php if ( 'recipes' == get_post_type() ) : ?>
-				<div class="col-md-6 offset-md-5 d-flex flex-row-reverse bd-highlight h-100 p-4">
+				<div class="col-md-6 offset-md-5 d-flex flex-row-reverse bd-highlight h-100 p-md-4 m-md-auto">
 					<div class="m-md-4 bd-highlight justify-content-center align-self-center post-thumbnail-inner-content">
 						<h1><?php the_title() ?></h1>
 						<p class="recipes"><?php echo $recipeShortDescr ?></p>

@@ -1069,6 +1069,14 @@ body:not(.theme-preset-active) footer#colophon {
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .btn-bigger {
+    padding: 8px 1rem;
+  }
+
+  .entry-footer {
+    display: none;
+  }
+  
   #wpsl-gmap {
     position: relative!important;
   }

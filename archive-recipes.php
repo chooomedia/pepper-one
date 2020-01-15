@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-	<div id="page-sub-header" class="mb-5 post-thumbnail" style="background: url('http://localhost:8888/wp-content/uploads/2019/12/monthlyrecipe0316.jpg');">
+	<div id="page-sub-header" class="mb-5 post-thumbnail" style="background: url('../wp-content/uploads/2019/12/monthlyrecipe0316.jpg');">
 		<div id="recipe-banner" class="row p-0 m-0 h-100 justify-content-center align-items-center">
 			<div class="col-auto bd-highlight post-thumbnail-inner-content">
 				<h1>Rezepte</h1>
