@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-	<div id="page-sub-header" class="mb-5 post-thumbnail" style="background: url('../wp-content/uploads/2019/12/monthlyrecipe0316.jpg');">
+	<div id="page-sub-header" class="mb-5 post-thumbnail" style="background: url('../wp-content/uploads/2019/12/monthlyrecipe0316.jpg');background-attachment: fixed;">
 		<div id="recipe-banner" class="row p-0 m-0 h-100 justify-content-center align-items-center">
 			<div class="col-auto bd-highlight post-thumbnail-inner-content">
 				<h1>Rezepte</h1>
@@ -28,12 +28,15 @@ get_header(); ?>
 						$year = get_the_date( 'Y' );
 
 						if ( $date_variable != $year ) // Year values are not the same
-							echo '<div class="col-md-4 float-left">
-									<h2>' . $year . '</h2></div>
-									<div class="offset-md-4 col-md-4">
-										<p class="recipe-app-info">
-											In der Groumetpilot2 App <br>digital verfügbar
-										</p>
+							echo '	<div class="row mx-1 col-12">
+										<div class="col-md-4 float-left">
+											<h2>' . $year . '</h2>
+										</div>
+										<div class="col-md-8 text-right">
+											<p class="recipe-app-info mr-md-4">
+												In der Groumetpilot2 App <br>digital verfügbar
+											</p>
+										</div>
 									</div>';
 
 						// Set $date_variable to $year

@@ -38,7 +38,7 @@ p.overview {
 }
 
 h2.recipes-month-name {
-	text-shadow: unset;
+	text-shadow: 1px 1px #000;
 	text-transform: uppercase;
 	margin-bottom: 1px;
 }

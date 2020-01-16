@@ -354,12 +354,12 @@ header#masthead {
 
 #page-sub-header {
   position: relative;
-  /*padding-top: 5rem;*/
   padding-bottom: 0;
   text-align: center;
   font-size: 1.25rem;
   background-size: cover !important;
   background-position: center !important;
+  background-attachment: fixed !important;
   height: calc(78vh - 95px);
 }
 
@@ -794,6 +794,13 @@ a img.aligncenter {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/* Gutenberg overwrite */
+
+.edit-post-visual-editor .editor-block-list__block {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
