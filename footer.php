@@ -16,7 +16,7 @@
 	</div><!-- #content -->
 </div><!-- .wrapper -->
 	<footer id="colophon" class="site-footer <?php echo wp_template_pepper_one_bg_class(); ?>" role="contentinfo">
-		<div class="container footer-cta">
+		<div id="footer-cta" class="container">
 			<?php if ( is_active_sidebar( 'footer-cta' )) : ?>
 				<?php dynamic_sidebar( 'footer-cta' ); ?>
 			<?php endif;?>

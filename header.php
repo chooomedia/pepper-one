@@ -117,7 +117,7 @@
                     $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
                     echo '<div id="page-sub-header" style="background-image: url('. $thumb['0'] .')">
                               <div id="recipe-banner" class="col-md-6 offset-md-5 d-flex flex-row-reverse bd-highlight h-100 p-4">
-                                <div class="m-md-4 bd-highlight justify-content-center align-self-center post-thumbnail-inner-content">
+                                <div class="m-md-4 bd-highlight justify-content-center align-self-center post-thumbnail-inner-content" style="z-index:9;">
                                     <h1>Rezept</h1>
                                     <p>für jeden Monat</p>
                                 </div>

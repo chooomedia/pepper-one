@@ -572,7 +572,7 @@ mark,
   padding: 1.5rem;
   border-radius:3px;
   background-size: cover;
-  transition: all .6s;
+  transition: all .6s !important;
 }
 
 .onHover {
@@ -2805,6 +2805,23 @@ fieldset:disabled a.btn {
   font-size: 1.1rem;
   letter-spacing: 1px;
   border-radius: 3px;
+}
+
+.btn-animation {
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 60%, rgba(255, 255, 255, 0.1) 61%, rgba(255, 255, 255, 0.1) 65%, transparent 66%, transparent 100%);
+  background-position-x: initial;
+  background-position-y: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-size: 400% 100%;
+  animation: background-panning 5s linear infinite;
+}
+
+@keyframes background-panning {
+  from {background-position: 0 0;}
+  to {background-position: 1000px 0;} 
 }
 
 .block-overview {
@@ -9530,10 +9547,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 .btn:hover, .btn:focus, .btn:not([disabled]):not(.disabled):active, .btn:not([disabled]):not(.disabled):active:hover, .btn:not([disabled]):not(.disabled).active:hover {
   border-color: rgba(0, 0, 0, 0.6);
-}
-
-.btn-primary {
-  background: var(--secondary);
 }
 
 .btn-primary:not([disabled]):not(.disabled):hover, .btn-primary:not([disabled]):not(.disabled):focus, .btn-primary:not([disabled]):not(.disabled):active:hover, .btn-primary:not([disabled]):not(.disabled).active:hover {

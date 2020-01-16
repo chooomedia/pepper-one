@@ -1064,7 +1064,7 @@ object {
   font-size: 1.2rem;
 }
 
-.footer-cta {
+#footer-cta {
   margin: 0 auto;
   padding: 3.7rem 0 1.6rem 0;
   border-bottom: 1px solid #515151;
@@ -1076,6 +1076,10 @@ body:not(.theme-preset-active) footer#colophon {
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .wp-block-spacer {
+    max-height: 3rem;
+  }
+
   .btn-bigger {
     padding: 8px 1rem;
   }
@@ -1132,23 +1136,6 @@ body:not(.theme-preset-active) footer#colophon {
 
   .post-thumbnail-inner-content {
     padding: 1rem !important;
-  }
-
-  .btn-animation {
-    background-image: repeating-linear-gradient(-45deg, transparent, transparent 60%, rgba(255, 255, 255, 0.1) 61%, rgba(255, 255, 255, 0.1) 65%, transparent 66%, transparent 100%);
-    background-position-x: initial;
-    background-position-y: initial;
-    background-repeat: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-size: 400% 100%;
-    animation: background-panning 10s linear infinite;
-  }
-
-  @keyframes background-panning {
-    from {background-position: 0 0;}
-    to {background-position: -99999999px 0;} 
   }
 
   .btn-overview { /*mad solution! */
