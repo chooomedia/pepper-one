@@ -24,7 +24,7 @@
 						<?php if( $recipeLink ): ?>
 							<a href="https://<?php echo $recipeLink ?>" target="_blank" title="<?php echo $recipeLinkTitle ?>" class="btn btn-primary btn-bigger">Jetzt mit der App kochen</a>
 						<?php else : ?>
-							<a href="#footer-cta" title="Downloaden Sie unsere App" class="btn btn-primary btn-bigger">Einfach kochen mit Unserer App</a>
+							<a href="#footer-cta" title="Downloaden Sie unsere App" class="btn btn-primary btn-bigger">Einfach kochen mit der App</a>
 						<?php endif; ?>
 					</div>
 				</div>
