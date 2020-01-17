@@ -805,10 +805,12 @@ a img.aligncenter {
 ## Posts and pages
 --------------------------------------------------------------*/
 #content.site-content {
-  padding-bottom: 2.75rem;
-  padding-top: 3rem;
+  border-bottom: 2.75rem solid #000;
+  border-top: 3rem solid #000;
   background: #000;
   min-height: 100vh;
+  position: relative;
+  z-index: 9;
 }
 
 #content.article-content {
@@ -1075,7 +1077,18 @@ body:not(.theme-preset-active) footer#colophon {
   background-color: #262626;
 }
 
+@media only screen and (max-device-width : 1366px) {
+  h1.recipe-title {
+    font-size: 3rem;
+  } 
+}
+
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  h1.recipe-title {
+    font-size: 3rem;
+  }
+ 
   .wp-block-spacer {
     max-height: 3rem;
   }

@@ -19,7 +19,7 @@
 			<?php if ( 'recipes' == get_post_type() ) : ?>
 				<div class="col-md-6 offset-md-5 d-flex flex-row-reverse bd-highlight h-100 p-md-4 m-col-md-11 px-md-0 col-sm-12-auto">
 					<div class="m-md-4 bd-highlight justify-content-center align-self-center post-thumbnail-inner-content" style="z-index:9;">
-						<h1><?php the_title() ?></h1>
+						<h1 class="recipe-title"><?php the_title() ?></h1>
 						<p class="recipes"><?php echo $recipeShortDescr ?></p>
 						<?php if( $recipeLink ): ?>
 							<a href="https://<?php echo $recipeLink ?>" target="_blank" title="<?php echo $recipeLinkTitle ?>" class="btn btn-primary btn-bigger">Jetzt mit der App kochen</a>

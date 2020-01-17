@@ -24,8 +24,10 @@
 <body <?php body_class(); ?>>
 
 <!-- Social-Media Button Area-->
-<?php if ( ! 'recipe' == get_post_type() && is_active_sidebar('socialmedia-buttons')) : ?>
-    <?php dynamic_sidebar('socialmedia-buttons'); ?>
+<?php if (is_active_sidebar('socialmedia-buttons') ) : ?>
+    <?php if ( is_page() ) {
+        dynamic_sidebar('socialmedia-buttons');
+    } ?>
 <?php endif;?>
 
 <div class="wrapper">

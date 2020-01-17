@@ -409,9 +409,11 @@ template {
   display: none !important;
 }
 
-#colophon, .entry-footer {
+#colophon {
   position: relative;
   z-index: 10;
+  bottom: -8px;
+  top: 0;
 }
 
 h1, h3, h4, h5, h6,
