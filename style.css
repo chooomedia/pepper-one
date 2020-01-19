@@ -354,13 +354,14 @@ header#masthead {
 
 #page-sub-header {
   position: relative;
+  z-index: 9;
   padding-bottom: 0;
   text-align: center;
   font-size: 1.25rem;
   background-size: cover !important;
   background-position: center !important;
   background-attachment: fixed !important;
-  height: calc(78vh - 95px);
+  height: calc(78vh - 107px);
 }
 
 .gradient-end-page {

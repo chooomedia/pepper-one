@@ -9,7 +9,6 @@ jQuery(function ($) {
             circledButtons.addClass("d-none-scroll");
             $("#sidebar, .overlay").removeClass("active");
             $(".overlay").css("z-index", "-1");
-            $(".btn-social:last-of-type").show();
 
         } else {
             $(".btn-social:last-of-type").hide();
@@ -18,7 +17,7 @@ jQuery(function ($) {
 
         // Show Scroll to Top Button if on end of Page
         if (scroll + $(window).height() == $(document).height()) {
-            $(".btn-social:last-of-type").hide();
+            $(".btn-social:last-of-type").show();
             circledButtons.removeClass("d-none-scroll");
         }
     

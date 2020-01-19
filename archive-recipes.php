@@ -16,7 +16,8 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="gradient-end-page"></div>
-	</div>
+	</div><!--#page-sub-header-->
+
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div class="container">

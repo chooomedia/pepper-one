@@ -6,7 +6,6 @@
  *
  * @package wp_template_pepper_one
  */
-
 ?>
 
 <?php $recipeLink = get_field( 'recipe-button-link' ); ?>
@@ -72,4 +71,5 @@
 		</div>
 	</article><!-- #post-## -->
 </div>
+
 <div class="container">
