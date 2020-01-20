@@ -52,6 +52,32 @@ get_header(); ?>
 					?>
 				</div>
 			</div>
+
+			<section id="intro" class="main fullscreen">
+				<div class="slider-wrapper">
+					<div id="recipe-slider" class="owl-carousel owl-theme">
+						<div class="owl-stage-outer">
+							<div class="owl-stage">
+								<?php $loop = new WP_Query( array( 'post_type' => 'recipes', 'posts_per_page' => -1 ) );?>
+								<?php while ( $loop->have_posts() ) : $loop->the_post();?>
+
+								<?php
+									$slide_text = get_post_meta($post->ID, "_text", true); 
+									$slide_url = get_post_meta($post->ID, "_url", true); 
+									$slide_img = get_the_post_thumbnail(); 
+								?>
+
+								<div class="owl-item active" style="background-image: url('<?php echo $slide_img ?>')">
+									<?php the_title(); ?> 
+								</div>
+
+								<?php endwhile; wp_reset_query(); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 		</main><!-- #main -->
 	</section><!-- #primary -->
 

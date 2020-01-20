@@ -350,6 +350,7 @@ function wp_template_pepper_one_scripts() {
         wp_enqueue_style( 'wp-pepper-one-default', get_template_directory_uri() . '/inc/assets/css/presets/color-scheme/blue.css', false, '' );
     }*/
 
+    wp_enqueue_style( 'owl-carousel' );
 	wp_enqueue_script('jquery');
 
     // Internet Explorer HTML5 support

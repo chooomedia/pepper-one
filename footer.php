@@ -10,6 +10,27 @@
  */
 
 ?>
+
+<script>
+	jQuery(document).ready(function(){
+		var owl = $('.owl-carousel');
+		owl.owlCarousel({
+			items:4,
+			loop:true,
+			margin:10,
+			autoplay:true,
+			autoplayTimeout:1000,
+			autoplayHoverPause:true
+		});
+		jQuery('.play').on('click',function(){
+			owl.trigger('autoplay.play.owl',[1000])
+		});
+		jQuery('.stop').on('click',function(){
+			owl.trigger('autoplay.stop.owl')
+		});
+	});
+</script>
+
 <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
 			</div><!-- .row -->
 		</div><!-- .container -->
@@ -25,8 +46,7 @@
 		<div class="container">
 			</br>
             <div class="site-info pb-md-2">
-                <?php echo 'cuciniale.com'; ?><br> &copy; <?php echo date('Y'); ?>
-				</br>
+                <?php echo 'cuciniale.com'; ?><br> &copy; <?php echo date('Y'); ?></br>
             </div><!-- close .site-info -->
 		</div>
 	</footer><!-- #colophon -->
@@ -34,6 +54,7 @@
 </div><!-- #page -->
 <!-- Dark Overlay element -->
 <div class="overlay"></div>
+
 <?php wp_footer(); ?>
 </body>
 </html>
