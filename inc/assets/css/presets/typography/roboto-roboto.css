@@ -42,7 +42,8 @@ h2.recipes-month-name {
 	text-transform: uppercase;
 	margin-bottom: 1px;
 }
-p.recipes {
+
+p.recipes, p.impress {
 	font-size: 1.149rem;
 	margin: 1rem auto 2rem;
 	line-height: 1.5;
