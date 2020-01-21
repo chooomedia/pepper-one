@@ -18,6 +18,7 @@ jQuery(function ($) {
         // Show Scroll to Top Button if on end of Page
         if (scroll + $(window).height() == $(document).height()) {
             $(".btn-social:last-of-type").show();
+            $(".btn-social:last-of-type").css("opacity", "1");
             circledButtons.removeClass("d-none-scroll");
         }
     

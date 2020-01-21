@@ -203,6 +203,8 @@ a {
 
 .btn-social:last-of-type {
   list-style-type: none;
+  opacity: 0 default;
+  transition: all .6s;
 }
 
 a:hover {
