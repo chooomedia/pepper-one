@@ -22,6 +22,7 @@ jQuery(function ($) {
         }
     
         $("#colophon").on("mouseover", function() {
+            $(".btn-social:last-of-type").show();
             circledButtons.removeClass("d-none-scroll");
         });
 
