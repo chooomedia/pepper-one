@@ -4333,28 +4333,6 @@ tbody.collapse.show {
   height: inherit;
 }
 
-.sidebar-brand:before, .sidebar-brand:after {
-  content: "";
-  border: 1px solid #504b4b;
-  width: 28%;
-  z-index: 0;
-  height: 1px;
-  position: absolute;
-  top: .7%;
-  left: 10%;
-}
-
-.sidebar-brand:after {
-  content: "";
-  border: 1px solid #504b4b;
-  width: 28%;
-  z-index: 0;
-  height: 1px;
-  position: absolute;
-  top: .7%;
-  left: 62%;
-}
-
 .flipper {
   transition: all 1s;
   transform: rotateY(180deg);

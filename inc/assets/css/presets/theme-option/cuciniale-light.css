@@ -4230,28 +4230,6 @@ tbody.collapse.show {
   top: 85vh;
 }
 
-.sidebar-brand:before, .sidebar-brand:after {
-  content: "";
-  border: 1px solid #504b4b;
-  width: 28%;
-  z-index: 0;
-  height: 1px;
-  position: absolute;
-  top: 50%;
-  left: 10%;
-}
-
-.sidebar-brand:after {
-  content: "";
-  border: 1px solid #504b4b;
-  width: 28%;
-  z-index: 0;
-  height: 1px;
-  position: absolute;
-  top: 50%;
-  left: 62%;
-}
-
 .overlay {
   position: fixed;
   /* full screen */
