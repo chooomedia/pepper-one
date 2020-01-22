@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying Partner Page
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -10,8 +10,18 @@
 ?>
 
 <div class="container-fluid p-0">
+	<div id="page-sub-header" class="mb-5 post-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');background-attachment: fixed;">
+			<div id="recipe-banner" class="row p-0 m-0 h-100 justify-content-center align-items-center">
+				<div class="col-auto bd-highlight post-thumbnail-inner-content">
+					<h1><?php the_title(); ?></h1>
+					<p>Ihr Cuciniale Partner in <?php echo ?></p>
+				</div>
+			</div>
+			<div class="gradient-end-page"></div>
+		</div><!--#page-sub-header-->
+	</div>
+
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<div class="post-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');max-height:40vh;background-position:center;"></div>
 		<div class="container">
 			<header class="entry-header mt-5">
 				<?php

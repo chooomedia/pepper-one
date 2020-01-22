@@ -552,12 +552,18 @@ mark,
 # Recipes
 --------------------------------------------------------------*/
 
-#recipe-banner {
+#recipe-banner > div > h1, #partner-banner > div > h1 {
   color: var(--primary);
+  text-transform: uppercase;
 }
 
-#recipe-banner {
+#recipe-banner div p, #partner-banner div p {
   color: var(--creamwhite);
+}
+
+#recipe-banner .post-thumbnail-inner-content, #partner-banner .post-thumbnail-inner-content {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2rem 6rem;
 }
 
 .recipes-shorter-description {
