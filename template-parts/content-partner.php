@@ -6,7 +6,6 @@
  *
  * @package wp_template_pepper_one
  */
-
 ?>
 
 <div class="container-fluid p-0">
@@ -14,7 +13,7 @@
 			<div id="recipe-banner" class="row p-0 m-0 h-100 justify-content-center align-items-center">
 				<div class="col-auto bd-highlight post-thumbnail-inner-content">
 					<h1><?php the_title(); ?></h1>
-					<p>Ihr Cuciniale Partner in <?php echo ?></p>
+					<p>Ihr Cuciniale Partner in <?php global $city; echo $city; ?></p>
 				</div>
 			</div>
 			<div class="gradient-end-page"></div>
@@ -23,17 +22,6 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="container">
-			<header class="entry-header mt-5">
-				<?php
-				if ( is_single() ) :
-					the_title( '<h2 class="text-center">', '</h2>' );
-				else :
-					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-				endif; ?>
-
-				
-
-			</header><!-- .entry-header -->
 			<div class="entry-content">
 				<div class="row p-0 m-0">
 					<?php

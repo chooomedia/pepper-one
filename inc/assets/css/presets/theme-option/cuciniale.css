@@ -203,7 +203,7 @@ a {
 
 .btn-social:last-of-type {
   list-style-type: none;
-  opacity: 0 default;
+  opacity: 0;
   transition: all .6s;
 }
 

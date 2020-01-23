@@ -185,11 +185,12 @@ function custom_templates( $templates ) {
 }
 add_filter( 'wpsl_templates', 'custom_templates' );
 
-/**Use Special Tempalte for Partner-Pages */
+
+/**Use Special Template for Partner-Pages */
 add_filter( 'template_include', 'wp_partner_post_template', 99 );
 
 function wp_partner_post_template( $template ) {
-
+    
     if ( is_page( 'partner' )  ) {
         $new_template = locate_template( array( '/template-parts/content-partner.php' ) );
         if ( '' != $new_template ) {
