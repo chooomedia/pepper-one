@@ -1097,9 +1097,9 @@ body:not(.theme-preset-active) footer#colophon {
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
   #home-banner-box {
-    height: 31vh;
+    height: 30vh;
+    margin-top: -.8rem;
   }
-
   
   h1.partner-title {
     font-size: 3rem;
