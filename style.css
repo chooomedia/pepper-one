@@ -172,6 +172,15 @@ html input[disabled] {
   cursor: default;
 }
 
+/* Added Partner-Buttons on Partner Page reqiures WP Store Locator Plugin!*/
+.partner-buttons {
+  width: 6rem; height: 6rem;
+  margin: .5rem 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--primary);
+  border-radius: 3px;
+}
+
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -1086,6 +1095,11 @@ body:not(.theme-preset-active) footer#colophon {
 
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  
+  h1.partner-title {
+    font-size: 3rem;
+  }
+  
   h1.recipe-title {
     font-size: 3rem;
   }
