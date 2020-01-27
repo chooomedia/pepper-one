@@ -65,9 +65,11 @@
 
 			</div><!-- .entry-content -->
 
-			<footer class="entry-footer">
-				<?php wp_template_pepper_one_entry_footer(); ?>
-			</footer><!-- .entry-footer -->
+			<?php if (is_admin() ) : ?>
+				<footer class="entry-footer">
+					<?php wp_template_pepper_one_entry_footer(); ?>
+				</footer><!-- .entry-footer -->
+			<?php endif; ?>
 		</div>
 	</article><!-- #post-## -->
 </div>
