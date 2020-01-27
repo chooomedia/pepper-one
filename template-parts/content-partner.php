@@ -10,17 +10,17 @@
 
 <div class="container-fluid p-0">
 	<div id="page-sub-header" class="mb-5 post-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');background-attachment: fixed;">
-			<div id="recipe-banner" class="row p-0 m-0 h-100 justify-content-center align-items-center">
-				<div class="col-auto bd-highlight post-thumbnail-inner-content">
-					<h1><?php the_title(); ?></h1>
-					<p>Ihr Cuciniale Partner in <?php global $city; echo $city; ?></p>
+			<div id="partner-banner" class="row p-0 m-0 h-100 justify-content-center align-items-center">
+				<div class="col-md-auto col-10 bd-highlight post-thumbnail-inner-content">
+					<h1 class="partner-title"><?php the_title(); ?></h1>
+					<p>Ihr Cuciniale Partner in der Region</p>
 				</div>
 			</div>
 			<div class="gradient-end-page"></div>
 		</div><!--#page-sub-header-->
 	</div>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<article class="container" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="container">
 			<div class="entry-content">
 				<div class="row p-0 m-0">
