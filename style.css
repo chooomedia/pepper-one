@@ -1086,6 +1086,10 @@ body:not(.theme-preset-active) footer#colophon {
 
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  #home-banner-box {
+    height: 31vh;
+  }
+  
   h1.recipe-title {
     font-size: 3rem;
   }
