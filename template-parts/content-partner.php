@@ -19,11 +19,10 @@
 			<div class="gradient-end-page"></div>
 		</div><!--#page-sub-header-->
 	</div>
-
-	<article class="container" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<div class="container">
+	<div class="container">
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="entry-content">
-				<div class="row p-0 m-0">
+				<div class="container-fullwidth row">
 					<?php
 					if ( is_single() ) :
 						the_content();
@@ -43,7 +42,7 @@
 				<!-- <a href="#partner" class="col-md-4 btn btn-cta btn-dark btn-appointment"><i class="fas fa-calendar"></i> Make an appointment</a> -->
 				<?php wp_template_pepper_one_entry_footer(); ?>
 			</footer><!-- .entry-footer -->
-		</div>
-	</article><!-- #post-## -->
+		</article><!-- #post-## -->
+	</div>
 </div>
-<div class="container">
+<div class="container d-none">

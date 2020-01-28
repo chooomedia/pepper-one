@@ -76,6 +76,18 @@ function wp_template_pepper_one_setup() {
 endif;
 add_action( 'after_setup_theme', 'wp_template_pepper_one_setup' );
 
+/* Remove Post Navigation fom Partners Pre-Page */ 
+
+function wp_tempte_pepper_one_remove_post_nav()
+{
+    if ( 'partners' == get_post_type() ) {
+		$status = false;
+	}
+
+	return $status;
+}
+add_filter('wp_template_pepper_one_post_nav_entries','wp_template_pepper_one_remove_post_nav', 10, 1);
+
 
 /* Add Custom Post Types for easier Content management */
 // Register Custom Post Type
