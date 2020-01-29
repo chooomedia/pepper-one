@@ -190,11 +190,20 @@ html input[disabled] {
 
 /* Added Partner-Buttons on Partner Page reqiures WP Store Locator Plugin!*/
 .partner-buttons {
-  width: 6rem; height: 6rem;
+  width: 6rem;
   margin: .5rem 1rem;
-  padding: 1rem 1.5rem;
+  padding: 1.1rem 1rem 0 1rem;
+  text-align: center;
+  line-height: 3.8rem;
+  vertical-align: middle;
   background: var(--primary);
   border-radius: 3px;
+  transition: all .4s;
+}
+
+a.partner-buttons:hover {
+  color: var(--primary);
+  background: #fff;
 }
 
 button::-moz-focus-inner,
@@ -1111,6 +1120,12 @@ body:not(.theme-preset-active) footer#colophon {
 
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+  .flex-center-mobile {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
 
   #home-banner-box {
     height: 30vh;
