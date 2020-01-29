@@ -38,9 +38,25 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: auto;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: 0 0;
+  /*FireFox*/
+  scrollbar-width: none;
+  /*IE10+*/
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  display: none;
+  -ms-overflow-style: none;
 }
 
 article,
