@@ -7,13 +7,16 @@
  * @package wp_template_pepper_one
  */
 ?>
+<?php 	$queried_object = get_queried_object(); 
+		$city = get_post_meta( $queried_object->ID, 'wpsl_city', true );
+?>
 
 <div class="container-fluid p-0">
 	<div id="page-sub-header" class="mb-5 post-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');background-attachment: fixed;">
 			<div id="partner-banner" class="row p-0 m-0 h-100 justify-content-center align-items-center">
 				<div class="col-md-auto col-10 bd-highlight post-thumbnail-inner-content">
 					<h1 class="partner-title"><?php the_title(); ?></h1>
-					<p>Ihr Cuciniale Partner in der Region</p>
+					<p>Ihr Cuciniale Partner in <?php echo $city ?></p>
 				</div>
 			</div>
 			<div class="gradient-end-page"></div>
