@@ -48,7 +48,7 @@ $email = get_post_meta( $queried_object->ID, 'wpsl_email', true );
                 <div class="row flex-center-mobile mb-5">
                     <a href="tel:+49<?php echo $phone ?>" title="Fon" class="partner-buttons"><i class="fas fa-3x fa-phone"></i></a>
                     <a href="#partnerEmailModal" data-toggle="modal" data-target="#partnerEmailModal" title="Email" class="partner-buttons"><i class="fas fa-3x fa-envelope"></i></a>
-                    <a class="partner-buttons" title="Route" ><i class="fas fa-3x fa-map-marked-alt"></i></a>
+                    <a class="partner-buttons d-none" title="Route" ><i class="fas fa-3x fa-map-marked-alt"></i></a>
                 </div>
 
                 <!-- Modal -->
