@@ -2807,6 +2807,18 @@ fieldset:disabled a.btn {
   text-overflow: ellipsis;
 }
 
+.btn-secondary-fitted {
+  font-weight: 200;
+  font-size: 1.1rem;
+  color: var(--dark) !important;
+  background-color: var(--secondary);
+  border: unset;
+  line-height: 16px;
+  padding: 10px 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .btn-overview {
   width: 100%;
   margin-top: 1rem;
