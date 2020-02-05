@@ -49,7 +49,7 @@
         <?php get_search_form(); ?>
         <div class="sidebar-brand mx-auto text-center">
             <img style="max-width: 3rem;" src="<?php echo get_site_icon_url(); ?>" alt="Logo small" />
-            <span id="template-brand">Pepper-One v1.3</span>
+            <span id="template-brand">Pepper-One v1.6</span>
         </div>
     </nav>
 

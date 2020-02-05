@@ -56,6 +56,15 @@ Pepper One includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.6 - Jan. 28.01.2020 =
+* Fixed Background-Video Bug => show Image if no load Video
+* Added new Page (Jobs)
+* Styled Accordion and Modals
+
+= 1.5 - Jan. 28.01.2020 =
+* Sidenav branding changes
+* Added Modals to Pages
+
 = 1.4 - Jan. 15.01.2020 =
 * Added Custom Post Type "Recipe" for easy editing
 * Added Custom Archive Template
