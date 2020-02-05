@@ -16,7 +16,7 @@ get_header(); ?>
 		
 	<?php if( get_field( "video_link")) {
 		$videoid = get_field( 'video_link' );
-		echo '<section id="home-banner-box" class="loading">
+		echo '<section id="home-banner-box" class="loading>
 					<div class="image video-slide">
 						<div class="video-background">
 							<div class="video-foreground" id="ytplayer">

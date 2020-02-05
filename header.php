@@ -95,7 +95,6 @@
             <?php $videoid = get_field( 'video_link' ); ?>
             <script type="text/javascript">var videoID = "<?php Print($videoid); ?>";</script>
             <script async src="<?php echo get_template_directory_uri() ?>/inc/assets/js/video.js"></script>
-            <script async src="https://www.youtube.com/iframe_api"></script>
         <?php endif; ?>
         
         <!-- Add Custom Field for Video Background & required Scripts for embed yt video background -->
