@@ -357,9 +357,9 @@ function wp_template_pepper_one_scripts() {
     wp_script_add_data( 'html5hiv', 'conditional', 'lt IE 9' );
 
     // Animated Sidebar-Nav & Social-Media-Buttons
-    wp_enqueue_script( 'on-scroll-changes',get_template_directory_uri().'/inc/assets/js/on-scroll-changes.js', array(), '1.0.0', false );
-    wp_enqueue_script( 'sidebar-nav',get_template_directory_uri().'/inc/assets/js/sidebar-nav.js', array(), '1.0.0', false );
-    wp_enqueue_script( 'animated-background',get_template_directory_uri().'/inc/assets/js/animated-background.js', array(), '1.0.0', false );
+    wp_enqueue_script( 'on-scroll-changes', get_template_directory_uri() . '/inc/assets/js/on-scroll-changes.js', array(), '1.0.0', true );
+    wp_enqueue_script( 'sidebar-nav', get_template_directory_uri() . '/inc/assets/js/sidebar-nav.js', array(), '1.0.0', true );
+    wp_enqueue_script( 'animated-background', get_template_directory_uri() . '/inc/assets/js/animated-background.js', array(), '1.0.0', true );
     
 	// load bootstrap js
     if ( get_theme_mod( 'cdn_assets_setting' ) === 'yes' ) {

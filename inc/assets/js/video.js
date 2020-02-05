@@ -36,3 +36,10 @@ function onYouTubeIframeAPIReady() {
         }
     });
   }
+
+
+  jQuery(function($) {
+    if ($('ytplayer').is(':empty')){
+      alert("Video not loaded!");
+    }
+  });

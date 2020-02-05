@@ -8,8 +8,8 @@
  */
 
 get_header(); ?>
-<div class="post-thumbnail mb-0" style="background-image: url('<?php echo get_template_directory_uri() . '/inc/assets/img/page-404-cuciniale-plate-on-red-background.jpg'; ?>');height: 71vh;background-size:cover;background-repeat: no-repeat;"></div>
-	<section id="primary" class="content-area container-fluid">
+<div id="page-sub-header" class="post-thumbnail mb-0" style="background-image: url('<?php echo get_template_directory_uri() . '/inc/assets/img/page-404-cuciniale-plate-on-red-background.jpg'; ?>');height: 71vh;background-size:cover;background-repeat: no-repeat;"></div>
+	<section id="primary" class="content-area col-12">
 		<main id="main" class="site-main d-flex justify-content-center text-center" role="main">
 
 			<section class="error-404 not-found">
@@ -19,11 +19,14 @@ get_header(); ?>
 
 				<div class="page-content mb-5 pb-3">
 					<p><?php esc_html_e( 'Es sieht so aus, als wäre an diesem Ort nichts gefunden worden.', 'wp-pepper-one' ); ?></p>
-
-					<?php
-						get_search_form();
-					?>
 				</div><!-- .page-content -->
+
+				<div class="container p-1 d-none d-sm-block">
+					<h2>Unsere Rezepte des Monats</h2>
+					<p>Von süß bis festlich-deftig</p>
+					<?php adl_post_slider(1341); ?>
+					<div style="width:100%;height:10vh;"></div>
+				</div>
 			</section><!-- .error-404 -->
 
 		</main><!-- #main -->

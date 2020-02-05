@@ -49,7 +49,7 @@
         <?php get_search_form(); ?>
         <div class="sidebar-brand mx-auto text-center">
             <img style="max-width: 3rem;" src="<?php echo get_site_icon_url(); ?>" alt="Logo small" />
-            <span id="template-brand">Pepper-One v1.6</span>
+            <span id="template-brand">Pepper-One v1.</span>
         </div>
     </nav>
 
@@ -90,16 +90,16 @@
                 </nav>
             </div>
         </header><!-- #masthead -->
-        <?php if( get_field( "video_link")) {
-                $videoid = get_field( 'video_link' );
-        } ?>
-        
-        <script type="text/javascript">var videoID = "<?php Print($videoid); ?>";</script>
 
+        <?php if( get_field( "video_link")) : ?>
+            <?php $videoid = get_field( 'video_link' ); ?>
+            <script type="text/javascript">var videoID = "<?php Print($videoid); ?>";</script>
+            <script async src="<?php echo get_template_directory_uri() ?>/inc/assets/js/video.js"></script>
+            <script async src="https://www.youtube.com/iframe_api"></script>
+        <?php endif; ?>
+        
         <!-- Add Custom Field for Video Background & required Scripts for embed yt video background -->
-        <?php  if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )):           
-                echo '<script async src="https://www.youtube.com/iframe_api"></script>';
-                echo '<script async src="' . get_template_directory_uri() . '/inc/assets/js/video.js"></script>';														
+        <?php if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )):			
                 echo '<section id="home-banner-box" class="loading">
                             <div class="image video-slide">
                                 <div class="video-background">
