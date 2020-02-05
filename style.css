@@ -646,7 +646,8 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a 
 }
 
 .post-navigation .nav-previous a,
-.post-navigation .nav-next a {
+.post-navigation .nav-next a,
+.btn-partner-back {
   display: inline-block;
   font-size: 1.15rem;
   padding: 10px 8px;
@@ -659,12 +660,13 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a 
   content: " \2192";
 }
 
-.post-navigation .nav-previous a::before {
+.post-navigation .nav-previous a::before, .btn-partner-back::before {
   content: "\2190 ";
 }
 
 .post-navigation .nav-previous a:hover,
-.post-navigation .nav-next a:hover {
+.post-navigation .nav-next a:hover,
+.btn-partner-back:hover {
   color: #fff;
   background-color: #282c2f;
   transition: all .3s;

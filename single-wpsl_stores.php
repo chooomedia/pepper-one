@@ -66,8 +66,15 @@ $email = get_post_meta( $queried_object->ID, 'wpsl_email', true );
                         </div>
                     </div>
                 </div>
-
             </div>
+
+            <div class="mt-5">
+                <a class="rounded btn-partner-back" href="/buy-now" rel="prev"> Zurück zur Partnerübersicht</a>
+            </div>
+
+            <!-- Spacer for desktop views only -->
+            <div style="width:100%; height:9vh;" class="d-none d-md-block"></div>
+
             </article>
         </main><!-- #main -->
     </div><!-- #primary -->
