@@ -34,6 +34,7 @@
   --danger: #ee5f5b;
   --light: #e9ecef;
   --dark: #262626;
+  --darker: #1d1d1d;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -4899,7 +4900,7 @@ tbody.collapse.show {
           flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #32383e;
+  background-color: var(--dark);
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.6);
   border-radius: 0.25rem;
@@ -4951,7 +4952,7 @@ tbody.collapse.show {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: #515960;
+  background-color: var(--darker);
   border-bottom: 1px solid rgba(0, 0, 0, 0.6);
 }
 
