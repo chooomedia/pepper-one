@@ -10,7 +10,7 @@ get_header();
     $queried_object = get_queried_object();
     $city = get_post_meta( $queried_object->ID, 'wpsl_city', true );
     $phone = get_post_meta( $queried_object->ID, 'wpsl_phone', true );
-    $email = get_post_meta( $queried_object->ID, 'wpsl_email', true );
+    $partneremail = get_post_meta( $queried_object->ID, 'wpsl_email', true );
 ?>
 
 <div class="container-fluid p-0">
@@ -95,10 +95,11 @@ get_header();
                                         <label class="sr-only" for="message">Nachricht</label>
                                         <textarea name="content" id="content" class="col-12 rounded" rows="6" placeholder="Nachricht an Uns" ></textarea>
                                     </div>
-                                        <button id="sendBtn" type="submit" class="btn btn-primary btn-cta">
-                                            <i class="far fa-envelope"></i> Senden
-                                        </button>
-                                    </div>
+
+                                    <button id="sendBtn" type="submit" class="btn btn-primary btn-cta">
+                                        <i class="far fa-envelope"></i> Senden
+                                    </button>
+                                    
                                     <div id="statusMessage"> 
                                         <?php if (! empty($message)) { ?>
                                             <p class='<?php echo $type; ?>Message'><?php echo $message; ?></p>
@@ -118,17 +119,18 @@ get_header();
         if(!empty($_POST["send"])) {
             $name = $_POST["userName"];
             $email = $_POST["userEmail"];
+            $subject = "Cucinale.com - Produktanfrage";
             $tel = $_POST["userTel"];
             $content = $_POST["content"];
 
             $recipients = array(
                 "info@cuciniale.com",
-                $email
+                $partneremail
             );
 
             $toEmail = implode(',', $recipients);
             $mailHeaders = "From: " . $name . "<". $email .">\r\n";
-            if(mail($toEmail, $tel, $content, $mailHeaders)) {
+            if(mail($toEmail, $subject, $tel, $content, $mailHeaders)) {
                 $message = "Ihre Anfrage wurde versandt.";
                 $type = "success";
             }
@@ -136,19 +138,21 @@ get_header();
         require_once "single-wpsl_stores.php";
     ?>
 
-
     <!-- Script for contact-form-validation and send via ajax -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
     <script type="text/javascript">
         jQuery(function($) {
             function validateContactForm() {
+                var valid = true;
                 var userName = $("#userName").val();
                 var userEmail = $("#userEmail").val();
                 var userTel = $("#userTel").val();
                 var content = $("#content").val();
-                var valid = false;
 
-                if (userName && userEmail && userTel && content == "") {
+                if (userName == "") {
+                    valid = false;
+                }
+
+                if (userEmail == "") {
                     valid = false;
                 }
 
@@ -156,18 +160,16 @@ get_header();
                     valid = false;
                 } 
 
+                if (userTel == "") {
+                    valid = false;
+                }
+
+                if (content == "") {
+                    valid = false;
+                }
+
                 return valid;
             }
-
-            /*$("#frmContact").change(function() {
-                validateContactForm();
-
-                if (valid) {
-                    alert("all filled");
-                    $("#sendBtn").prop("disabled", false);
-                    return valid;
-                }
-            });*/
         });
     </script>
 <?php get_footer(); ?>
