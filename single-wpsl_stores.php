@@ -76,7 +76,7 @@ get_header();
                                         <label class="sr-only" for="email">Email</label>
                                         <div class="btn-group col-md-12 p-0" role="group">
                                             <div class="input-group-addon">
-                                                <i class="fas fa-phone"></i>
+                                                <i class="far fa-envelope-open"></i>
                                             </div>
                                             <input type="text" class="inputPostalCode" name="userEmail" id="userEmail" placeholder="E-Mail Adresse" required />
                                         </div>
@@ -85,7 +85,7 @@ get_header();
                                         <label class="sr-only" for="userTel">Telefon</label>
                                         <div class="btn-group col-md-12 p-0" role="group">
                                             <div class="input-group-addon">
-                                                <i class="fas fa-info-circle"></i>
+                                                <i class="fas fa-phone"></i>
                                             </div>
                                             <input type="tel" class="inputPostalCode" name="userTel" id="userTel" placeholder="+49 12345 678910" required />
                                         </div>
