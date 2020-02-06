@@ -49,7 +49,7 @@
         <?php get_search_form(); ?>
         <div class="sidebar-brand mx-auto text-center">
             <img style="max-width: 3rem;" src="<?php echo get_site_icon_url(); ?>" alt="Logo small" />
-            <span id="template-brand">Pepper-One v1.</span>
+            <span id="template-brand">Pepper-One v1.6</span>
         </div>
     </nav>
 
@@ -57,7 +57,7 @@
 	    <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-pepper-one' ); ?></a>
         <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
         <header id="masthead" class="site-header navbar-static-top sticky-top <?php echo wp_template_pepper_one_bg_class(); ?>" role="banner">
-            <div class="container-fluid">
+            <div class="container-fluid pl-0 ml-0">
                 <nav class="navbar navbar-expand-xl p-0">
                     <button type="button" id="sidebarCollapse" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>

@@ -110,6 +110,8 @@ get_header();
                     </div>
                 </div>
             </article>
+
+            <div class="d-none d-md-block" style="width:100%;height:5rem;"></div>
         </main><!-- #main -->
     </div><!-- #primary -->
     <?php

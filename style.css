@@ -354,7 +354,7 @@ div.wpcf7-response-output {
   letter-spacing: .5px;
 }
 
-.inputPostalCode, .inputPostalCodeDark {
+.inputPostalCode, .inputPostalCodeDark, textarea {
   font-size: 1.445rem !important;
   font-weight: 200;
   letter-spacing: 1px;
@@ -1129,6 +1129,15 @@ body:not(.theme-preset-active) footer#colophon {
 
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+  #ytplayer {
+    display: none;
+  }
+
+  .reverse-columns {
+		display: flex;
+		flex-direction: column-reverse;
+	}
 
   .flex-center-mobile {
     display: flex;
