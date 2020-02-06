@@ -62,7 +62,7 @@ $email = get_post_meta( $queried_object->ID, 'wpsl_email', true );
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <?php echo do_shortcode("[contact-form-7 id='1326' title='Partnerkontaktformular']"); ?>
+                                <?php echo do_shortcode("[contact-form-7 id='1315' title='Partneranfrageformular']"); ?>
                         </div>
                     </div>
                 </div>
