@@ -76,6 +76,7 @@ function wp_template_pepper_one_setup() {
 endif;
 add_action( 'after_setup_theme', 'wp_template_pepper_one_setup' );
 
+
 /* Add Custom Post Types for easier Content management */
 // Register Custom Post Type
 function wp_template_pepper_cpt_recipes() {
@@ -378,7 +379,6 @@ function wp_template_pepper_one_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'wp_template_pepper_one_scripts' );
-
 
 
 /**

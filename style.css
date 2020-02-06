@@ -346,6 +346,7 @@ div.wpcf7-response-output {
   height: 44px;
   line-height: 22px;
   border-radius: 3px;
+  padding-left: .5rem
 }
 
 .postalCodeSubmit {
