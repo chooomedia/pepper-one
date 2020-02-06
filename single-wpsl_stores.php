@@ -7,10 +7,10 @@
 
 get_header(); 
 // get informations from wp Store locator plugin
-$queried_object = get_queried_object();
-$city = get_post_meta( $queried_object->ID, 'wpsl_city', true );
-$phone = get_post_meta( $queried_object->ID, 'wpsl_phone', true );
-$email = get_post_meta( $queried_object->ID, 'wpsl_email', true );
+    $queried_object = get_queried_object();
+    $city = get_post_meta( $queried_object->ID, 'wpsl_city', true );
+    $phone = get_post_meta( $queried_object->ID, 'wpsl_phone', true );
+    $email = get_post_meta( $queried_object->ID, 'wpsl_email', true );
 ?>
 
 <div class="container-fluid p-0">
@@ -62,20 +62,110 @@ $email = get_post_meta( $queried_object->ID, 'wpsl_email', true );
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <?php echo do_shortcode("[contact-form-7 id='1326' title='Partnerkontaktformular']"); ?>
+                                <form name="frmContact" id="frmContact" method="post" action="" enctype="multipart/form-data" onsubmit="return validateContactForm()">
+                                    <div class="form-group mb-4">
+                                        <label class="sr-only" for="name">Name</label>
+                                        <div class="btn-group col-md-12 p-0" role="group">
+                                            <div class="input-group-addon">
+                                                <i class="far fa-user"></i>
+                                            </div>
+                                            <input type="text" class="inputPostalCode" name="userName" id="userName" placeholder="Name" required />
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label class="sr-only" for="email">Email</label>
+                                        <div class="btn-group col-md-12 p-0" role="group">
+                                            <div class="input-group-addon">
+                                                <i class="fas fa-phone"></i>
+                                            </div>
+                                            <input type="text" class="inputPostalCode" name="userEmail" id="userEmail" placeholder="E-Mail Adresse" required />
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label class="sr-only" for="userTel">Telefon</label>
+                                        <div class="btn-group col-md-12 p-0" role="group">
+                                            <div class="input-group-addon">
+                                                <i class="fas fa-info-circle"></i>
+                                            </div>
+                                            <input type="tel" class="inputPostalCode" name="userTel" id="userTel" placeholder="+49 12345 678910" required />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-4">
+                                        <label class="sr-only" for="message">Nachricht</label>
+                                        <textarea name="content" id="content" class="col-12 rounded" rows="6" placeholder="Nachricht an Uns" ></textarea>
+                                    </div>
+                                        <button id="sendBtn" type="submit" class="btn btn-primary btn-cta">
+                                            <i class="far fa-envelope"></i> Senden
+                                        </button>
+                                    </div>
+                                    <div id="statusMessage"> 
+                                        <?php if (! empty($message)) { ?>
+                                            <p class='<?php echo $type; ?>Message'><?php echo $message; ?></p>
+                                        <?php } ?>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="mt-5">
-                <a class="rounded btn-partner-back" href="/buy-now" rel="prev"> Zurück zur Partnerübersicht</a>
-            </div>
-
-            <!-- Spacer for desktop views only -->
-            <div style="width:100%; height:9vh;" class="d-none d-md-block"></div>
-
             </article>
         </main><!-- #main -->
     </div><!-- #primary -->
+    <?php
+        if(!empty($_POST["send"])) {
+            $name = $_POST["userName"];
+            $email = $_POST["userEmail"];
+            $tel = $_POST["userTel"];
+            $content = $_POST["content"];
+
+            $recipients = array(
+                "info@cuciniale.com",
+                $email
+            );
+
+            $toEmail = implode(',', $recipients);
+            $mailHeaders = "From: " . $name . "<". $email .">\r\n";
+            if(mail($toEmail, $tel, $content, $mailHeaders)) {
+                $message = "Ihre Anfrage wurde versandt.";
+                $type = "success";
+            }
+        }
+        require_once "single-wpsl_stores.php";
+    ?>
+
+
+    <!-- Script for contact-form-validation and send via ajax -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+    <script type="text/javascript">
+        jQuery(function($) {
+            function validateContactForm() {
+                var userName = $("#userName").val();
+                var userEmail = $("#userEmail").val();
+                var userTel = $("#userTel").val();
+                var content = $("#content").val();
+                var valid = false;
+
+                if (userName && userEmail && userTel && content == "") {
+                    valid = false;
+                }
+
+                if (!userEmail.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
+                    valid = false;
+                } 
+
+                return valid;
+            }
+
+            /*$("#frmContact").change(function() {
+                validateContactForm();
+
+                if (valid) {
+                    alert("all filled");
+                    $("#sendBtn").prop("disabled", false);
+                    return valid;
+                }
+            });*/
+        });
+    </script>
 <?php get_footer(); ?>
