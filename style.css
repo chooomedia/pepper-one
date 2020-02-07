@@ -335,6 +335,10 @@ table {
 # Forms
 --------------------------------------------------------------*/
 
+.human {
+  line-height: 44px;
+}
+
 /* Overwrite of margin from Error-Area Contact Form 7*/
 div.wpcf7-response-output {
   margin: 4.7em 0.5em 1em;
