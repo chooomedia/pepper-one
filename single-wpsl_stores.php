@@ -1,21 +1,81 @@
 <?php
 /**
- * Example of a single WPSL store template for the Twenty Fifteen theme.
+ * Singe Partner Site Tempate.
  * 
- * @package Twenty_Fifteen
+ * @package wp_template_pepper_one
  */
 
-//response generation function
-$response = "";
+ //response generation function
+ $response = "";
 
-//function to generate response
-function my_contact_form_generate_response($type, $message){
+ //function to generate response
+ function my_contact_form_generate_response($type, $message){
 
-    global $response;
+     global $response;
 
-    if($type == "success") $response = "<div class='success'>{$message}</div>";
-    else $response = "<div class='error'>{$message}</div>";
-}  
+     if($type == "success") $response = "<div class='success'>{$message}</div>";
+     else $response = "<div class='error'>{$message}</div>";
+ }
+
+ //response messages
+ $not_human       = "Das ist leider falsch - bitte wiederholen";
+ $missing_content = "Bitte füllen Sie alle Felder aus";
+ $email_invalid   = "Email Adresse falsch";
+ $message_unsent  = "Anfrage nicht versendet - Bitte erneut versuchen.";
+ $message_sent    = "Vielen Dank die Anfrage wurde verschickt. Sie erhalten innerhalb von 3 - 5 Werktagen Bescheid.";
+ 
+ //user posted variables
+ $name = $_POST['message_name'];
+ $email = $_POST['message_email'];
+ $tel = $_POST['message_tel'];
+ $message = $_POST['message_text'];
+ $human = $_POST['message_human'];
+
+ // Array for multi-send Email
+ $recipients = array(
+    "info@cuciniale.com",
+    $partneremail
+ );
+
+ $content = array(
+     "<p>Kundenname: " . $name . "</p>",
+     "<p>Kundentelefonnummer: " . $tel . "</p>",
+     "<p>Nachricht: " . $message . "</p>"
+ );
+ 
+ //php mailer variables
+ $to = implode(',', $recipients);
+ $subject = get_bloginfo('name') . " - Neue Produktanfrage";
+ $headers = 'From: '. $email . "\r\n";
+ $headers .= "MIME-Version: 1.0\r\n";
+ $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+ 'Reply-To: ' . $email . "\r\n";
+
+ //Human verification
+ if(!$human == 0) {
+     if($human != 2) my_contact_form_generate_response("error", $not_human); //not human!
+     else {
+
+         //validate email
+         if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+             my_contact_form_generate_response("error", $email_invalid);
+         else //email is valid
+         {
+             //validate presence of name and message
+             if(empty($name) || empty($message) || empty($tel)){
+                 my_contact_form_generate_response("error", $missing_content);
+             }
+             //ready to go!
+             else 
+             {
+                 $sent = wp_mail($to, $subject, implode($content), $headers);
+                 if($sent) my_contact_form_generate_response("success", $message_sent); //message sent!
+                 else my_contact_form_generate_response("error", $message_unsent); //message wasn't sent
+             }
+         }  
+     }
+ }
+ else if ($_POST['submitted']) my_contact_form_generate_response("error", $missing_content);
 
 get_header(); 
 // get informations from wp Store locator plugin
@@ -75,14 +135,14 @@ get_header();
                             </div>
                             <div class="modal-body">
                             <?php echo $response; ?>
-                                <form method="post" action="<?php the_permalink(); ?>">
+                                <form id="partnerFrm" action="<?php the_permalink(); ?>">
                                     <div class="form-group mb-4">
                                         <label class="sr-only" for="message_name">Name</label>
                                         <div class="btn-group col-md-12 p-0" role="group">
                                             <div class="input-group-addon">
                                                 <i class="far fa-user"></i>
                                             </div>
-                                            <input type="text" class="inputPostalCode" name="message_name" placeholder="Name" value="<?php echo esc_attr($_POST['message_name']); ?>" required/>
+                                            <input type="text" class="inputPostalCode" name="message_name" placeholder="Name" value="<?php echo esc_attr($_POST['message_name']); ?>" required autofocus autocomplete="off" />
                                         </div>
                                     </div>
                                     <div class="form-group mb-4">
@@ -91,7 +151,7 @@ get_header();
                                             <div class="input-group-addon">
                                                 <i class="far fa-envelope-open"></i>
                                             </div>
-                                            <input type="text" class="inputPostalCode" name="message_email" palceholder="Email Adresse" value="<?php echo esc_attr($_POST['message_email']); ?>" required/>
+                                            <input type="text" class="inputPostalCode" name="message_email" placeholder="Email Adresse" value="<?php echo esc_attr($_POST['message_email']); ?>" required autocomplete="off" />
                                         </div>
                                     </div>
                                     <div class="form-group mb-4">
@@ -100,7 +160,7 @@ get_header();
                                             <div class="input-group-addon">
                                                 <i class="fas fa-phone"></i>
                                             </div>
-                                            <input type="tel" class="inputPostalCode" name="message_tel" placeholder="Telefonnummer" value="<?php echo esc_attr($_POST['message_tel']); ?>" required/>
+                                            <input type="tel" class="inputPostalCode" name="message_tel" placeholder="Telefonnummer" value="<?php echo esc_attr($_POST['message_tel']); ?>" required autocomplete="off" />
                                         </div>
                                     </div>
 
@@ -113,14 +173,22 @@ get_header();
                                         <label class="sr-only" for="message_human">Mensch</label>
                                         <div class="btn-group col-md-12 p-0" role="group">
                                             <div class="input-group-addon">
-                                                <i class="fas fa-brain"></i>
+                                                <i class="fas fa-robot"></i>
                                             </div>
-                                            <input type="text" style="width: 60px;" name="message_human"><span class="human ml-md-1"> + 3 = 5</span>
+                                            <input type="text" class="inputPostalCode" style="width: 60px;" name="message_human" required><span class="human ml-md-1"> + 3 = 5</span>
                                             <input type="hidden" name="submitted" value="1">
                                         </div>
                                     </div>
+                                    <div class="form-group mb-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="acceptGDPR" autocomplete="off" />
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Hiermit bestätigen Sie die <a href="/impressum#datenschutz" target="_blank" title="Datenschutzbestimmungen akzeptieren">Datenschutzbestimmungen</a>
+                                            </label>
+                                        </div>    
+                                    </div>
 
-                                    <button type="submit" class="btn btn-primary btn-cta">
+                                    <button type="submit" class="btn btn-primary btn-cta btn-submit" disabled="disabled">
                                         <i class="far fa-envelope"></i> Senden
                                     </button>
                                     
@@ -135,76 +203,19 @@ get_header();
         </main><!-- #main -->
     </div><!-- #primary -->
 
-    <style type="text/css">
-  .error{
-    padding: 5px 9px;
-    border: 1px solid red;
-    color: red;
-    border-radius: 3px;
-  }
- 
-  .success{
-    padding: 5px 9px;
-    border: 1px solid green;
-    color: green;
-    border-radius: 3px;
-  }
- 
-  form span{
-    color: red;
-  }
-</style>
-    
-    <?php
-
-        //response messages
-        $not_human       = "Das ist leider falsch - bitte wiederholen";
-        $missing_content = "Bitte füllen Sie alle Felder aus";
-        $email_invalid   = "Email Adresse falsch";
-        $message_unsent  = "Anfrage nicht versendet - Bitte erneut versuchen.";
-        $message_sent    = "Vielen Dank die Anfrage wurde verschickt. Sie erhalten innerhalb von 3 - 5 Werktagen Bescheid.";
-        
-        //user posted variables
-        $name = $_POST['message_name'];
-        $email = $_POST['message_email'];
-        $tel = $_POST['message_tel'];
-        $message = $_POST['message_text'];
-        $human = $_POST['message_human'];
-
-        // Array for multi-send Email
-        $recipients = array(
-            "info@cuciniale.com",
-            $partneremail
-        );
-        
-        //php mailer variables
-        $to = implode(',', $recipients);
-        $subject = "Neue Anfrage - ".get_bloginfo('name');
-        $headers = 'From: '. $email . "\r\n" .
-        'Reply-To: ' . $email . "\r\n";
-
-        //Human verification
-        if(!$human == 0){
-            if($human != 2) my_contact_form_generate_response("error", $not_human); //not human!
-            else {
-                //validate email
-                if(!filter_var($email, FILTER_VALIDATE_EMAIL))
-                    my_contact_form_generate_response("error", $email_invalid);
-
-                //validate presence of name and message
-                if(empty($name) || empty($message) || empty($tel)){
-                    my_contact_form_generate_response("error", $missing_content);
-                    
-                }
-                else //ready to go!
-                {
-                    $sent = wp_mail($to, $subject, strip_tags($message,$tel), $headers);
-                    if($sent) my_contact_form_generate_response("success", $message_sent); //message sent!
-                    else my_contact_form_generate_response("error", $message_unsent); //message wasn't sent
-                }
+    <!-- Check the Private Policities -->
+    <script>
+    jQuery(function($) {
+        $("input#acceptGDPR").click(function() {
+            if ($(this).is(':checked')) {
+                $("button.btn-submit").removeAttr('disabled');
+                $("#partnerFrm").attr('method', 'post')
+            } else {
+                $("button.btn-submit").attr('disabled', 'disabled');
+                $("#partnerFrm").removeAttr('method');
             }
-          }
-          else if ($_POST['submitted']) my_contact_form_generate_response("error", $missing_content);
-    ?>
-
+        });
+    });
+    </script>
+    
 <?php get_footer(); ?>
