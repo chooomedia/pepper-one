@@ -56,6 +56,10 @@ Pepper One includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.6.1 - Jan. 07.02.2020 =
+* added custom contact formular for WP store locator subpages (single-wpsl_stores.php)
+* Added Custom Information von admin dashboard
+
 = 1.6 - Jan. 28.01.2020 =
 * Fixed Background-Video Bug => show Image if no load Video
 * Added new Page (Jobs)
