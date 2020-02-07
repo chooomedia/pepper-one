@@ -624,6 +624,7 @@ mark,
 }
 
 .recipes-shorter-description {
+  height: 56.667px;
   text-shadow: unset;
   font-size: 1rem;
   font-weight: 200;
