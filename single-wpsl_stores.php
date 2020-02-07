@@ -134,7 +134,9 @@ get_header();
                                 </button>
                             </div>
                             <div class="modal-body">
-                            <?php echo $response; ?>
+                                <span class="m-3">
+                                    <?php echo $response; ?>
+                                </span>
                                 <form id="partnerFrm" action="<?php the_permalink(); ?>">
                                     <div class="form-group mb-4">
                                         <label class="sr-only" for="message_name">Name</label>
@@ -173,7 +175,7 @@ get_header();
                                         <label class="sr-only" for="message_human">Mensch</label>
                                         <div class="btn-group col-md-12 p-0" role="group">
                                             <div class="input-group-addon">
-                                                <i class="fas fa-robot"></i>
+                                                <i class="fas fa-brain"></i>
                                             </div>
                                             <input type="text" class="inputPostalCode" style="width: 60px;" name="message_human" required><span class="human ml-md-1"> + 3 = 5</span>
                                             <input type="hidden" name="submitted" value="1">
@@ -183,7 +185,7 @@ get_header();
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" value="" id="acceptGDPR" autocomplete="off" />
                                             <label class="form-check-label" for="defaultCheck1">
-                                                Hiermit bestätigen Sie die <a href="/impressum#datenschutz" target="_blank" title="Datenschutzbestimmungen akzeptieren">Datenschutzbestimmungen</a>
+                                            Hiermit akzeptiere ich die <a href="/impressum#datenschutz" target="_blank" title="Datenschutzbestimmungen akzeptieren">AGB</a> zur Verarbeitung meiner Daten.
                                             </label>
                                         </div>    
                                     </div>

@@ -165,6 +165,26 @@ function wp_template_pepper_one_reminder(){
 }
 add_action( 'admin_notices', 'wp_template_pepper_one_reminder' );
 
+/**InfoField for Update-Warnings of the plugins */
+function wp_template_pepper_one_plugin_info(){
+
+        if(!get_option( 'triggered_welcomet99')){
+            $message = sprintf(__( 'Bitte die Plugins <b>Slide Anything, WP Store Locator & ADL Post Slider</b> nicht ohne vorherige Anfrage an <a style="color:inherit;text-decoration:underline;" href="mailto:christopher@chooomedia.de">Christopher von CHOOOMEDIA</a> updaten !!!', 'wp-pepper-one' )
+            );
+
+            printf(
+                '<div class="notice is-dismissible" style="background-color: red; color: #fff; border-left: none;">
+                    <p>%1$s</p>
+                </div>',
+                $message
+            );
+            add_option( 'triggered_welcomet99', '0', '', 'yes' );
+        }
+
+}
+add_action( 'admin_notices', 'wp_template_pepper_one_plugin_info' );
+
+
 /**Styling of the WP Store Locator Plugin */
 function custom_templates( $templates ) {
 
