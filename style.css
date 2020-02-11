@@ -1318,6 +1318,29 @@ body:not(.theme-preset-active) footer#colophon {
 ## iPad
 --------------------------------------------------------------*/
 @media only screen and (max-width: 960px) {
+  .wp-block-column:nth-child(2n) {
+    margin: 0 16px;
+  }
+  .wp-block-column {
+      flex-basis: calc(33% - 16px);
+      flex-grow: 0;
+  }
+
+  .wp-block-spacer {
+    height: 1.85rem !important;
+  }
+
+  div.container > div > div > div.wp-block-columns.alignfull > div.wp-block-column.ml-md-5.pl-md-5 {
+    flex-basis: 58% !important;
+  }
+
+  h2.recipes-month-name {
+    font-size: 2rem;
+  }
+  p.recipe-app-info {
+    font-size: 1.1rem;
+  }
+
   html {
     font-size: 85%;
   }
@@ -1332,6 +1355,7 @@ body:not(.theme-preset-active) footer#colophon {
     max-width: 88%;
   }
 }
+
 /*--------------------------------------------------------------
 ## iPad
 --------------------------------------------------------------*/

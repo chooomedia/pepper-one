@@ -30,11 +30,11 @@ get_header(); ?>
 
 						if ( $date_variable != $year ) // Year values are not the same
 							echo '	<div class="row mx-1 col-12">
-										<div class="col-md-4 col-5 float-left">
+										<div class="col-md-4 p-0 col-3 float-left">
 											<h2>' . $year . '</h2>
 										</div>
-										<div class="col-md-8 col-7 text-right">
-											<p class="recipe-app-info mr-md-4">
+										<div class="col-md-8 px-md-0 col-9 text-right">
+											<p class="recipe-app-info mr-md-0">
 												In der Groumetpilot2 App <br>digital verfügbar
 											</p>
 										</div>
