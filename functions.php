@@ -466,3 +466,65 @@ require get_template_directory() . '/inc/plugin-compatibility/plugin-compatibili
 if ( ! class_exists( 'wp_bootstrap_navwalker' )) {
     require_once(get_template_directory() . '/inc/wp_bootstrap_navwalker.php');
 }
+
+
+// Style Login View
+
+function wp_template_pepper_one_login_style() { ?>
+    <style>
+
+    body {
+        background: #000;
+    }
+
+    body.login, #login {
+        background: #000 !important;
+    }
+
+    .login h1 a {
+        background-image: url('<?php echo esc_url(get_theme_mod( 'wp_template_pepper_one_logo' )); ?>') !important;
+        background-size: contain !important;
+        width: 180px !important;
+    }
+
+    #login > p.message {
+        border-radius: 3px !important;
+        color: #FFF !important;
+        border-left: 4px solid #d0112b !important;
+        background-color: #262626 !important;
+        box-shadow: 0 1px 1px 0 rgba(255,255,255,.1) !important;
+    }
+
+    .login form, .login #login_error, .login .message, .login .success {
+        border-radius: 3px !important;
+        color: #FFF !important;
+        background-color: #262626 !important;
+        border: 1px solid #d0112b !important;
+        box-shadow: 0 1px 1px 0 rgba(255,255,255,.1) !important;
+    }
+
+    .login form .input, .login form input[type=checkbox], .login input[type=text] {
+        background: #1d1d1d !important;
+    }
+
+    input[type=text]:focus, input[type=password]:focus {
+        border-color: #d0112b !important;
+        box-shadow: 0 0 0 1px #d0112b !important;
+    }
+
+    .wp-core-ui .button, .wp-core-ui .button-secondary {
+        color: #d0112b !important; 
+    }
+
+    .wp-core-ui .button-primary {
+        color: #FFF !important;
+        background: #d0112b !important;
+        border-color: #d0112b !important;
+    }
+
+    </style>
+
+<?php } ?>
+<?php
+
+add_action('login_enqueue_scripts','wp_template_pepper_one_login_style');
