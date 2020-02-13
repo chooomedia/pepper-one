@@ -208,6 +208,7 @@ a {
 a:hover {
   color: var(--creamwhite);
   text-decoration: underline;
+  transition: all .3s;
 }
 
 a:not([href]):not([tabindex]) {

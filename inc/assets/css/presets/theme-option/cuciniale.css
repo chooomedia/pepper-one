@@ -211,6 +211,7 @@ a {
 a:hover {
   color: var(--primary);
   text-decoration: unset;
+  transition: all .3s;
 }
 
 a:not([href]):not([tabindex]) {
