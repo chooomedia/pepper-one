@@ -258,15 +258,6 @@ function wp_template_pepper_one_widgets_init() {
         'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer CTA', 'wp-pepper-one' ),
-        'id'            => 'footer-cta',
-        'description'   => esc_html__( 'Add HTML Code here to insert some CTA Buttons in the footer area', 'wp-pepper-one' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2>',
-        'after_title'   => '</h2>',
-    ) );
-    register_sidebar( array(
         'name'          => esc_html__( 'Page Bottom Widget', 'wp-pepper-one' ),
         'id'            => 'page-bottom-widget',
         'description'   => esc_html__( 'Add widgets here.', 'wp-pepper-one' ),
@@ -283,6 +274,15 @@ function wp_template_pepper_one_widgets_init() {
         'after_widget'  => '</div>',
         'before_title'  => '',
         'after_title'   => '',
+    ) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer CTA', 'wp-pepper-one' ),
+        'id'            => 'footer-cta',
+        'description'   => esc_html__( 'Add HTML Code here to insert some CTA Buttons in the footer area', 'wp-pepper-one' ),
+        'before_widget' => '<section id="%1$s" class="mx-4 widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2>',
+        'after_title'   => '</h2>',
     ) );
     register_sidebar( array(
         'name'          => esc_html__( 'Footer Left', 'wp-pepper-one' ),
