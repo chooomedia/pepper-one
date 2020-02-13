@@ -21,21 +21,23 @@
                     ?>
                     <?php if(is_archive()): ?>
                     <div class="recipes-box">
-                        <div class="recipe-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');background-repeat: no-repeat;">
-                        <footer class="recipes-text align-self-end">
-                            <h2 class="recipes-month-name"><?php the_date( 'F' ); ?></h2>
-                            <div class="row m-0 p-0">
-                                <h3 class="col-10 p-0 m-0 recipes-shorter-description">
-                                    <?php echo $recipeShorterDescr ?>
-                                </h3>
-                                <?php if ($recipeLink) : ?>
-                                    <div class="col-2 p-0 m-0 pl-3">
-                                        <img src="<?php echo get_template_directory_uri()?>/inc/assets/img/icon-cuciniale-avaiable-for-app.png" alt="icon-cuciniale-avaiable-for-app" />
-                                </div>
-                                <?php endif ?>
-                            </div>
-                        </footer>
-                        </div>
+                        <figure role="group" class="recipe-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');background-repeat: no-repeat;">
+                            <footer class="recipes-text align-self-end">
+                                <figcaption role="group">
+                                    <h2 class="recipes-month-name"><?php the_date( 'F' ); ?></h2>
+                                    <div class="row m-0 p-0">
+                                        <h3 class="col-10 p-0 m-0 recipes-shorter-description">
+                                            <?php echo $recipeShorterDescr ?>
+                                        </h3>
+                                        <?php if ($recipeLink) : ?>
+                                            <div class="col-2 p-0 m-0 pl-3">
+                                                <img src="<?php echo get_template_directory_uri()?>/inc/assets/img/icon-cuciniale-avaiable-for-app.png" alt="icon-cuciniale-avaiable-for-app" />
+                                        </div>
+                                        <?php endif ?>
+                                    </div>
+                                </figcaption>
+                            </footer>
+                        </figure>
                     </div><!-- .entry-content -->
                     <?php endif; ?>
                     <?php } ?>
