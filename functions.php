@@ -184,6 +184,24 @@ function wp_template_pepper_one_plugin_info(){
 }
 add_action( 'admin_notices', 'wp_template_pepper_one_plugin_info' );
 
+/**Instruction to easy edit new Recipes */
+function wp_template_pepper_one_reminder_new_recipe() { ?>
+    <?php $screen = get_current_screen(); ?>
+    <?php if( 'recipes' == $screen->post_type && 'edit' == $screen->base ) : ?>
+        <?php if (!get_option( 'triggered_welcomet100')) : ?>
+            <div class="notice notice-warning is-dismissible">
+                <h2>Neue Rezepte erstellen und editieren:</h2>
+                <p><strong>1.</strong> Über <b>aktuellstes Rezept</b> hovern</p>
+                <p><strong>2.</strong> auf <b><a href="#Btdppmc">Replizieren</a></b> klicken</p>
+                <p><strong>3.</strong> Repliziertes Rezept <b>bearbeiten</b></p>
+            </div>
+            <?php add_option( 'triggered_welcomet100', '0', '', 'yes' ); ?>
+        <?php endif; ?>
+    <?php endif; ?>
+	<?php
+}
+add_action('admin_notices', 'wp_template_pepper_one_reminder_new_recipe');
+
 
 /**Styling of the WP Store Locator Plugin */
 function custom_templates( $templates ) {
