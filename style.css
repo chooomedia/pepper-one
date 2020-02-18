@@ -849,6 +849,10 @@ a img.aligncenter {
   max-width: 1200px;
 }
 
+#wpsl-base-gmap_0.col-md-6.wpsl-gmap-canvas {
+  max-height: 47vh !important
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/

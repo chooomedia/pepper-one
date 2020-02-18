@@ -80,22 +80,31 @@
 get_header(); 
 // get informations from wp Store locator plugin
     $queried_object = get_queried_object();
-    $city = get_post_meta( $queried_object->ID, 'wpsl_city', true );
-    $phone = get_post_meta( $queried_object->ID, 'wpsl_phone', true );
-    $partneremail = get_post_meta( $queried_object->ID, 'wpsl_email', true );
+    $address        = get_post_meta( $queried_object->ID, 'wpsl_address', true );
+    $city           = get_post_meta( $queried_object->ID, 'wpsl_city', true );
+    $country       = get_post_meta( $queried_object->ID, 'wpsl_country', true );
+    $phone          = get_post_meta( $queried_object->ID, 'wpsl_phone', true );
+    $partneremail   = get_post_meta( $queried_object->ID, 'wpsl_email', true );
+    $destination    = $address . ',' . $city . ',' . $country;
+    $direction_url  = "https://maps.google.com/maps?saddr=&daddr=" . urlencode( $destination ) . "";
 ?>
 
 <div class="container-fluid p-0">
-    <div id="page-sub-header" class="mb-5 post-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');background-attachment: fixed;">
-            <div id="partner-banner" class="row p-0 m-0 h-100 justify-content-center align-items-center">
+        <figure role="group" id="page-sub-header" class="mb-5 post-thumbnail" style="background-image: url(
+            <?php if(has_post_thumbnail()) {
+                echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); 
+            } else {
+                echo get_site_url() . '/wp-content/uploads/2019/12/product-cuciniale-sandia-4-pan-potatoes-meat-champions-sensor-iphone.jpg';
+            }
+            ?>);background-attachment: fixed;">
+            <figcaption role="group" id="partner-banner" class="row p-0 m-0 h-100 justify-content-center align-items-center">
                 <div class="col-md-auto col-10 bd-highlight post-thumbnail-inner-content">
                     <h1 class="partner-title"><?php the_title(); ?></h1>
                     <p>Ihr Cuciniale Partner in <?php echo $city ?></p>
                 </div>
-            </div>
+            </figcaption>
             <div class="gradient-end-page"></div>
-        </div>
-    </div><!--#page-sub-header-->
+        </figure><!--#page-sub-header-->
     <main class="container">
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div class="container-fullwidth row">
@@ -117,10 +126,13 @@ get_header();
                     echo do_shortcode( '[wpsl_hours]' ); 
                 ?>
 
-                <div class="row flex-center-mobile mb-5">
+                <div class="row flex-center-mobile mb-5 mt-md-5 mt-0">
+                    <div class="col-12 mb-3 text-center text-md-left">
+                        <h5 style="font-size:1.11rem;">Jetzt Termin vereinbaren oder hinfahren</h5>
+                    </div>
                     <a href="tel:+49<?php echo $phone ?>" title="Fon" class="partner-buttons"><i class="fas fa-3x fa-phone"></i></a>
                     <a href="#partnerEmailModal" data-toggle="modal" data-target="#partnerEmailModal" title="Email" class="partner-buttons"><i class="fas fa-3x fa-envelope"></i></a>
-                    <a class="partner-buttons d-none" title="Route" ><i class="fas fa-3x fa-map-marked-alt"></i></a>
+                    <a class="partner-buttons" title="Route" href="<?php echo esc_url( $direction_url ) ?>" target="_blank"><i class="fas fa-3x fa-map-marked-alt"></i></a>
                 </div>
 
                 <!-- Modal -->

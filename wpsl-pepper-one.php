@@ -49,7 +49,7 @@ $output .= "\t\t\t\t" . '</div>' . "\r\n";
 $output .= "\t\t\t\t" . '<p class="mt-2">Oder schreiben Sie uns <a class="underline" href="/contact" title="Nachricht schreiben"><u>hier</u></a> eine Nachricht</p>' . "\r\n";
 $output .= "\t\t\t\t" . '</form>' . "\r\n";
 $output .= "\t" . '<div style="width:100%;height:4vh;" aria-hidden="true" class="wp-block-spacer d-none d-sm-block"></div>' . "\r\n";
-$output .= "\t" . '<div id="wpsl-result-list" class="wpsl-pepper-store-list">' . "\r\n";
+$output .= "\t" . '<div id="wpsl-result-list" class="wpsl-pepper-store-list col-12">' . "\r\n";
 $output .= "\t\t" . '<div id="wpsl-stores" '. $autoload_class .'>' . "\r\n";
 $output .= "\t\t\t" . '<ul></ul>' . "\r\n";
 $output .= "\t\t" . '</div>' . "\r\n";
