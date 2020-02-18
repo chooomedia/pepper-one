@@ -190,10 +190,17 @@ function wp_template_pepper_one_reminder_new_recipe() { ?>
     <?php if( 'recipes' == $screen->post_type && 'edit' == $screen->base ) : ?>
         <?php if (!get_option( 'triggered_welcomet100')) : ?>
             <div class="notice notice-warning is-dismissible">
-                <h2>Neue Rezepte erstellen und editieren:</h2>
-                <p><strong>1.</strong> Über <b>aktuellstes Rezept</b> hovern</p>
-                <p><strong>2.</strong> auf <b><a href="#Btdppmc">Replizieren</a></b> klicken</p>
-                <p><strong>3.</strong> Repliziertes Rezept <b>bearbeiten</b></p>
+                <div style="display:flex;">
+                    <span style="width:20%">
+                        <h2>Neues Rezept erstellen und editieren:</h2>
+                        <p><strong>1.</strong> Über <b>aktuellstes Rezept</b> hovern</p>
+                        <p><strong>2.</strong> auf <b><a href="#Btdppmc">Replizieren</a></b> klicken</p>
+                        <p><strong>3.</strong> Repliziertes Rezept <b>bearbeiten</b></p>
+                    </span>
+                    <span style="width:80%">
+                        <img src="<?php echo get_template_directory_uri() ?>/inc/assets/img/cuciniale-neues-rezept.gif" alt="Mini-Tutorial neues Rezept erstellen" />
+                    </span>
+                </div>
             </div>
             <?php add_option( 'triggered_welcomet100', '0', '', 'yes' ); ?>
         <?php endif; ?>
