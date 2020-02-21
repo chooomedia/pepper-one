@@ -4324,7 +4324,7 @@ tbody.collapse.show {
   background-color: var(--dark);
   min-width: 250px;
   max-width: 250px;
-  padding: 1.5rem 32px 0 32px;
+  padding: 1.5rem 20px 0 20px;
   position: fixed;
   transform: translateX(-100%);
   transition: all 0.5s ease-in-out;
