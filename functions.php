@@ -184,6 +184,13 @@ function wp_template_pepper_one_plugin_info(){
 }
 add_action( 'admin_notices', 'wp_template_pepper_one_plugin_info' );
 
+/**Add Schema.org Item propertie to nav links */
+function wp_template_pepper_one_add_menu_atts( $atts, $item, $args ) {
+    $atts['itemprop'] = 'url';
+    return $atts;
+  }
+add_filter( 'nav_menu_link_attributes', 'wp_template_pepper_one_add_menu_atts', 10, 3 );
+
 /**Instruction to easy edit new Recipes */
 function wp_template_pepper_one_reminder_new_recipe() { ?>
     <?php $screen = get_current_screen(); ?>
@@ -191,13 +198,14 @@ function wp_template_pepper_one_reminder_new_recipe() { ?>
         <?php if (!get_option( 'triggered_welcomet100')) : ?>
             <div class="notice notice-warning is-dismissible">
                 <div style="display:flex;">
-                    <span style="width:20%">
+                    <span style="width:27%">
                         <h2>Neues Rezept erstellen und editieren:</h2>
                         <p><strong>1.</strong> Über <b>aktuellstes Rezept</b> hovern</p>
                         <p><strong>2.</strong> auf <b><a href="#Btdppmc">Replizieren</a></b> klicken</p>
                         <p><strong>3.</strong> Repliziertes Rezept <b>bearbeiten</b></p>
+                        <p><strong>4.</strong> Rezeptmaske <b>anpassen</b></p>
                     </span>
-                    <span style="width:80%">
+                    <span style="width:73%;margin:1rem 0">
                         <img src="<?php echo get_template_directory_uri() ?>/inc/assets/img/cuciniale-neues-rezept.gif" alt="Mini-Tutorial neues Rezept erstellen" />
                     </span>
                 </div>

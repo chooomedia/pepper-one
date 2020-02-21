@@ -32,7 +32,7 @@
 
 <div class="wrapper">
     <!-- Sidebar-Nav -->
-    <nav id="sidebar">
+    <nav id="sidebar" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
         <?php
             wp_nav_menu(array(
             'theme_location'  => 'sidebar-nav',
@@ -47,9 +47,9 @@
             ));
         ?>
         <?php get_search_form(); ?>
-        <div class="sidebar-brand mx-auto text-center">
-            <img style="max-width: 3rem;" src="<?php echo get_site_icon_url(); ?>" alt="Logo small" />
-            <span id="template-brand">Pepper-One v1.6</span>
+        <div class="sidebar-brand mx-auto text-center" itemscope="itemscope" itemtype="https://schema.org/Brand">
+            <img itemprop="logo" style="max-width: 3rem;" src="<?php echo get_site_icon_url(); ?>" alt="Logo small" />
+            <span itemprop="name" id="template-brand">Pepper-One v1.6</span>
         </div>
     </nav>
 
@@ -58,7 +58,7 @@
         <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
         <header id="masthead" class="site-header navbar-static-top sticky-top <?php echo wp_template_pepper_one_bg_class(); ?>" role="banner">
             <div class="container-fluid pl-0 ml-0">
-                <nav class="navbar navbar-expand-xl p-0">
+                <nav class="navbar navbar-expand-xl p-0" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
                     <button type="button" id="sidebarCollapse" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -77,13 +77,13 @@
                     ));
                     ?>
 
-                    <div class="navbar-brand">
+                    <div class="navbar-brand" itemscope itemtype="http://schema.org/Brand">
                         <?php if ( get_theme_mod( 'wp_template_pepper_one_logo' ) ): ?>
-                            <a href="<?php echo esc_url( home_url( '/' )); ?>">
-                                <img src="<?php echo esc_url(get_theme_mod( 'wp_template_pepper_one_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                            <a itemprop="name" href="<?php echo esc_url( home_url( '/' )); ?>">
+                                <img itemprop="logo" src="<?php echo esc_url(get_theme_mod( 'wp_template_pepper_one_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                             </a>
                         <?php else : ?>
-                            <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
+                            <a itemprop="name" class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
                         <?php endif; ?>
 
                     </div>
@@ -99,14 +99,14 @@
         
         <!-- Add Custom Field for Video Background & required Scripts for embed yt video background -->
         <?php if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )):			
-                echo '<section id="home-banner-box" class="loading">
+                echo '<figure role="group" id="home-banner-box" class="loading">
                             <div class="image video-slide">
                                 <div class="video-background">
                                     <div class="video-foreground" id="ytplayer">
                                     </div>
                                 </div>
                             </div>
-                        </section>';
+                        </figure>';
 
                 if( !is_front_page() || is_single()) {
                     $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
