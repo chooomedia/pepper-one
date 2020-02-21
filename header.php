@@ -30,6 +30,16 @@
     } ?>
 <?php endif;?>
 
+<?php
+wp_nav_menu( array( 
+    'theme_location'    => 'social-media-menu',
+    'container'         => '',
+    'container_id'      => '',
+    'container_class'   => '',
+    'menu_class'        => 'circled-buttons'
+     ) );
+?>
+
 <div class="wrapper">
     <!-- Sidebar-Nav -->
     <nav id="sidebar" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">

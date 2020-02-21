@@ -2780,10 +2780,9 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .circled-buttons {
   z-index: 999;
   position: fixed;
-  display: inline-block;
-  right: 96px;
+  right: 12px;
   top: 37vh;
-  width: 40px;
+  padding: unset;
   transition: all .3s;
 }
 
