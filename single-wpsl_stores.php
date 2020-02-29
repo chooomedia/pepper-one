@@ -141,7 +141,7 @@ get_header();
                     <div class="col-12 mb-3 text-center text-md-left">
                         <h5 style="font-size:1.11rem;">Jetzt Termin vereinbaren oder hinfahren</h5>
                     </div>
-                    <a href="tel:+49<?php echo $phone ?>" title="Fon" class="partner-buttons"><i class="fas fa-3x fa-phone"></i></a>
+                    <a href="tel:+<?php echo $phone ?>" title="Fon" class="partner-buttons"><i class="fas fa-3x fa-phone"></i></a>
                     <a href="#partnerEmailModal" data-toggle="modal" data-target="#partnerEmailModal" title="Email" class="partner-buttons"><i class="fas fa-3x fa-envelope"></i></a>
                     <?php if (!$terms) : ?>
                         <a class="partner-buttons" title="Route" href="<?php echo esc_url( $direction_url ) ?>" target="_blank"><i class="fas fa-3x fa-map-marked-alt"></i></a>

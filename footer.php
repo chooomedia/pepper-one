@@ -39,7 +39,7 @@
 					&copy; <?php echo date('Y'); ?>
 					</div><!-- close .site-info -->
 				<?php else : ?>
-					<div class="my-5">
+					<div class="py-5">
 						<div class="site-info pb-3 pb-md-4">
 							<?php echo 'cuciniale.com'; ?>
 							<br> 

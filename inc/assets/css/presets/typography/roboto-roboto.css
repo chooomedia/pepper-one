@@ -54,6 +54,8 @@ h2.recipes-month-name {
 	text-shadow: 1px 1px #000;
 	text-transform: uppercase;
 	margin-bottom: 1px;
+	position: relative;
+	z-index: 9;
 }
 p.recipes {
 	font-size: 1.149rem;
@@ -64,6 +66,13 @@ p.recipes {
 .recipes-text {
 	z-index: 1;
 }
+
+footer.recipes-text {
+	padding: 1.5rem;
+	position: relative;
+    top: 50%;
+}
+
 p.recipe-app-info {
 	color: var(--primary) !important;
 	text-align: left;

@@ -21,7 +21,8 @@
                     ?>
                     <?php if(is_archive()): ?>
                     <div class="recipes-box">
-                        <figure role="group" class="recipe-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');background-repeat: no-repeat;">
+                        <figure role="group">
+                        <div class="recipe-thumbnail" style="background: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>')"></div>
                             <footer class="recipes-text align-self-end">
                                 <figcaption role="group">
                                     <h2 class="recipes-month-name"><?php the_date( 'F' ); ?></h2>

@@ -33,7 +33,7 @@ get_header(); ?>
 										<div class="col-md-4 p-0 pr-2 col-4 float-left">
 											<h2>' . $year . '</h2>
 										</div>
-										<div class="col-md-8 px-md-0 col-8 text-right">
+										<div class="d-none col-md-8 px-md-0 col-8 text-right">
 											<p class="recipe-app-info mr-md-4">
 												In der Groumetpilot2 App <br>digital verfügbar
 											</p>
