@@ -1,6 +1,6 @@
 <?php
 /**
- * Singe Partner Site Tempate.
+ * Single Partner Site Template.
  * 
  * @package wp_template_pepper_one
  */
@@ -87,6 +87,7 @@ get_header();
     $partneremail   = get_post_meta( $queried_object->ID, 'wpsl_email', true );
     $destination    = $address . ',' . $city . ',' . $country;
     $direction_url  = "https://maps.google.com/maps?saddr=&daddr=" . urlencode( $destination ) . "";
+    $terms = wp_get_post_terms( $queried_object->ID, 'wpsl_store_category', '' );
 ?>
 
 <div class="container-fluid p-0">
@@ -108,6 +109,16 @@ get_header();
     <main class="container">
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div class="container-fullwidth row">
+            <?php if ( $terms && !is_wp_error( $terms ) ) : ?>
+                <p class="landingpage">
+                    <strong>
+                        Wir haben mit dem Wissen der Profiköche ein Kochsystem entwickelt, das Sie unterstützt, jedes Gericht optimal zuzubereiten.
+                        Ihr Leben wird nicht mehr dasselbe sein, wenn Sie lernen, wie Sie 'smart' kochen können.
+                        Vereinbaren Sie jetzt einen Termin um selbst das System zu Hause testen zu können!
+                    </strong>
+                </p>
+            <?php endif; ?>
+
                 <?php
                     global $post;
                     
@@ -132,7 +143,9 @@ get_header();
                     </div>
                     <a href="tel:+49<?php echo $phone ?>" title="Fon" class="partner-buttons"><i class="fas fa-3x fa-phone"></i></a>
                     <a href="#partnerEmailModal" data-toggle="modal" data-target="#partnerEmailModal" title="Email" class="partner-buttons"><i class="fas fa-3x fa-envelope"></i></a>
-                    <a class="partner-buttons" title="Route" href="<?php echo esc_url( $direction_url ) ?>" target="_blank"><i class="fas fa-3x fa-map-marked-alt"></i></a>
+                    <?php if (!$terms) : ?>
+                        <a class="partner-buttons" title="Route" href="<?php echo esc_url( $direction_url ) ?>" target="_blank"><i class="fas fa-3x fa-map-marked-alt"></i></a>
+                    <?php endif; ?>
                 </div>
 
                 <!-- Modal -->
@@ -213,6 +226,10 @@ get_header();
                 </div>
             </article>
 
+            <article class="my-5 p-md-0">
+                <?php the_content() ?>
+            </article>
+
             <div class="d-none d-md-block" style="width:100%;height:5rem;"></div>
         </main><!-- #main -->
     </div><!-- #primary -->
@@ -231,5 +248,5 @@ get_header();
         });
     });
     </script>
-    
+
 <?php get_footer(); ?>

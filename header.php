@@ -9,7 +9,8 @@
  * @package wp_template_pepper_one
  */
 
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -23,6 +24,13 @@
 </head>
 <body <?php body_class(); ?>>
 
+<!-- Load Wp Store Locator Cathegorie Variable if useing Cathegory "Landingpage" -->
+<?php if(is_single() ) : ?>
+    <?php $queried_object = get_queried_object();
+        $terms = wp_get_post_terms( $queried_object->ID, 'wpsl_store_category', '' );
+    ?>
+<?php endif; ?>
+
 <!-- Social-Media Button Area-->
 <?php if (is_active_sidebar('socialmedia-buttons') ) : ?>
     <?php if ( is_page() ) {
@@ -30,14 +38,15 @@
     } ?>
 <?php endif;?>
 
-<?php
-wp_nav_menu( array( 
-    'theme_location'    => 'social-media-menu',
-    'container'         => '',
-    'container_id'      => '',
-    'container_class'   => '',
-    'menu_class'        => 'circled-buttons'
-     ) );
+<?php if (!$terms) {
+    wp_nav_menu( array( 
+        'theme_location'    => 'social-media-menu',
+        'container'         => '',
+        'container_id'      => '',
+        'container_class'   => '',
+        'menu_class'        => 'circled-buttons'
+         ) );
+    }
 ?>
 
 <div class="wrapper">
@@ -57,6 +66,7 @@ wp_nav_menu( array(
             ));
         ?>
         <?php get_search_form(); ?>
+
         <div class="sidebar-brand mx-auto text-center" itemscope="itemscope" itemtype="https://schema.org/Brand">
             <img itemprop="logo" style="max-width: 3rem;" src="<?php echo get_site_icon_url(); ?>" alt="Logo small" />
             <span itemprop="name" id="template-brand">Pepper-One v1.6</span>
@@ -68,11 +78,12 @@ wp_nav_menu( array(
         <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
         <header id="masthead" class="site-header navbar-static-top sticky-top <?php echo wp_template_pepper_one_bg_class(); ?>" role="banner">
             <div class="container-fluid pl-0 ml-0">
+
+            <?php if (!$terms) : ?>
                 <nav class="navbar navbar-expand-xl p-0" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
                     <button type="button" id="sidebarCollapse" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
                     <?php
                     wp_nav_menu(array(
                     'theme_location'    => 'primary',
@@ -86,7 +97,6 @@ wp_nav_menu( array(
                     'walker'          => new wp_bootstrap_navwalker()
                     ));
                     ?>
-
                     <div class="navbar-brand" itemscope itemtype="http://schema.org/Brand">
                         <?php if ( get_theme_mod( 'wp_template_pepper_one_logo' ) ): ?>
                             <a itemprop="name" href="<?php echo esc_url( home_url( '/' )); ?>">
@@ -95,8 +105,22 @@ wp_nav_menu( array(
                         <?php else : ?>
                             <a itemprop="name" class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
                         <?php endif; ?>
-
                     </div>
+                </nav>
+
+                <?php else : ?>
+                    <nav class="navbar navbar-expand-xl p-0 d-flex justify-content-end" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+                        <div class="navbar-brand" itemscope itemtype="http://schema.org/Brand">
+                        <?php if ( get_theme_mod( 'wp_template_pepper_one_logo' ) ): ?>
+                            <a itemprop="name" href="<?php echo esc_url( home_url( '/' )); ?>">
+                                <img itemprop="logo" src="<?php echo esc_url(get_theme_mod( 'wp_template_pepper_one_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                            </a>
+                        <?php else : ?>
+                            <a itemprop="name" class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
+                        <?php endif; ?>
+                        </div>
+                    </nav>
+                <?php endif; ?>
                 </nav>
             </div>
         </header><!-- #masthead -->

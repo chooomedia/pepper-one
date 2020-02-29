@@ -37,6 +37,19 @@ p.overview {
 	color: var(--creamwhite);
 }
 
+p.landingpage {
+text-align: center;
+margin: 2rem auto 9rem auto;
+color: #fff;
+font-weight: 400;
+font-size: 1.5rem;
+}
+  
+.my-landingpage {
+	margin: 6rem auto 5rem auto;
+	font-weight: 600;
+}
+
 h2.recipes-month-name {
 	text-shadow: 1px 1px #000;
 	text-transform: uppercase;

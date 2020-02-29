@@ -1,6 +1,6 @@
 <?php
 /**
- * WP Bootstrap Starter functions and definitions
+ * CHOOOMEDIA Pepper One - functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
