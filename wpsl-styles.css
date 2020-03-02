@@ -254,6 +254,7 @@ in street view mode doesn't cover the control area.
 /* Result list */
 .wpsl-back {
     display: inline-block;
+    color: var(--primary);
 }
 
 #wpsl-stores,

@@ -111,11 +111,9 @@ get_header();
             <div class="container-fullwidth row">
             <?php if ( $terms && !is_wp_error( $terms ) ) : ?>
                 <p class="landingpage">
-                    <strong>
-                        Wir haben mit dem Wissen der Profiköche ein Kochsystem entwickelt, das Sie unterstützt, jedes Gericht optimal zuzubereiten.
-                        Ihr Leben wird nicht mehr dasselbe sein, wenn Sie lernen, wie Sie 'smart' kochen können.
-                        Vereinbaren Sie jetzt einen Termin um selbst das System zu Hause testen zu können!
-                    </strong>
+                    Wir haben mit dem Wissen der Profiköche ein Kochsystem entwickelt, das Sie unterstützt, jedes Gericht optimal zuzubereiten.
+                    Ihr Leben wird nicht mehr dasselbe sein, wenn Sie lernen, wie Sie <q>smart</q> kochen können.
+                    Vereinbaren Sie jetzt einen Termin um selbst das System zu Hause testen zu können!
                 </p>
             <?php endif; ?>
 
@@ -143,9 +141,7 @@ get_header();
                     </div>
                     <a href="tel:+<?php echo $phone ?>" title="Fon" class="partner-buttons"><i class="fas fa-3x fa-phone"></i></a>
                     <a href="#partnerEmailModal" data-toggle="modal" data-target="#partnerEmailModal" title="Email" class="partner-buttons"><i class="fas fa-3x fa-envelope"></i></a>
-                    <?php if (!$terms) : ?>
-                        <a class="partner-buttons" title="Route" href="<?php echo esc_url( $direction_url ) ?>" target="_blank"><i class="fas fa-3x fa-map-marked-alt"></i></a>
-                    <?php endif; ?>
+                    <a class="partner-buttons" title="Route" href="<?php echo esc_url( $direction_url ) ?>" target="_blank"><i class="fas fa-3x fa-map-marked-alt"></i></a>
                 </div>
 
                 <!-- Modal -->

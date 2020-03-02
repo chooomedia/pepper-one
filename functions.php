@@ -410,6 +410,9 @@ function wp_template_pepper_one_scripts() {
     wp_enqueue_script( 'on-scroll-changes', get_template_directory_uri() . '/inc/assets/js/on-scroll-changes.js', array(), '1.0.0', true );
     wp_enqueue_script( 'sidebar-nav', get_template_directory_uri() . '/inc/assets/js/sidebar-nav.js', array(), '1.0.0', true );
     wp_enqueue_script( 'animated-background', get_template_directory_uri() . '/inc/assets/js/animated-background.js', array(), '1.0.0', true );
+   
+    // Add Linked-Row function for "Presse"
+    wp_enqueue_script( 'linked-row', get_template_directory_uri() . '/inc/assets/js/linked-row.js', array(), '1.0.0', true );
     
 	// load bootstrap js
     if ( get_theme_mod( 'cdn_assets_setting' ) === 'yes' ) {
