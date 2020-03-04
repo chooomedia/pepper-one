@@ -760,7 +760,7 @@ if ( !class_exists( 'WPSL_Frontend' ) ) {
                 return __( 'If you use the [wpsl_address] shortcode outside a store page you need to set the ID attribute.', 'wpsl' );
             }
 
-            $content = '<div class="offset-md-1 col-md-5 container col-12 p-md-0 pt-5 wpsl-locations-details">';
+            $content = '<div class="offset-md-1 col-md-5 container order-2 col-12 p-md-0 pt-5 wpsl-locations-details">';
 
             if ( $atts['name'] && $name = get_the_title( $atts['id'] ) ) {
                 $content .= '<span><h4>' . esc_html( $name ) . '</h4></span>';
@@ -773,7 +773,7 @@ if ( !class_exists( 'WPSL_Frontend' ) ) {
             }
 
             if ( $atts['address2'] && $address2 = get_post_meta( $atts['id'], 'wpsl_address2', true ) ) {
-                $content .= '<span>' . esc_html( $address2 ) . '</span><br/>';
+                $content .= '<span>' . esc_html( $address2 ) . '</span><br/></br>';
             }
 
             $address_format = explode( '_', $wpsl_settings['address_format'] );
@@ -808,6 +808,17 @@ if ( !class_exists( 'WPSL_Frontend' ) ) {
 
                 $i++;
             }
+
+            $queried_object = get_queried_object();
+            $address        = get_post_meta( $queried_object->ID, 'wpsl_address', true );
+            $city           = get_post_meta( $queried_object->ID, 'wpsl_city', true );
+            $country        = get_post_meta( $queried_object->ID, 'wpsl_country', true );
+            $destination    = $address . ',' . $city . ',' . $country;
+            $direction_url  = "https://maps.google.com/maps?saddr=&daddr=" . urlencode( $destination ) . "";
+
+            $content .= '<a style="color:var(--primary)" href="' . $direction_url . '" target="_blank">Route</a>';
+
+
 
             /*if ( $atts['country'] && $country = get_post_meta( $atts['id'], 'wpsl_country', true ) ) {
                 $content .= '<span>' . esc_html( $country ) . '</span>';
@@ -1033,7 +1044,7 @@ if ( !class_exists( 'WPSL_Frontend' ) ) {
                 }
             }
 
-            $output =   '<div id="wpsl-base-gmap_' . self::$map_count . '" class="col-md-6 wpsl-gmap-canvas">' . "\r\n";
+            $output =   '<div id="wpsl-base-gmap_' . self::$map_count . '" class="col-md-6 wpsl-gmap-canvas order-3">' . "\r\n";
 
             // Make sure the shortcode attributes are valid.
             $map_styles = $this->check_map_shortcode_atts( $atts );

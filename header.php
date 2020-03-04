@@ -67,7 +67,7 @@
         ?>
         <?php get_search_form(); ?>
 
-        <div class="sidebar-brand mx-auto text-center" itemscope="itemscope" itemtype="https://schema.org/Brand">
+        <div class="sidebar-brand mx-auto text-center d-none" itemscope="itemscope" itemtype="https://schema.org/Brand">
             <img itemprop="logo" style="max-width: 3rem;" src="<?php echo get_site_icon_url(); ?>" alt="Logo small" />
             <span itemprop="name" id="template-brand">Pepper-One v1.6</span>
         </div>
@@ -110,7 +110,7 @@
 
                 <?php else : ?>
                     <nav class="navbar navbar-expand-xl p-0 d-flex justify-content-end" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
-                        <div class="navbar-brand" itemscope itemtype="http://schema.org/Brand">
+                        <div class="navbar-brand px-3" itemscope itemtype="http://schema.org/Brand">
                         <?php if ( get_theme_mod( 'wp_template_pepper_one_logo' ) ): ?>
                             <a itemprop="name" href="<?php echo esc_url( home_url( '/' )); ?>">
                                 <img itemprop="logo" src="<?php echo esc_url(get_theme_mod( 'wp_template_pepper_one_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">

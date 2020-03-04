@@ -82,12 +82,10 @@ get_header();
     $queried_object = get_queried_object();
     $address        = get_post_meta( $queried_object->ID, 'wpsl_address', true );
     $city           = get_post_meta( $queried_object->ID, 'wpsl_city', true );
-    $country       = get_post_meta( $queried_object->ID, 'wpsl_country', true );
+    $country        = get_post_meta( $queried_object->ID, 'wpsl_country', true );
     $phone          = get_post_meta( $queried_object->ID, 'wpsl_phone', true );
     $partneremail   = get_post_meta( $queried_object->ID, 'wpsl_email', true );
-    $destination    = $address . ',' . $city . ',' . $country;
-    $direction_url  = "https://maps.google.com/maps?saddr=&daddr=" . urlencode( $destination ) . "";
-    $terms = wp_get_post_terms( $queried_object->ID, 'wpsl_store_category', '' );
+    $terms          = wp_get_post_terms( $queried_object->ID, 'wpsl_store_category', '' );
 ?>
 
 <div class="container-fluid p-0">
@@ -110,7 +108,7 @@ get_header();
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div class="container-fullwidth row">
             <?php if ( $terms && !is_wp_error( $terms ) ) : ?>
-                <p class="landingpage">
+                <p class="landingpage order-1">
                     Wir haben mit dem Wissen der Profiköche ein Kochsystem entwickelt, das Sie unterstützt, jedes Gericht optimal zuzubereiten.
                     Ihr Leben wird nicht mehr dasselbe sein, wenn Sie lernen, wie Sie <q>smart</q> kochen können.
                     Vereinbaren Sie jetzt einen Termin um selbst das System zu Hause testen zu können!
@@ -132,16 +130,15 @@ get_header();
                     
                     // Add the address shortcode
                     echo do_shortcode( '[wpsl_address]' );
-                    echo do_shortcode( '[wpsl_hours]' ); 
                 ?>
 
                 <div class="row flex-center-mobile mb-5 mt-md-5 mt-0">
                     <div class="col-12 mb-3 text-center text-md-left">
-                        <h5 style="font-size:1.11rem;">Jetzt Termin vereinbaren oder hinfahren</h5>
+                        <h5 style="font-size:1.11rem;">Jetzt Termin vereinbaren</h5>
                     </div>
                     <a href="tel:+<?php echo $phone ?>" title="Fon" class="partner-buttons"><i class="fas fa-3x fa-phone"></i></a>
                     <a href="#partnerEmailModal" data-toggle="modal" data-target="#partnerEmailModal" title="Email" class="partner-buttons"><i class="fas fa-3x fa-envelope"></i></a>
-                    <a class="partner-buttons" title="Route" href="<?php echo esc_url( $direction_url ) ?>" target="_blank"><i class="fas fa-3x fa-map-marked-alt"></i></a>
+                    <!--<a class="partner-buttons" title="Route" href="" target="_blank"><i class="fas fa-3x fa-map-marked-alt"></i></a>-->
                 </div>
 
                 <!-- Modal -->
