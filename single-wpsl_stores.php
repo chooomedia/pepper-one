@@ -4,7 +4,6 @@
  * 
  * @package wp_template_pepper_one
  */
-
  //response generation function
  $response = "";
 
@@ -76,6 +75,13 @@
      }
  }
  else if ($_POST['submitted']) my_contact_form_generate_response("error", $missing_content);
+
+ //Google Gtag Tracking for conversation rate optimizing
+
+if ($terms) {
+    echo "<script> gtag('config', 'AW-662113117/7UuYCNzt78gBEN2W3LsC', { 'phone_conversion_number': '+49719133310' }); </script>";
+    echo "<script> function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-662113117/RKL_CKbz78gBEN2W3LsC', 'event_callback': callback }); return false; } </script>";
+}
 
 get_header(); 
 // get informations from wp Store locator plugin
@@ -208,10 +214,15 @@ get_header();
                                         </div>    
                                     </div>
 
-                                    <button type="submit" class="btn btn-primary btn-cta btn-submit" disabled="disabled">
-                                        <i class="far fa-envelope"></i> Senden
-                                    </button>
-                                    
+                                    <?php if(!$terms) : ?>
+                                        <button type="submit" class="btn btn-primary btn-cta btn-submit" disabled="disabled">
+                                            <i class="far fa-envelope"></i> Senden
+                                        </button>
+                                    <?php else : ?>
+                                        <button onclick="return gtag_report_conversion('https://cuciniale.com/partners/kueche-design-gmbh/')" type="submit" class="btn btn-primary btn-cta btn-submit" disabled="disabled">
+                                            <i class="far fa-envelope"></i> Senden
+                                        </button>
+                                    <?php endif; ?>
                                 </form>
                             </div>
                         </div>
