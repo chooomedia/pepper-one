@@ -81,6 +81,7 @@
 if ($terms) {
     echo "<script> gtag('config', 'AW-662113117/7UuYCNzt78gBEN2W3LsC', { 'phone_conversion_number': '+49719133310' }); </script>";
     echo "<script> function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-662113117/RKL_CKbz78gBEN2W3LsC', 'event_callback': callback }); return false; } </script>";
+    echo "<script> function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-662113117/3-2cCMC1l8oBEN2W3LsC', 'event_callback': callback }); return false; } </script>";
 }
 
 get_header(); 
@@ -112,7 +113,6 @@ get_header();
         </figure><!--#page-sub-header-->
     <main class="container">
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <div class="container-fullwidth row">
             <?php if ( $terms && !is_wp_error( $terms ) ) : ?>
                 <p class="landingpage order-1">
                     Wir haben mit dem Wissen der Profiköche ein Kochsystem entwickelt, das Sie unterstützt, jedes Gericht optimal zuzubereiten.
@@ -120,6 +120,12 @@ get_header();
                     Vereinbaren Sie jetzt einen Termin um selbst das System zu Hause testen zu können!
                 </p>
             <?php endif; ?>
+
+            <div class="container-fullwidth row">
+
+            <article class="my-5 p-md-0">
+                <?php the_content() ?>
+            </article>
 
                 <?php
                     global $post;
@@ -186,7 +192,7 @@ get_header();
                                             <div class="input-group-addon">
                                                 <i class="fas fa-phone"></i>
                                             </div>
-                                            <input type="tel" class="inputPostalCode" name="message_tel" placeholder="Telefonnummer" value="<?php echo esc_attr($_POST['message_tel']); ?>" required autocomplete="off" />
+                                            <input type="tel" class="inputPostalCode" name="message_tel" placeholder="Telefonnummer" value="<?php echo esc_attr($_POST['message_tel']); ?>" autocomplete="off" />
                                         </div>
                                     </div>
 
@@ -230,11 +236,7 @@ get_header();
                 </div>
             </article>
 
-            <article class="my-5 p-md-0">
-                <?php the_content() ?>
-            </article>
-
-            <div class="d-none d-md-block" style="width:100%;height:5rem;"></div>
+            <div class="d-none d-md-block" style="width:100%;height:6rem;"></div>
         </main><!-- #main -->
     </div><!-- #primary -->
 
