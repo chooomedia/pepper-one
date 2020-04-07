@@ -121,7 +121,6 @@
                         </div>
                     </nav>
                 <?php endif; ?>
-                </nav>
             </div>
         </header><!-- #masthead -->
 
