@@ -603,6 +603,7 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a 
   }
 }
 @media screen and (max-width: 991px) {
+
   .navbar-nav .dropdown-menu {
     border: medium none;
     margin-left: 1.250rem;
@@ -1144,6 +1145,10 @@ body:not(.theme-preset-active) footer#colophon {
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   header#masthead {
     padding: 1.5rem 1rem;
+  }
+
+  .product-page-wrapper {
+    width: 106vw !important;
   }
 
   #sidebar {

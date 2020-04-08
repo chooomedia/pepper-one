@@ -31,23 +31,6 @@
     ?>
 <?php endif; ?>
 
-<!-- Social-Media Button Area-->
-<?php if (is_active_sidebar('socialmedia-buttons') ) : ?>
-    <?php if ( is_page() ) {
-        dynamic_sidebar('socialmedia-buttons');
-    } ?>
-<?php endif;?>
-
-<?php if (!$terms) {
-    wp_nav_menu( array( 
-        'theme_location'    => 'social-media-menu',
-        'container'         => '',
-        'container_id'      => '',
-        'container_class'   => '',
-        'menu_class'        => 'circled-buttons'
-         ) );
-    }
-?>
 
 <div class="wrapper">
     <!-- Sidebar-Nav -->
