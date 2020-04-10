@@ -237,7 +237,7 @@ get_footer(); ?>
                             <div class="input-group-addon">
                                 <i class="fas fa-map"></i>
                             </div>
-                            <input type="number" class="inputPostalCode" name="message_plz" maxlength="5" placeholder="Postleitzahl" value="<?php echo esc_attr($_POST['message_plz']); ?>" autocomplete="off" />
+                            <input type="number" class="inputPostalCode" name="message_plz" maxlength="5" placeholder="Postleitzahl" value="<?php echo esc_attr($_POST['message_plz']); ?>" required autocomplete="off" />
                         </div>
                     </div>
 
@@ -260,8 +260,7 @@ get_footer(); ?>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="acceptGDPR" autocomplete="off" />
                             <label class="form-check-label text-white" for="defaultCheck1">
-                            Hiermit akzeptiere ich die <a href="/impressum#datenschutz" target="_blank" title="Datenschutzbestimmungen akzeptieren"><u>AGB</u></a> zur Verarbeitung meiner Daten.
-                            </label>
+                            Hiermit akzeptiere ich die <a href="/impressum#datenschutz" target="_blank" title="Datenschutzbestimmungen akzeptieren"><u>AGB</u></a> zur Verarbeitung meiner Daten. Wir antworten Ihnen binnen 3 Werktagen via Email. </label>
                         </div>    
                     </div>
 

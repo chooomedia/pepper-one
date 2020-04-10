@@ -226,7 +226,7 @@ in street view mode doesn't cover the control area.
     height: auto;
     padding: 6px 12px;
     margin: 0;
-    color: var(--dark-grey);
+    color: #000 !important;
     font-size: 1.245rem;
     font-weight: 200;
     letter-spacing: 1px;
