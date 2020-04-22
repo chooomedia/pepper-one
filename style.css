@@ -387,6 +387,10 @@ div.wpcf7-response-output {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+#switcher-wrapper {
+  right: 0;
+}
+
 header#masthead {
   margin-bottom: 0;
   box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
@@ -1383,7 +1387,7 @@ body:not(.theme-preset-active) footer#colophon {
   .navbar-brand {
     position: absolute;
     right: -39px;
-    top: -14px;
+    top: -2px;
   }
 
   .navbar-brand a img {
@@ -1404,6 +1408,9 @@ body:not(.theme-preset-active) footer#colophon {
 ## iPad
 --------------------------------------------------------------*/
 @media only screen and (max-width: 480px) {
+  #switcher-wrapper {
+    right: 34vw;
+  }
   html {
     font-size: 75%;
   }
