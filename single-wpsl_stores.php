@@ -45,9 +45,10 @@
  //php mailer variables
  $to = implode(',', $recipients);
  $subject = get_bloginfo('name') . " - Neue Produktanfrage";
- $headers = 'From: '. $email . "\r\n";
+ $headers = "From: Cuciniale GmbH <anfrage@cuciniale.com>\r\n";
  $headers .= "MIME-Version: 1.0\r\n";
- $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+ $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
+ $headers .= "X-Mailer: PHP/" . phpversion();
  'Reply-To: ' . $email . "\r\n";
 
  //Human verification
@@ -215,7 +216,7 @@ get_header();
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" value="" id="acceptGDPR" autocomplete="off" />
                                             <label class="form-check-label" for="defaultCheck1">
-                                            Hiermit akzeptiere ich die <a href="/impressum#datenschutz" target="_blank" title="Datenschutzbestimmungen akzeptieren">AGB</a> zur Verarbeitung meiner Daten.
+                                            Hiermit akzeptiere ich die <a href="/datenschutzerklaerung" target="_blank" title="Datenschutzbestimmungen akzeptieren">AGB</a> zur Verarbeitung meiner Daten.
                                             </label>
                                         </div>    
                                     </div>

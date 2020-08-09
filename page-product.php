@@ -31,7 +31,9 @@ $human = $_POST['message_human'];
 // Array for multi-send Email
 $recipients = array(
     "hello@chooo.media",
-    "oliver.deimling@cuciniale.com"
+    "andreas.lenhardt@cuciniale.com",
+    "oliver.deimling@cuciniale.com",
+    "andreas_lenhardt@hotmail.com"
 );
 
 $content = array(
@@ -43,9 +45,10 @@ $content = array(
 //php mailer variables
 $to = implode(',', $recipients);
 $subject = get_bloginfo('name') . " - Neue Bestellung " . get_the_title();
-$headers = 'From: '. $email . "\r\n";
+$headers = "From: Cuciniale GmbH <anfrage@cuciniale.com>\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+$headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
+$headers .= "X-Mailer: PHP/" . phpversion();
 'Reply-To: ' . $email . "\r\n";
 
 //Human verification
@@ -260,7 +263,7 @@ get_footer(); ?>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="acceptGDPR" autocomplete="off" />
                             <label class="form-check-label text-white" for="defaultCheck1">
-                            Hiermit akzeptiere ich die <a href="/impressum#datenschutz" target="_blank" title="Datenschutzbestimmungen akzeptieren"><u>AGB</u></a> zur Verarbeitung meiner Daten. Wir antworten Ihnen binnen 3 Werktagen via Email. </label>
+                            Hiermit akzeptiere ich die <a href="/datenschutzerklaerung" target="_blank" title="Datenschutzbestimmungen akzeptieren"><u>AGB</u></a> zur Verarbeitung meiner Daten. Wir antworten Ihnen binnen 3 Werktagen via Email. </label>
                         </div>    
                     </div>
 
