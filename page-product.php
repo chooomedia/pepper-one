@@ -84,8 +84,6 @@ else if ($_POST['submitted']) my_contact_form_generate_response("error", $missin
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="<?php echo get_theme_mod('header_bg_color_setting', '#fff'); ?>">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61015950-1"></script>
 <?php wp_head(); ?>
 </head>
 
@@ -269,7 +267,7 @@ get_footer(); ?>
                             <i class="far fa-envelope"></i> Senden
                         </button>
                     <?php else : ?>
-                        <button onclick="return gtag_report_conversion('https://cuciniale.com/partners/kueche-design-gmbh/')" type="submit" class="btn btn-primary btn-cta btn-submit" disabled="disabled">
+                        <button type="submit" class="btn btn-primary btn-cta btn-submit" disabled="disabled">
                             <i class="far fa-envelope"></i> Senden
                         </button>
                     <?php endif; ?>

@@ -80,8 +80,6 @@
 
 if ($terms) {
     echo "<script> gtag('config', 'AW-662113117/7UuYCNzt78gBEN2W3LsC', { 'phone_conversion_number': '+49719133310' }); </script>";
-    echo "<script> function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-662113117/RKL_CKbz78gBEN2W3LsC', 'event_callback': callback }); return false; } </script>";
-    echo "<script> function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-662113117/3-2cCMC1l8oBEN2W3LsC', 'event_callback': callback }); return false; } </script>";
 }
 
 get_header(); 
@@ -225,7 +223,7 @@ get_header();
                                             <i class="far fa-envelope"></i> Senden
                                         </button>
                                     <?php else : ?>
-                                        <button onclick="return gtag_report_conversion('https://cuciniale.com/partners/kueche-design-gmbh/')" type="submit" class="btn btn-primary btn-cta btn-submit" disabled="disabled">
+                                        <button type="submit" class="btn btn-primary btn-cta btn-submit" disabled="disabled">
                                             <i class="far fa-envelope"></i> Senden
                                         </button>
                                     <?php endif; ?>
