@@ -16,7 +16,7 @@ $output .= "\t\t\t\t" . '<p class="overview">Über die Distanzsuche können Sie 
 
 $output .= "\t\t\t\t" . '<form class="form-inline p-0 m-0" autocomplete="off">' . "\r\n";
 $output .= "\t\t\t\t\t" . '<div class="form-group p-0 col-8">' . "\r\n";
-$output .= "\t\t\t\t\t\t" . '<input id="wpsl-search-input" class="inputPostalCode form-control" type="text" placeholder="PLZ / Stadt" value="' . apply_filters( 'wpsl_search_input', '' ) . '" name="wpsl-search-input" aria-required="true" />' . "\r\n";
+$output .= "\t\t\t\t\t\t" . '<input id="wpsl-search-input" class="searchBtn inputPostalCode form-control" type="text" placeholder="PLZ / Stadt" value="' . apply_filters( 'wpsl_search_input', '' ) . '" name="wpsl-search-input" aria-required="true" />' . "\r\n";
 $output .= "\t\t\t\t\t" . '</div>' . "\r\n";
 
 if ( $wpsl_settings['radius_dropdown'] || $wpsl_settings['results_dropdown']  ) {

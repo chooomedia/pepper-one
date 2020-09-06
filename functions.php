@@ -253,6 +253,22 @@ function wp_partner_post_template( $template ) {
     return $template;
 }
 
+/**Exkluce Thank You Pages from search results */
+function wp_template_pepper_one_search_filter( $query ) {
+    if ( ! $query->is_admin && $query->is_search && $query->is_main_query() ) {
+      $query->set( 'post__not_in', array( 2398,2316,1333 ) );
+    }
+  }
+add_action( 'pre_get_posts', 'wp_template_pepper_one_search_filter' );
+
+/** Add Read More Button on excerpted Text */
+function new_excerpt_more($more) {
+    global $post;
+    return '<br><a style="width:160px;" class="mt-4 px-4 text-center nav-link btn-primary rounded" href="'. get_permalink($post->ID) . '">Mehr dazu</a>'; //Change to suit your needs
+}
+
+add_filter( 'excerpt_more', 'new_excerpt_more' );
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *

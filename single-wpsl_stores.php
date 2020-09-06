@@ -165,7 +165,7 @@ get_header();
                                 <span class="m-3">
                                     <?php echo $response; ?>
                                 </span>
-                                <form id="partnerFrm" action="<?php the_permalink(); ?>">
+                                <form id="partnerFrm" action="/vielen-dank-haendler">
                                     <div class="form-group mb-4">
                                         <label class="sr-only" for="message_name">Name</label>
                                         <div class="btn-group col-md-12 p-0" role="group">
@@ -223,7 +223,7 @@ get_header();
                                             <i class="far fa-envelope"></i> Senden
                                         </button>
                                     <?php else : ?>
-                                        <button type="submit" class="btn btn-primary btn-cta btn-submit" disabled="disabled">
+                                        <button type="submit" class="btn btn-primary btn-cta btn-submit landingBtn" disabled="disabled">
                                             <i class="far fa-envelope"></i> Senden
                                         </button>
                                     <?php endif; ?>
